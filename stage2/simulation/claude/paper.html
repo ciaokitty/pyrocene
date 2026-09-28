@@ -1,0 +1,233 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pyrocene replay</title>
+<style>
+  :root { --paper:#f2ebda; --paper2:#e7dcc4; --ink:#2a2823; --dim:#8b8371; --good:#4f7a3f; --warn:#b8862a; --bad:#9c1f10; --trench:#1f5f88; --lant:#6d2a5d; }
+  html, body { margin:0; height:100%; background:var(--paper); color:var(--ink); overflow:hidden;
+    font-family: Inter, Cantarell, "Helvetica Neue", Arial, sans-serif; }
+  #map { position:fixed; inset:0; width:100vw; height:100vh; display:block; }
+  #hud { position:fixed; left:0; right:0; top:0; display:flex; justify-content:space-between; align-items:flex-start; padding:16px 28px 0; pointer-events:none; }
+  #hud > div { background:rgba(242,235,218,.82); padding:8px 12px 10px; border-radius:6px; box-shadow:0 2px 14px rgba(60,50,30,.08); }
+  .ttl { font-size:17px; letter-spacing:.34em; font-weight:800; }
+  .rule { width:250px; height:1.4px; background:var(--ink); opacity:.5; margin:6px 0 8px; }
+  .deck { font-size:15px; font-weight:500; color:var(--dim); letter-spacing:.02em; }
+  .health { text-align:right; }
+  .lab { font-size:11px; letter-spacing:.22em; font-weight:700; margin-bottom:6px; }
+  .bar { display:inline-block; width:240px; height:14px; border-radius:7px; background:#ddd3bd; vertical-align:middle; overflow:hidden; }
+  #hfill { height:100%; width:50%; border-radius:7px; background:var(--good); transition: width .35s ease, background .35s; }
+  #hpct { display:inline-block; font-size:30px; font-weight:800; font-variant-numeric:tabular-nums; margin-left:14px; vertical-align:middle; color:var(--good); min-width:80px; text-align:left; }
+  #cap { position:fixed; left:0; right:0; bottom:16.5vh; display:flex; justify-content:center; pointer-events:none; padding:0 6vw; }
+  #captext { font-family: C059, "Century Schoolbook", Georgia, "Times New Roman", serif; font-size:clamp(20px, 2.55vw, 40px); line-height:1.25; text-align:center;
+    background:rgba(242,235,218,.86); padding:.45em 1.1em .5em; border-top:1.5px solid rgba(42,40,35,.55); border-bottom:1.5px solid rgba(42,40,35,.55);
+    max-width:1100px; box-shadow:0 8px 30px rgba(60,50,30,.12); opacity:0; transition:opacity .25s; }
+  #deck { position:fixed; left:0; right:0; bottom:0; padding:0 40px 18px; background:linear-gradient(rgba(242,235,218,0), rgba(242,235,218,.92) 35%); }
+  #scrub { position:relative; height:44px; cursor:pointer; user-select:none; touch-action:none; }
+  #segs { position:absolute; left:0; right:0; top:14px; height:16px; display:flex; }
+  .seg { position:relative; height:100%; border-right:2px solid var(--paper); background:#ded3ba; box-sizing:border-box; }
+  .seg:first-child { border-radius:8px 0 0 8px; } .seg:last-child { border-radius:0 8px 8px 0; border-right:0; }
+  .seg.back { background:#cfc3a6; } .seg.intro { background:#e6dcc4; }
+  .seg span { position:absolute; left:0; right:0; top:19px; text-align:center; font-size:11px; letter-spacing:.14em; font-weight:700; color:var(--dim); }
+  #done { position:absolute; left:0; top:14px; height:16px; width:0; background:rgba(42,40,35,.28); border-radius:8px 0 0 8px; pointer-events:none; }
+  #marks { position:absolute; left:0; right:0; top:0; height:44px; pointer-events:none; }
+  .mk { position:absolute; top:-2px; transform:translateX(-50%); font-size:14px; line-height:1; }
+  .mk.fire { color:var(--bad); } .mk.dig { color:var(--trench); top:0; } .mk.crit { color:var(--lant); font-size:16px; top:-4px; } .mk.held { color:var(--trench); }
+  .mk.big { font-size:20px; top:-6px; }
+  #head { position:absolute; top:8px; width:4px; height:28px; margin-left:-2px; background:var(--ink); border-radius:2px; pointer-events:none; box-shadow:0 0 0 2px var(--paper); }
+  #ctl { display:flex; gap:10px; align-items:center; margin-top:8px; transition:opacity .4s; }
+  #ctl.idle { opacity:0; }
+  button { font:inherit; font-size:13px; font-weight:700; letter-spacing:.06em; color:var(--ink); background:rgba(255,255,255,.55); border:1.5px solid rgba(42,40,35,.6); border-radius:8px; padding:6px 12px; cursor:pointer; }
+  button:hover { background:#fff; }
+  #hint { margin-left:auto; font-size:12px; color:var(--dim); letter-spacing:.04em; }
+  #start { position:fixed; inset:0; display:grid; place-items:center; background:rgba(231,220,196,.72); backdrop-filter:blur(2px); z-index:5; }
+  #start .card { background:var(--paper); border:1.5px solid rgba(42,40,35,.5); padding:38px 56px 34px; text-align:center; box-shadow:0 20px 60px rgba(60,50,30,.25); max-width:560px; }
+  #start .card .ttl { font-size:22px; }
+  #start .card h2 { font-family: C059, Georgia, serif; font-weight:500; font-size:26px; margin:14px 0 8px; }
+  #start .card p { color:var(--dim); font-size:15px; margin:6px 0 22px; line-height:1.5; }
+  #go { font-size:18px; padding:12px 40px; background:var(--ink); color:var(--paper); border-color:var(--ink); border-radius:10px; }
+  #go:hover { background:#000; }
+  #start small { display:block; margin-top:18px; color:var(--dim); font-size:12px; letter-spacing:.04em; }
+  #err { position:fixed; inset:0; display:grid; place-items:center; background:var(--paper); z-index:6; text-align:center; padding:40px; }
+  #err code { background:#e7dcc4; padding:2px 8px; border-radius:5px; }
+  [hidden] { display:none !important; }
+  #rw { position:fixed; right:40px; bottom:33vh; font-size:44px; font-weight:800; color:var(--ink); opacity:0; pointer-events:none; letter-spacing:-.1em; transition:opacity .2s; }
+</style>
+
+<canvas id="map"></canvas>
+<div id="hud">
+  <div class="brand"><div class="ttl">P Y R O C E N E</div><div class="rule"></div><div class="deck" id="night"></div></div>
+  <div class="health"><div class="lab">FOREST</div><div class="bar"><div id="hfill"></div></div><div id="hpct">–</div></div>
+</div>
+<div id="rw">◀◀</div>
+<div id="cap"><span id="captext"></span></div>
+<div id="deck">
+  <div id="scrub"><div id="segs"></div><div id="done"></div><div id="marks"></div><div id="head"></div></div>
+  <div id="ctl">
+    <button id="bplay" title="space">Play</button>
+    <button id="bback" title="left arrow">◀ Back</button>
+    <button id="bfwd" title="right arrow">Next ▶</button>
+    <button id="brestart" title="R">Restart</button>
+    <button id="bspeed" title="S">1×</button>
+    <button id="bsound" title="M">Sound on</button>
+    <button id="bfull" title="F">Full screen</button>
+    <span id="hint">space pause · arrows step · drag the bar to scrub</span>
+  </div>
+</div>
+<div id="start" hidden>
+  <div class="card">
+    <div class="ttl">P Y R O C E N E</div>
+    <h2>The season, replayed</h2>
+    <p id="summary"></p>
+    <button id="go">Play the replay</button>
+    <small>Space pauses. Arrows step. Drag the bar at the bottom to scrub.</small>
+  </div>
+</div>
+<div id="err" hidden></div>
+
+<script src="log.js"></script>
+<script src="geom.js"></script>
+<script src="render.js"></script>
+<script src="player.js"></script>
+<script src="audio.js"></script>
+<script src="sample-game.js"></script>
+<script>
+(async function () {
+  const $ = id => document.getElementById(id);
+  const q = new URLSearchParams(location.search);
+  const name = q.get("log") || "sample-game.json";
+
+  async function fetchJson(url) {
+    const r = await fetch(url, { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status + " " + url);
+    return r.json();
+  }
+  async function loadLog() {
+    const tries = [];
+    if (name.includes("/") || name.startsWith("http")) tries.push(name);
+    tries.push("/api/log?file=" + encodeURIComponent(name));
+    if (name === "sample-game.json") tries.push("../sample-game.json");
+    let lastErr = null;
+    for (const u of tries) {
+      try { const d = await fetchJson(u); if (d && d.game) return { log: d, from: u }; } catch (e) { lastErr = e; }
+    }
+    if (name === "sample-game.json" && window.SAMPLE_GAME) return { log: window.SAMPLE_GAME, from: "embedded sample" };
+    throw lastErr || new Error("no log");
+  }
+
+  let loaded;
+  try { loaded = await loadLog(); }
+  catch (e) {
+    $("err").hidden = false;
+    $("err").innerHTML = `<div><div class="ttl">P Y R O C E N E</div><p>Could not load the game log <code>${name}</code>.</p><p style="color:#8b8371">${e.message}</p></div>`;
+    return;
+  }
+  const log = loaded.log;
+  if (!log.game.terrain || !log.game.terrain.length) {
+    $("err").hidden = false;
+    $("err").innerHTML = `<div><div class="ttl">P Y R O C E N E</div><p>This log has no starting board in it, so there is nothing to rebuild.</p><p style="color:#8b8371">${name}</p></div>`;
+    return;
+  }
+
+  const world = PyroLog.build(log);
+  const canvas = $("map");
+  const renderer = PyroRender.create(canvas, world);
+  const audio = PyroAudio.create();
+
+  // ---- the scrubber -------------------------------------------------------------
+  const beats = world.beats, D = world.duration;
+  const segs = $("segs"), marks = $("marks");
+  const spans = [];
+  let cur = null;
+  for (const b of beats) {
+    let key, label, cls;
+    const afterEnd = b.kind === "end" || (b.i > 0 && beats.slice(0, b.i).some(x => x.kind === "end"));
+    if (b.kind === "open" || b.kind === "lift" || (b.kind === "rewind" && !afterEnd) || (b.kind === "hold" && b.night === 0)) { key = "intro"; label = "start"; cls = "intro"; }
+    else if (afterEnd) { key = "back"; label = b.kind === "end" ? "end" : "back"; cls = "back"; if (b.kind === "end") key = "end"; }
+    else { key = "n" + b.night; label = String(b.night); cls = ""; }
+    if (!cur || cur.key !== key) { cur = { key, label, cls, t0: b.t0, t1: b.t0 + b.dur }; spans.push(cur); } else cur.t1 = b.t0 + b.dur;
+  }
+  for (const s of spans) {
+    const d = document.createElement("div"); d.className = "seg " + s.cls; d.style.width = (100 * (s.t1 - s.t0) / D) + "%";
+    d.innerHTML = "<span>" + s.label + "</span>"; segs.appendChild(d);
+  }
+  let critMarked = false;
+  for (const b of beats) {
+    let cls = null, glyph = "";
+    if (b.kind === "ignite" || b.kind === "flash") { cls = "fire" + (b.fire.cells.length >= 20 ? " big" : ""); glyph = "🔥"; }
+    else if (b.kind === "dig") { cls = "dig"; glyph = "▬"; }
+    else if (b.kind === "held") { cls = "held"; glyph = "◆"; }
+    else if (b.kind === "crit" && !critMarked && world.crit) { cls = "crit"; glyph = "★"; critMarked = true; }
+    if (!cls) continue;
+    const m = document.createElement("div"); m.className = "mk " + cls; m.style.left = (100 * b.t0 / D) + "%"; m.textContent = glyph; marks.appendChild(m);
+  }
+
+  const ui = {
+    update(v, t, D, playing, speed) {
+      $("head").style.left = (100 * t / D) + "%";
+      $("done").style.width = (100 * t / D) + "%";
+      const cap = $("captext");
+      if (cap.textContent !== v.cap) cap.textContent = v.cap;
+      cap.style.opacity = v.capAlpha;
+      const nights = world.nights.length;
+      $("night").textContent = v.night === 0 ? "The start" : "Night " + v.night + " of " + nights;
+      const h = v.health;
+      const col = h >= 60 ? "var(--good)" : h >= 40 ? "var(--warn)" : "var(--bad)";
+      $("hfill").style.width = h + "%"; $("hfill").style.background = col; $("hpct").style.color = col; $("hpct").textContent = h + "%";
+      $("bplay").textContent = playing ? "Pause" : (t >= D - 0.01 ? "Replay" : "Play");
+      $("bspeed").textContent = speed + "×";
+      $("rw").style.opacity = v.rewind ? 0.85 : 0;
+    }
+  };
+  const player = PyroPlayer.create(world, renderer, audio, ui);
+  window.__pyro = { world, player, renderer, beats };
+
+  // ---- controls ----------------------------------------------------------------
+  $("bplay").onclick = () => player.toggle();
+  $("bback").onclick = () => player.step(-1);
+  $("bfwd").onclick = () => player.step(1);
+  $("brestart").onclick = () => { player.seek(0); player.play(); };
+  const speeds = [1, 1.5, 2, 0.5];
+  $("bspeed").onclick = () => { player.speed = speeds[(speeds.indexOf(player.speed) + 1) % speeds.length]; };
+  $("bsound").onclick = () => { audio.enable(); audio.mute(!audio.muted); $("bsound").textContent = audio.muted ? "Sound off" : "Sound on"; };
+  $("bfull").onclick = () => { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); };
+  document.addEventListener("keydown", e => {
+    if (e.target.tagName === "BUTTON") e.target.blur();
+    if (e.code === "Space") { e.preventDefault(); player.toggle(); }
+    else if (e.code === "ArrowRight") player.step(1);
+    else if (e.code === "ArrowLeft") player.step(-1);
+    else if (e.code === "Home") player.seek(0);
+    else if (e.code === "End") player.seek(D - 0.01);
+    else if (e.key === "r" || e.key === "R") { player.seek(0); player.play(); }
+    else if (e.key === "m" || e.key === "M") $("bsound").onclick();
+    else if (e.key === "s" || e.key === "S") $("bspeed").onclick();
+    else if (e.key === "f" || e.key === "F") $("bfull").onclick();
+  });
+  const scrub = $("scrub");
+  let dragging = false;
+  function seekFromEvent(e) {
+    const r = scrub.getBoundingClientRect();
+    player.seek(D * Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)));
+  }
+  scrub.addEventListener("pointerdown", e => { dragging = true; scrub.setPointerCapture(e.pointerId); player.pause(); seekFromEvent(e); });
+  scrub.addEventListener("pointermove", e => { if (dragging) seekFromEvent(e); });
+  scrub.addEventListener("pointerup", () => { dragging = false; });
+  let idle = 0;
+  document.addEventListener("pointermove", () => { $("ctl").classList.remove("idle"); idle = performance.now(); });
+  setInterval(() => { if (player.playing && performance.now() - idle > 3500) $("ctl").classList.add("idle"); }, 500);
+  window.addEventListener("resize", () => renderer.resize());
+
+  // ---- go ------------------------------------------------------------------------
+  const g = log.game, ending = g.ending || {};
+  const fires = world.nights.filter(nt => nt.fire).length, lines = world.nights.filter(nt => nt.trench.length).length;
+  const h0 = world.frames[0].health, h1 = world.frames[world.frames.length - 1].health;
+  $("summary").textContent = `${world.nights.length} night${world.nights.length === 1 ? "" : "s"}. Forest from ${h0}% to ${h1}%. ` +
+    `${fires} fire${fires === 1 ? "" : "s"}${lines ? `, ${lines} night${lines === 1 ? "" : "s"} spent digging fire lines` : ""}. ` +
+    (ending.text ? ending.text : "");
+  player.start();
+  if (q.get("autoplay") === "1") { player.play(); }
+  else {
+    $("start").hidden = false;
+    $("go").onclick = () => { $("start").hidden = true; audio.enable(); player.seek(0); player.play(); };
+  }
+})();
+</script>

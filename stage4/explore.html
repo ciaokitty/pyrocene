@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#081311" />
+    <title>The Amazon - Pyrocene</title>
+    <link rel="stylesheet" href="explore.css" />
+    <script src="vendor/three.min.js"></script>
+    <script type="module" src="explore.mjs"></script>
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="./">PYROCENE</a
+      ><span class="chapter">STAGE 4 / THE AMAZON</span>
+      <nav aria-label="Field tools">
+        <button id="plants-open" hidden>
+          Plants <span id="plant-count">0</span>
+        </button>
+        <button id="sources-open">Sources</button>
+        <button id="settings-open" aria-label="Settings" title="Settings">
+          ⋯
+        </button>
+      </nav>
+    </header>
+    <main id="landscape" aria-label="Interactive forest">
+      <div id="plot-caption" aria-live="polite">
+        <span id="plot-title">The Amazon</span
+        ><span id="plot-subtitle">Choose a place to explore</span>
+      </div>
+      <div id="loading" role="status">
+        <div class="loading-orbit"></div>
+        <p>Opening the forest</p>
+      </div>
+      <div id="map-summary" hidden>
+        <span id="match-count"></span
+        ><button id="clear-map" aria-label="Clear plant map">×</button>
+      </div>
+      <div class="view-controls" role="group" aria-label="Forest views">
+        <button data-view="forest" class="active">Forest</button>
+        <button data-view="overhead">Overhead</button>
+        <button data-view="close" disabled>Close view</button>
+      </div>
+    </main>
+    <section id="lia" aria-label="Lia, field ecologist">
+      <button id="lia-hide" class="close-icon" aria-label="Hide Lia's message">
+        ×
+      </button>
+      <img
+        class="lia-portrait"
+        src="lia-v1.png"
+        alt="Lia, your field ecologist"
+      />
+      <div class="lia-message">
+        <div class="lia-name">
+          <span id="helper-name">LIA</span
+          ><small id="helper-role">Field ecologist</small>
+        </div>
+        <p id="lia-text" aria-live="polite"></p>
+        <button id="lia-action" class="primary" hidden></button>
+      </div>
+    </section>
+    <button id="lia-recall" hidden aria-label="Talk to Lia">
+      <img src="lia-v1.png" alt="" /><span>Lia</span>
+    </button>
+    <aside id="plant-guide" role="dialog" aria-label="Plant guide" hidden>
+      <div class="guide-heading">
+        <button id="guide-back" aria-label="Back to all plants" hidden>Back</button
+        ><span id="guide-title">Plants you've met</span
+        ><button
+          id="guide-close"
+          class="close-icon"
+          aria-label="Close plant guide"
+        >
+          ×
+        </button>
+      </div>
+      <div id="guide-tools" hidden>
+        <label for="plant-sort">Order</label
+        ><select id="plant-sort">
+          <option value="found">Found first</option>
+          <option value="dry">Driest observation</option>
+        </select>
+      </div>
+      <div id="guide-content"></div>
+      <div id="guide-map-actions" hidden>
+        <button id="find-plants" class="primary wide" disabled>
+          Find selected plants</button
+        ><small>Possible matches. Check them in the field.</small>
+      </div>
+    </aside>
+    <dialog id="sources">
+      <button
+        class="close-icon"
+        data-close="sources"
+        aria-label="Close sources"
+      >
+        ×
+      </button>
+      <h1>Sources</h1>
+      <p>
+        The forest scans are measured. Plant locations and field observations
+        are made for this practice landscape.
+      </p>
+      <div id="source-content"></div>
+    </dialog>
+    <dialog id="settings">
+      <button
+        class="close-icon"
+        data-close="settings"
+        aria-label="Close settings"
+      >
+        ×
+      </button>
+      <h1>Settings</h1>
+      <label
+        ><input type="checkbox" id="low-detail" /> Reduced point detail</label
+      ><label
+        ><input type="checkbox" id="reduced-motion" /> Reduced motion</label
+      ><button id="restart" class="secondary">Start a new exploration</button>
+      <p id="save-status">Your discoveries stay in this browser.</p>
+    </dialog>
+    <div id="toast" role="status" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "schema": "pyrocene-spectral-triptych-release/1",
+  "status": "active review candidate",
+  "supersedes": [
+    "amazon-signature-generalization-guided-v1.mp4",
+    "amazon-signature-generalization-continuous-v1.mp4"
+  ],
+  "frozen_lidar_final": {
+    "path": "/mnt/seagate/videos/pyrocene/lidar/final/forest-structure-single-v1.mp4",
+    "sha256": "4fa5dbaaeaf83d0ae77b720e119c73261b02136324311bb58ef4c15622b15be5",
+    "modified": false
+  },
+  "master": {
+    "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-spectral-triptych-v1.mp4",
+    "sha256": "36377eaaf0d7acc3cd17e8827cf97ddae1cdcdc04a262a7c9a546b53010f9375",
+    "duration_seconds": 32.5,
+    "resolution": [2560, 1440],
+    "fps": 24,
+    "audio": false
+  },
+  "review_copy": {
+    "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/review/amazon-spectral-triptych-v1-1080p.mp4",
+    "sha256": "1d6a1941888c9d7a2e893858284ac22acd430a2dd6d88e5c5272e4652c0a87a0"
+  },
+  "edit": [
+    "selected spectral signature",
+    "resolution stack",
+    "EMIT at 60 metres"
+  ],
+  "camera": {
+    "selected_and_emit": "3 point 5 degree anticlockwise drift during a gradual lift",
+    "resolution_stack": "1 point 8 degree drift in a side view",
+    "transition": "one second dip through near black between scenes"
+  },
+  "qa": {
+    "full_decode": "passed",
+    "contact": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/spectral-triptych/contact-v1.png",
+    "poster": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/spectral-triptych/poster-v1.jpg"
+  },
+  "claim_boundary": "The fine signature is a non co located educational composite The EMIT cells are measured Amazon spectra but not a species fuel or fire class"
+}

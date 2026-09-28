@@ -1,0 +1,49 @@
+# Labels for the game master console, the phone card, and the projector.
+
+[projector.title]
+P Y R O C E N E
+
+[projector.round]
+Night {r} of {max}
+
+[projector.lobby]
+Waiting for the game master
+
+[role.lantana]
+Lantana
+
+[role.native]
+Native forest
+
+[role.ecologist]
+Ecologist
+
+[role.ranger]
+Ranger
+
+[role.lantana.blurb]
+Every night you wake and choose a native to take.
+
+[role.native.blurb]
+Find the lantana in the day.
+
+[role.ecologist.blurb]
+Each night you wake and point at one player.
+
+[role.ranger.blurb]
+Each night you wake and point at one player to protect.
+
+[phone.alive]
+Alive
+
+[phone.out]
+Eliminated
+
+[gm.hunt]
+Hunt lantana
+
+[gm.resilience]
+Resilience
+
+[gm.resolve]
+Resolve night

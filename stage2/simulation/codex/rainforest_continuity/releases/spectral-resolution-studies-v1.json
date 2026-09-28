@@ -1,0 +1,79 @@
+{
+  "schema": "pyrocene-spectral-resolution-release/1",
+  "created": "2026-09-15T10:02:54+05:30",
+  "status": "review experiments",
+  "frozen_lidar_master": {
+    "path": "/mnt/seagate/videos/pyrocene/lidar/final/forest-structure-single-v1.mp4",
+    "sha256": "4fa5dbaaeaf83d0ae77b720e119c73261b02136324311bb58ef4c15622b15be5",
+    "modified": false
+  },
+  "videos": [
+    {
+      "study": "non co located fine spectral signature",
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-neon-selected-signature-v2.mp4",
+      "sha256": "979138ce113d83d3565797692e8795cc0d443494ca260b649368335eda6c0105",
+      "bytes": 29916690,
+      "duration_seconds": 8,
+      "resolution": [2560, 1440],
+      "fps": 24,
+      "audio": false
+    },
+    {
+      "study": "co located Amazon EMIT 60 metre signature",
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-emit-60m-signature-v1.mp4",
+      "sha256": "8c42ea2660bdfc1f7f5a00fa3eae8d8766666e7ab58ba93e6b8be8b023ed6adb",
+      "bytes": 30181370,
+      "duration_seconds": 8,
+      "resolution": [2560, 1440],
+      "fps": 24,
+      "audio": false
+    },
+    {
+      "study": "Amazon measurement resolution stack",
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-resolution-stack-v1.mp4",
+      "sha256": "c307199e2e971b5053adab1516457a309036799afa54c3f4deb4dbf011d311d1",
+      "bytes": 27179650,
+      "duration_seconds": 8,
+      "resolution": [2560, 1440],
+      "fps": 24,
+      "audio": false
+    }
+  ],
+  "source_artifacts": {
+    "amazon_spectral": {
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/artifacts/amazon-emit-sentinel-resolution-v1.npz",
+      "sha256": "bd231f18e75cce6b000312e3aee4b360a4f01a44fe0e15a449d5d37568c82b90"
+    },
+    "earth_engine_manifest": {
+      "path": "/mnt/seagate/videos/pyrocene/data/rainforest-continuity/amazon-spectral/amazon-spectral-layers.manifest.json",
+      "sha256": "dd6ccdafa7f3d725e34c656c9063fd5770f1f488787d689f5500030916c5aee9"
+    }
+  },
+  "review_proxies": [
+    {
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/review/amazon-neon-selected-signature-v2-1080p.mp4",
+      "sha256": "cd3f5d789f98699ccb6a37c81995d9537f44de4ecb352439bde6c7adf2d6dc48",
+      "bytes": 6705406
+    },
+    {
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/review/amazon-emit-60m-signature-v1-1080p.mp4",
+      "sha256": "d90acfaa684afcece5351778d37a6ace0b45778c1d9bc6d1af71902e412cd457",
+      "bytes": 6728369
+    },
+    {
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/review/amazon-resolution-stack-v1-1080p.mp4",
+      "sha256": "822ff25334d8a563eeba2c9f4ecef51820ba40354b3999988db06b2ff8538fb3",
+      "bytes": 3543004
+    }
+  ],
+  "qa": {
+    "full_decode": "passed for all three videos",
+    "contact_sheets": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/spectral-resolution-full/",
+    "visual_review": "checked at contact sheet and full 2560 by 1440 key-frame scale"
+  },
+  "claim_boundaries": [
+    "The NEON signature comes from Soaproot Saddle California and is not an Amazon observation",
+    "The EMIT selected signature is unsupervised and is not a species fuel moisture or fire label",
+    "The LiDAR Sentinel-2 and EMIT layers share a footprint but were acquired on different dates"
+  ]
+}

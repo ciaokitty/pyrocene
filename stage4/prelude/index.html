@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The paper forest - Pyrocene</title><link rel="stylesheet" href="prelude.css"><script type="module" src="prelude.mjs"></script></head>
+<body>
+<header><a class="wordmark" href="../ledger.html">PYROCENE</a><span>THE PAPER FOREST</span><nav><button id="undo" disabled>Undo</button><button id="restart">Start again</button><a href="../ledger.html">Enter the forest</a></nav></header>
+<main>
+ <section class="paper" aria-label="Practice map">
+  <div class="map-heading"><div><small>LEARN TO PLAY</small><h1>Leave a forest that holds.</h1></div><p id="clock">Turn 1 - six months</p></div>
+  <div id="board" aria-label="Choose a patch"></div>
+  <div class="legend" aria-label="Map key"><span><i class="grass"></i>Invasive grass</span><span><i class="bare"></i>Cleared</span><span><i class="young"></i>Planted</span><span><i class="shade"></i>Canopy closed</span></div>
+  <p class="map-foot">Lines join neighbouring patches. Fire follows connected grass.</p>
+ </section>
+ <aside aria-label="Your crew">
+  <div class="totals"><div><small>Credits</small><strong id="credits"></strong></div><div><small>Forest health</small><strong id="health"></strong></div><div><small>Canopies</small><strong id="closed"></strong></div></div>
+  <section class="lesson"><div class="lesson-top"><small id="lesson-label">FIRST RECOVERY</small><button id="hints" aria-pressed="true">Hide hints</button></div><p id="hint"></p></section>
+  <section class="choice"><h2 id="patch-title">Choose a patch.</h2><p id="patch-note">Looking is free. One job takes six months.</p><p id="quote"></p><button id="work" class="primary" hidden></button><p id="consequence"></p><button id="wait">Let six months pass</button></section>
+  <section class="care"><h2>Needs care <span id="care-count">0</span></h2><div id="care-list"></div></section>
+  <p id="season"></p>
+  <details id="rules"><summary>The rules in six lines</summary><p>Clear grass to earn credits. Planting costs 6.</p><p>The crew costs 3 each turn, even if it waits.</p><p>Grass returns. Weed around saplings until shade closes.</p><p>Closed canopy pays 1 per turn. Mixed forest pays 3.</p><p>Repeated clearing cuts native regrowth and costs health.</p><p>Reach three closed canopies with credits left. Undo is always available.</p><small>Same rules as the forest. Growth is accelerated. These are teaching values.</small></details>
+ </aside>
+</main>
+<footer><p id="report" role="status">Try a few turns here. Your forest game stays untouched.</p><button id="continue" hidden>Work two more years</button></footer>
+<noscript>This practice map needs JavaScript, but does not need hardware acceleration.</noscript>
+</body></html>

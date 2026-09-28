@@ -1,0 +1,51 @@
+{
+  "schema": "pyrocene-rainforest-continuity-candidate-set/1",
+  "status": "superseded",
+  "created_at": "2026-09-14T19:22:52+05:30",
+  "gallery": "http://100.82.28.38:8022/",
+  "common": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "codec": "h264",
+    "audio": false,
+    "generated_imagery": false,
+    "procedural_forest_points": false,
+    "captions_sha256": "376ce9838edd0dc26ec6f1510dd3b6068ee631b03ca9a3204f32d11e5271460f",
+    "renderer_sha256": "0a32354aa7faee5c0456c2e63fcf8eec75376b8b89202cf0050165f7534cc17a"
+  },
+  "candidates": [
+    {
+      "variant": "liana_structure",
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/candidates/liana-structure.mp4",
+      "duration_seconds": 32,
+      "frames": 768,
+      "sha256": "72c0bc24cb4421312c1b5a28f75d4210ae1148dd3e5379aaa0e9e50db9ee9fc2",
+      "manifest_sha256": "db9e7a894d84a874f2733a5babd6663fa17f3b1fdaaa3c4e8b419e9d85645b01"
+    },
+    {
+      "variant": "invasive_identity",
+      "path": "/mnt/seagate/videos/pyrocene-retired/rainforest-continuity-2026-09-14-v1/candidates/invasive-identity.mp4",
+      "duration_seconds": 36,
+      "frames": 864,
+      "sha256": "ed2bff4ab456c64e3caf552bf336d15980c49f0c09640ccafa2409058bc28f68",
+      "manifest_sha256": "5c817543326f1350285edc20a374b5b063296097273fe1eee2405f3774d612b3"
+    },
+    {
+      "variant": "gap_microclimate",
+      "path": "/mnt/seagate/videos/pyrocene-retired/rainforest-continuity-2026-09-14-v1/candidates/gap-microclimate.mp4",
+      "duration_seconds": 34,
+      "frames": 816,
+      "sha256": "6f8b063be815ffbcd5e37abe6e583ea8960f803664918b7e1f34e9fa928a66fc",
+      "manifest_sha256": "a94244a4bdef51db3819940146587690d57eb98eb98d2012bfb89d597792d88a"
+    }
+  ],
+  "qa": {
+    "full_decode": "passed for all three candidates before retirement",
+    "contact_sheets": "/mnt/seagate/videos/pyrocene-retired/rainforest-continuity-2026-09-14-v1/qa/",
+    "visual_review": "passed after three source crop and two microclimate light passes",
+    "http_endpoints": "historical check passed before this set was superseded",
+    "frozen_lidar_sha256": "4fa5dbaaeaf83d0ae77b720e119c73261b02136324311bb58ef4c15622b15be5"
+  },
+  "policy": "These are spliceable review candidates not frozen finals and the Asner figure requires reuse review before public release"
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pyrocene — projector</title>
+<link rel="stylesheet" href="/static/vendor/xterm.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #0d1410; overflow: hidden; }
+  .stage { height: 100%; display: flex; align-items: center; justify-content: center; }
+  .screen { display: flex; }
+  #term { width: max-content; }
+  .xterm .xterm-screen { outline: none; }
+  .xterm-viewport::-webkit-scrollbar { width: 0; }
+  [hidden] { display: none !important; }
+  .svgwrap { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .svgwrap svg { width: 100%; height: 100%; }
+  #off { position: fixed; right: 12px; bottom: 10px; font: 12px ui-monospace, monospace;
+         color: #ff6a3d; opacity: 0; transition: opacity .4s; }
+  #off.show { opacity: 1; }
+</style>
+</head>
+<body>
+<main class="stage">
+  <div class="screen"><div id="term"></div></div>
+  <div id="svg" class="svgwrap" hidden></div>
+</main>
+<div id="off">reconnecting</div>
+<script src="/static/vendor/xterm.js"></script>
+<script>
+  // Fixed 80 columns, scaled to fill the projector, so the map's hand-aligned
+  // columns never reflow. Same approach as the live game's web build.
+  const COLS = 80, ROWS = 26;
+  const el = document.getElementById("term");
+  const term = new Terminal({
+    cols: COLS, rows: ROWS, cursorBlink: false, convertEol: true, scrollback: 0,
+    fontFamily: '"DejaVu Sans Mono", "Menlo", "Consolas", ui-monospace, monospace',
+    fontSize: 16, lineHeight: 1.0, disableStdin: true,
+    theme: { background: "#0d1410", foreground: "#cfe3d4", cursor: "#0d1410" },
+  });
+  term.open(el);
+  term.write("\x1b[?25l");
+  // Fit by choosing a font size rather than scaling with a transform. A CSS
+  // scale blurs glyphs on a projector, and centring a scaled box clipped the
+  // edges of the frame. Sizing the font keeps every cell crisp and the grid
+  // exactly 80 columns wide.
+  function fit() {
+    const padX = 40, padY = 36;
+    let size = Math.floor(Math.min((innerWidth - padX) / (COLS * 0.601),
+                                   (innerHeight - padY) / ROWS));
+    size = Math.max(8, Math.min(64, size));
+    const apply = (n) => {
+      if (term.options.fontSize !== n) {
+        term.options.fontSize = n;
+        term.refresh(0, ROWS - 1);
+      }
+    };
+    apply(size);
+    // Character metrics are not exactly 0.601em wide, so step down until it fits.
+    for (let i = 0; i < 8 && size > 8; i++) {
+      const scr = el.querySelector(".xterm-screen");
+      if (!scr) break;
+      if (scr.offsetWidth <= innerWidth - padX && scr.offsetHeight <= innerHeight - padY) break;
+      apply(--size);
+    }
+  }
+  addEventListener("resize", fit);
+  setTimeout(fit, 60);
+  setTimeout(fit, 400);
+
+  // ?beat=N shows one stored beat statically (tests, screenshots).
+  const params = new URLSearchParams(location.search);
+  window.__beat = null;
+  // Two kinds of frame come down the same channel: the terminal board the game
+  // shipped with, and an SVG map. Whichever arrives, show that one.
+  const svgBox = document.getElementById("svg");
+  const screen = document.querySelector(".screen");
+  function paint(frame) {
+    if (frame.startsWith("<svg")) {
+      screen.hidden = true;
+      svgBox.hidden = false;
+      svgBox.innerHTML = frame;
+      return;
+    }
+    svgBox.hidden = true;
+    screen.hidden = false;
+    term.write("\x1b[H" + frame.replace(/\n/g, "\x1b[K\n") + "\x1b[K\x1b[J");
+  }
+  if (params.has("beat")) {
+    fetch("/api/beat?i=" + params.get("beat")).then(r => r.json()).then(d => { paint(d.frame); window.__beat = d; fit(); });
+  } else {
+    let es;
+    const off = document.getElementById("off");
+    function connect() {
+      es = new EventSource("/events?ch=projector");
+      es.addEventListener("frame", (e) => {
+        const d = JSON.parse(e.data);
+        paint(d.frame);
+        window.__beat = d;
+        off.classList.remove("show");
+      });
+      es.onerror = () => { off.classList.add("show"); };
+    }
+    connect();
+  }
+</script>
+</body>
+</html>

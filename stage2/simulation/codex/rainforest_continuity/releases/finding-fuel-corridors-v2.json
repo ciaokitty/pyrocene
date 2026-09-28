@@ -1,0 +1,46 @@
+{
+  "schema": "pyrocene-finding-fuel-corridors-release/1",
+  "status": "canonical event final",
+  "supersedes": "pyrocene-forest-structure-and-spectra-v1.mp4",
+  "master": {
+    "path": "/mnt/seagate/videos/pyrocene/final/finding-fuel-corridors-v2.mp4",
+    "sha256": "e06d865fb7c03a104d3b9fe85c5cdf5a7b40dbc84af2616936663b7d2eaa8d3f",
+    "duration_seconds": 88.125,
+    "resolution": [1920, 1080],
+    "fps": 24,
+    "audio": false
+  },
+  "inputs": {
+    "lidar": {
+      "path": "/mnt/seagate/videos/pyrocene/lidar/final/forest-structure-minimal-v2.mp4",
+      "sha256": "6f5da0c066156d10020497c5d3a2900b1153d2580e6e01be7cb3285eac63e2c7",
+      "captions": "stage2/simulation/codex/lidar/captions_minimal.json",
+      "caption_sha256": "9cca5640623bd5d90f57ffb9c006ffcfebc39a0b8f365a198bcdcc303d6f6045"
+    },
+    "spectral": {
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-spectral-seamless-minimal-v2.mp4",
+      "sha256": "b485e680bdcc2aa202610fb551196dd81c1c6d08e5e554ee0c634b4bb478604a",
+      "captions": "stage2/simulation/codex/rainforest_continuity/spectral_seamless_captions_minimal.json",
+      "caption_sha256": "28cbdc669f6735ec4b5a97684fa37f5d9b40d6417e43ba6d6662949f96070844"
+    }
+  },
+  "copy_changes": [
+    "title changed to Finding fuel corridors",
+    "opening license text removed from picture and retained in manifest",
+    "source lines shortened",
+    "literal color names removed from legends",
+    "legend panels reduced to one swatch and one meaning"
+  ],
+  "join": {
+    "offset_seconds": 55.6,
+    "duration_seconds": 0.4,
+    "transition": "matched map dissolve"
+  },
+  "reproduction": "stage2/simulation/codex/rainforest_continuity/render_finding_fuel_corridors.sh",
+  "qa": {
+    "full_decode": "passed",
+    "visual_review": "opening legends join and satellite ending inspected",
+    "contact": "/mnt/seagate/videos/pyrocene/qa/finding-fuel-corridors-v2/contact-v2.jpg",
+    "poster": "/mnt/seagate/videos/pyrocene/qa/finding-fuel-corridors-v2/poster.jpg"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "pyrocene-spectral-seamless/1",
+  "header": "PYROCENE: FINDING FUEL CORRIDORS",
+  "duration": 32.5,
+  "sentences": [
+    {
+      "start": 0.4,
+      "end": 9.6,
+      "text": "Drone imagery can identify spectral patterns around these gaps"
+    },
+    {
+      "start": 10.2,
+      "end": 21.5,
+      "text": "Satellites can extend the pattern across the forest"
+    }
+  ],
+  "sources": {
+    "selected": "EDUCATIONAL COMPOSITE : AMAZON LIDAR : NEON SPECTRA",
+    "stack": "AMAZON : LIDAR : SENTINEL 2 : EMIT",
+    "emit": "AMAZON : LIDAR : EMIT 60 M"
+  },
+  "legends": {
+    "selected": [
+      ["LIDAR HEIGHT", "", "green"],
+      ["SELECTED SIGNATURE", "", "violet"],
+      ["CLASSIFIER BOUNDARY", "", "amber"]
+    ],
+    "stack": [
+      ["60 M HYPERSPECTRAL", "", "violet"],
+      ["10 M MULTISPECTRAL", "", "cyan"],
+      ["LIDAR RETURNS", "", "green"]
+    ],
+    "emit": [
+      ["LIDAR HEIGHT", "", "green"],
+      ["SIMILAR SPECTRA", "", "violet"],
+      ["CELL BOUNDARY", "", "amber"]
+    ]
+  }
+}

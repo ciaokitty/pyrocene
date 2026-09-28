@@ -1,0 +1,55 @@
+{
+  "schema": "pyrocene-rainforest-continuity-candidate-set/1",
+  "status": "review-candidates",
+  "created_at": "2026-09-14T23:55:34+05:30",
+  "gallery": "http://100.82.28.38:8022/",
+  "common": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "codec": "h264",
+    "audio": false,
+    "generated_imagery": false,
+    "procedural_forest_points": false,
+    "captions_sha256": "1ce92135d6b7ff984275f349ae46c28461373e5be18b88fef19dcc99a15e088c",
+    "renderer_sha256": "c4bb45b59abdba5e08a4d265db114bc06988b1e85f94d060f83e9b38647e8115"
+  },
+  "candidates": [
+    {
+      "variant": "liana_structure",
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/candidates/liana-structure.mp4",
+      "duration_seconds": 32,
+      "frames": 768,
+      "sha256": "72c0bc24cb4421312c1b5a28f75d4210ae1148dd3e5379aaa0e9e50db9ee9fc2",
+      "manifest_sha256": "db9e7a894d84a874f2733a5babd6663fa17f3b1fdaaa3c4e8b419e9d85645b01"
+    },
+    {
+      "variant": "invasive_identity",
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/candidates/invasive-identity.mp4",
+      "duration_seconds": 36,
+      "frames": 864,
+      "sha256": "87cdd524c63377e4c34a3caea3662e58847ab7981c8fcff06fd5c4fe210360aa",
+      "manifest_sha256": "acfc73e4c2cb10b1891d019d890ea717ede3167bbccca5ec8b62d77bdbc5cae2"
+    }
+  ],
+  "retired": {
+    "archive": "/mnt/seagate/videos/pyrocene-retired/rainforest-continuity-2026-09-14-v1/",
+    "gap_microclimate": "The light overlay was procedural and was not spatially tied to a measured canopy gap",
+    "invasive_identity_v1": "The spectral source was a 494 pixel publication strip and did not share a footprint with the preceding LiDAR transects"
+  },
+  "aligned_source": {
+    "paper": "Asner et al 2008 Invasive species detection in Hawaiian rainforests using airborne imaging spectroscopy and LiDAR",
+    "figure": 3,
+    "scope": "One 53 hectare forest stand in Hawaii Volcanoes National Park",
+    "source_image": "/mnt/seagate/videos/pyrocene/data/rainforest-continuity/hawaii/asner-rse-pdf-images/image-004.jpg",
+    "source_image_sha256": "a5a5f75175f52242691c049ba33b46b9ade72b839045a1885da11f9c4f3bc484",
+    "panels": ["LiDAR minimum vegetation height", "spectral live and dead fractional cover", "invasive tree detection"]
+  },
+  "qa": {
+    "full_decode": "passed",
+    "visual_review": "passed at the LiDAR transition spectral composition and invasive detection stages",
+    "contact_sheet": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/full/invasive-identity-contact.jpg",
+    "frozen_lidar_sha256": "4fa5dbaaeaf83d0ae77b720e119c73261b02136324311bb58ef4c15622b15be5"
+  },
+  "policy": "The Asner figure requires reuse review before public release"
+}

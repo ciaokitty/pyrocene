@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "note": "Every number here is an authored teaching value. None is a field rate, a carbon price or a forecast.",
+  "pasture": 33,
+  "plots": [
+    {
+      "key": "neck",
+      "id": 27,
+      "name": "Neck",
+      "tonnes": 6,
+      "about": "A strip of grass joining the pasture to everything behind it."
+    },
+    {
+      "key": "edge",
+      "id": 28,
+      "name": "Edge",
+      "tonnes": 10,
+      "about": "Grass along an old opening near the pasture."
+    },
+    {
+      "key": "east",
+      "id": 22,
+      "name": "East",
+      "tonnes": 12,
+      "about": "A wide opening, thick with grass."
+    },
+    {
+      "key": "middle",
+      "id": 21,
+      "name": "Middle",
+      "tonnes": 14,
+      "about": "The thickest growth on the island. It touches almost everything."
+    },
+    {
+      "key": "north",
+      "id": 15,
+      "name": "North",
+      "tonnes": 8,
+      "about": "Invaded ground with forest on two sides."
+    },
+    {
+      "key": "far",
+      "id": 9,
+      "name": "Far",
+      "tonnes": 4,
+      "about": "A small invaded pocket deep in the forest."
+    }
+  ],
+  "links": [
+    [
+      "pasture",
+      "neck"
+    ],
+    [
+      "neck",
+      "edge"
+    ],
+    [
+      "neck",
+      "middle"
+    ],
+    [
+      "edge",
+      "east"
+    ],
+    [
+      "middle",
+      "east"
+    ],
+    [
+      "middle",
+      "north"
+    ],
+    [
+      "north",
+      "far"
+    ]
+  ],
+  "living": 3,
+  "costs": {
+    "clear": 2,
+    "plant": 6,
+    "tend": 1,
+    "enrich": 12,
+    "burn": 1
+  },
+  "weeds": {
+    "invaded": 0.25,
+    "open": 0.2,
+    "young": 0.05,
+    "perNeighbour": 0.1,
+    "carries": 0.3,
+    "lost": 0.6,
+    "afterFire": 0.35,
+    "afterTend": 0.05
+  },
+  "canopy": {
+    "perSeason": 0.5
+  },
+  "animals": {
+    "maxHostileNeighbours": 1,
+    "perSeason": 0.5
+  },
+  "health": {
+    "base": 40,
+    "young": 3,
+    "pioneer": 6,
+    "forest": 10,
+    "burn": 1
+  },
+  "missions": {
+    "tonne": {
+      "title": "By the tonne",
+      "seasons": 6,
+      "grant": 8,
+      "rate": 1,
+      "carbon": {
+        "pioneer": 0,
+        "forest": 0
+      },
+      "fires": [
+        3,
+        6
+      ]
+    },
+    "tree": {
+      "title": "By the tree",
+      "seasons": 6,
+      "grant": 24,
+      "rate": 0,
+      "carbon": {
+        "pioneer": 1,
+        "forest": 3
+      },
+      "fires": [
+        3,
+        6
+      ]
+    },
+    "both": {
+      "title": "Both",
+      "seasons": 12,
+      "grant": 8,
+      "rate": 1,
+      "carbon": {
+        "pioneer": 1,
+        "forest": 3
+      },
+      "fires": [
+        3,
+        6,
+        9,
+        12
+      ]
+    }
+  },
+  "finale": {
+    "seasons": 20,
+    "pioneerLife": 12
+  },
+  "hard": {
+    "seasons": 16,
+    "fires": [
+      3,
+      6,
+      9,
+      12,
+      15
+    ],
+    "grant": 6,
+    "living": 4,
+    "burnNeeds": 0.5
+  }
+}

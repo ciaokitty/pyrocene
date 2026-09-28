@@ -1,0 +1,48 @@
+{
+  "schema": "pyrocene-signature-generalization-release/1",
+  "frozen_lidar_final": {
+    "path": "/mnt/seagate/videos/pyrocene/lidar/final/forest-structure-single-v1.mp4",
+    "sha256": "4fa5dbaaeaf83d0ae77b720e119c73261b02136324311bb58ef4c15622b15be5",
+    "modified": false
+  },
+  "masters": [
+    {
+      "variant": "guided",
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-signature-generalization-guided-v1.mp4",
+      "sha256": "2171b98273f4014f9ab8be55d8d6be9015e08305d7073f7f1ccbb092c41d9b09",
+      "duration_seconds": 36,
+      "resolution": [2560, 1440],
+      "fps": 24
+    },
+    {
+      "variant": "continuous",
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-signature-generalization-continuous-v1.mp4",
+      "sha256": "5a2a18efe6e28a6e4bed1009cf62ff5feff59bb673a50e242ef6f34236b2de3a",
+      "duration_seconds": 30,
+      "resolution": [2560, 1440],
+      "fps": 24
+    }
+  ],
+  "review_copies": [
+    {
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/review/amazon-signature-generalization-guided-v1-1080p.mp4",
+      "sha256": "f33ed22fcd53b70898bdb76d942cf2e6968cdc5fbea01de93099899d224992ce"
+    },
+    {
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/review/amazon-signature-generalization-continuous-v1-1080p.mp4",
+      "sha256": "898a06716391a8bf2b1f8e79ee191d091437b3dd7038e9d047954508bd1a26e9"
+    }
+  ],
+  "artifact": {
+    "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/artifacts/signature-generalization-v1.npz",
+    "sha256": "4109e8182ff455d11689dd2e1aaae49f782fdfde83e7d32a9423fd8f56bb8a89"
+  },
+  "qa": {
+    "full_decode": "passed",
+    "audio": false,
+    "guided_contact": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/signature-generalization/guided-contact-v1.png",
+    "continuous_contact": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/signature-generalization/continuous-contact-v1.png",
+    "camera": "fixed bearing minus 31 degrees with lift only"
+  },
+  "claim_boundary": "The fine layer is an educational non co located composite The Amazon EMIT cells show spectral similarity and not a species class The final surface is neither measured fuel load nor calibrated fire risk"
+}

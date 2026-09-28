@@ -1,0 +1,61 @@
+{
+  "helper": { "name": "Lia", "role": "Field ecologist" },
+  "welcome": {
+    "text": "I'm Lia. Pick a place in the forest. We can take a closer look together.",
+    "action": "Find a place to start"
+  },
+  "selected": {
+    "text": "Let's look beneath the canopy here.",
+    "action": "Look closer"
+  },
+  "close": {
+    "text": "A scan from the ground will show us the lower plants.",
+    "action": "Scan from the ground"
+  },
+  "dense": {
+    "text": "There is another layer of plants below the trees. Shall we ask the field team what grows here?",
+    "action": "Send the field team"
+  },
+  "open": {
+    "text": "Let's compare this with the other plots. The field team can tell us which plants grow here.",
+    "action": "Send the field team"
+  },
+  "field": {
+    "text": "The team has marked three plants. Choose one to see what they found."
+  },
+  "firstPlant": {
+    "text": "Your first plant is in the guide. You can open Plants to find it again."
+  },
+  "nextPlot": {
+    "text": "We've checked the plants here. Let's look at another part of the forest.",
+    "action": "Back to the forest"
+  },
+  "mapInvite": {
+    "text": "You've met a few plants. Try Overhead. We can look for the same plants elsewhere.",
+    "action": "Go overhead"
+  },
+  "mapSelect": {
+    "text": "Open Plants and choose a species. We can look for places where it may grow.",
+    "action": "Open Plants"
+  },
+  "sortInvite": {
+    "text": "Some of the dead leaves felt dry. Put the driest observations first in your plant guide.",
+    "action": "Open Plants"
+  },
+  "mapResult": {
+    "text": "These are possible matches. A field visit can check which plants are there."
+  },
+  "settlement": {
+    "text": "People sometimes use fire to clear land. Look at the plant patches near the settlement.",
+    "action": "Show the settlement"
+  },
+  "keepExploring": {
+    "text": "You can keep visiting plots. Check the plants and compare what the team finds."
+  },
+  "scanning": { "text": "The ground scan is coming in." },
+  "visiting": { "text": "The field team is checking this plot." },
+  "unavailable": {
+    "text": "That scan could not load. We can try again.",
+    "action": "Try the ground scan again"
+  }
+}

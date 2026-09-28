@@ -1,0 +1,49 @@
+{
+  "schema": "pyrocene-hyperspectral-candidate-set/1",
+  "status": "retired",
+  "retired_at": "2026-09-14T18:20:00+05:30",
+  "retirement_reason": "The candidates break rainforest visual and ecological continuity",
+  "archive": "/mnt/seagate/videos/pyrocene-retired/hyperspectral-2026-09-14/",
+  "created_at": "2026-09-14T15:59:31+05:30",
+  "gallery": "http://100.82.28.38:8022/",
+  "common": {
+    "duration_seconds": 36,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 864,
+    "codec": "h264",
+    "audio": false,
+    "generated_imagery": false,
+    "captions_sha256": "59334db447c3793f3a9977eeed0533a35aff970bf623a899ec4b445307838f99",
+    "renderer_sha256": "bd4ea6d66dc6b734336dfa59e1f57a1d0f824def864e5ff8baa2484f4cd93f8b"
+  },
+  "candidates": [
+    {
+      "variant": "water",
+      "path": "/mnt/seagate/videos/pyrocene/hyperspectral/candidates/hyperspectral-water-content-v1.mp4",
+      "sha256": "57b551838de373a0247f4dbd6fc02fabeab424170080cb524584eb1f6a41b632",
+      "manifest_sha256": "510bf16e8c6d4c06f54f306935833cdbe595d45843e501ba5e3368bcc208811a"
+    },
+    {
+      "variant": "disturbance",
+      "path": "/mnt/seagate/videos/pyrocene/hyperspectral/candidates/hyperspectral-disturbance-comparison-v1.mp4",
+      "sha256": "5454bdaa5911c66cf4bab11f6efd825e3a9e89c4c6bf68c4bebbb7d5e621c1df",
+      "manifest_sha256": "32f329e1ed8057567dddb9710827f04419fb34a7f80211116ded6d3671d68dd6"
+    },
+    {
+      "variant": "invasives",
+      "path": "/mnt/seagate/videos/pyrocene/hyperspectral/candidates/hyperspectral-invasive-identification-v1.mp4",
+      "sha256": "81761f624c2acb0d78ecfc46e10b5065ec3d80c1a218b26999b72e1cf9b18d72",
+      "manifest_sha256": "e13a44ac3e19ae8b725d9abaedde8bac8b3194dbd6d36892615a242b1f7c1187"
+    }
+  ],
+  "qa": {
+    "full_decode": "passed for all three candidates",
+    "contact_sheets": "/mnt/seagate/videos/pyrocene/hyperspectral/qa/",
+    "visual_review": "passed at full candidate resolution",
+    "http_endpoints": "returned 200 for portal and all four films",
+    "interactive_browser": "not run because no browser instance was connected"
+  },
+  "policy": "These are review candidates and not frozen finals. Promote one only after editorial selection and source reuse review."
+}

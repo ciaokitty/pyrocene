@@ -217,3 +217,73 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 web/py/
+
+# Local design prompts
+.prompt/
+stage2/logs/
+stage2/maps/out/
+
+# Editor swap files
+*.swp
+*.swo
+*~
+
+# Local credentials and browser sessions. Example configuration may be shared.
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.ssh/
+.aws/
+.kube/
+credentials/
+secrets/
+credentials.json
+service-account*.json
+playwright/.auth/
+storage-state*.json
+auth-state*.json
+
+# Raw survey data, media, screenshots and generated delivery bundles stay external.
+# Git cannot ignore by size. New raster assets require an explicit exception.
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.tif
+*.tiff
+*.mp4
+*.mov
+*.webm
+*.wav
+*.mp3
+*.las
+*.laz
+*.ply
+*.pcd
+*.bin
+*.npy
+*.npz
+*.zip
+*.tar
+*.tar.gz
+screenshots/
+test-results/
+playwright-report/
+stage4/assets/
+stage4/qa/
+stage4/qa-*/
+
+# Small, deliberately shipped UI portraits and lab examples.
+!stage4/hazel.png
+!stage4/lia-v1.png
+!stage4/lia-v2.png
+!stage2/simulation/claude/lab/results/bandipur.png
+!stage2/simulation/claude/lab/results/lahaina.png
+!stage2/simulation/claude/lab/results/sample.png

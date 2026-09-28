@@ -1,0 +1,27 @@
+{
+  "schema": "pyrocene-lidar-single-film/1",
+  "header": "PYROCENE: FOREST STRUCTURE STUDY",
+  "legend": {
+    "title": "MEASURED HEIGHT ABOVE GROUND",
+    "rows": {
+      "canopy": {"name": "CANOPY", "band": "10 m +"},
+      "understory": {"name": "UNDERSTORY", "band": "2–10 m"},
+      "low": {"name": "LOW STRATUM", "band": "0.2–2 m"},
+      "ground": {"name": "GROUND", "band": "0–0.2 m"}
+    }
+  },
+  "locations": {
+    "fire": "IQUIRI NATIONAL FOREST : AMAZONAS : BRAZIL : 9 SEP 2019 : PHOTO ERICK CALDAS XAVIER : CC BY-SA 4.0",
+    "airborne": "PARACOU : FRENCH GUIANA : AIRBORNE LIDAR : NOV 2019",
+    "terrestrial": "PARACOU : FRENCH GUIANA : TERRESTRIAL LIDAR : 2022",
+    "post_fire": "AUTAZES : AMAZONAS : BRAZIL : AIRBORNE LIDAR : 2.5 YEARS AFTER FIRE : MAY 2017"
+  },
+  "sentences": [
+    {"start": 6.6, "end": 16.7, "text": "From the air the forest looks impenetrable and uniform."},
+    {"start": 16.7, "end": 33.0, "text": "LiDAR reveals the layers that can connect a surface fire."},
+    {"start": 34.2, "end": 41.2, "text": "Gaps expose the understory two and a half years after fire."},
+    {"start": 41.2, "end": 46.2, "text": "Sunlight and wind can dry the lower forest."},
+    {"start": 46.2, "end": 51.2, "text": "Non-native plants can occupy gaps and connect fuels."},
+    {"start": 51.2, "end": 56.0, "text": "Forest structure alone does not identify fuel."}
+  ]
+}

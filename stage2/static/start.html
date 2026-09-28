@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pyrocene</title>
+<style>
+  :root{color-scheme:dark;
+        --bg:#07100e;        /* deep forest, near black */
+        --ink:#e4ece6;
+        --muted:#8aa39a;
+        --accent:#5fc2a4;    /* not the film galleries' amber */
+        --edge:#2d4a42}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:ui-sans-serif,system-ui,sans-serif;
+       min-height:100vh;display:flex;align-items:center;justify-content:center}
+  main{width:min(1180px,90vw);padding:56px 0}
+  small{color:var(--accent);font:700 11px ui-monospace,monospace;letter-spacing:.18em}
+  h1{font:400 clamp(26px,3.4vw,44px) Georgia,serif;margin:14px 0 40px}
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+  .tile{border:1px solid var(--edge);border-radius:14px;aspect-ratio:1;padding:24px;
+        display:flex;flex-direction:column;justify-content:space-between;
+        text-decoration:none;color:var(--ink);
+        transition:border-color .15s,background .15s}
+  a.tile{justify-content:center}
+  a.tile:hover,a.tile:focus-visible{border-color:var(--accent);background:#5fc2a40f;outline:none}
+  .tile h2{font:400 22px Georgia,serif;margin:0}
+  .ways{display:flex;flex-direction:column;gap:9px;margin:0}
+  .ways a{color:var(--muted);text-decoration:none;font-size:14px;align-self:flex-start;
+          border-bottom:1px solid transparent}
+  .ways a:hover,.ways a:focus-visible{color:var(--accent);border-bottom-color:var(--accent);outline:none}
+  @media(max-width:520px){.tile{aspect-ratio:auto;min-height:150px}}
+</style>
+</head>
+<body>
+<main>
+  <small>PYROCENE</small>
+  <h1>Start playing by clicking on a level</h1>
+
+  <div class="grid">
+    <!-- The stage lives on the server, so the game master link carries which one
+         it should be. That way an evening can start at stage 2 and skip stage 1,
+         and the player link handed to the room is the right one either way. -->
+    <div class="tile">
+      <h2>Stage 1</h2>
+      <p class="ways">
+        <a href="/?stage=1">Player</a>
+        <a href="/gm?stage=1">GM</a>
+        <a href="/projector">Map</a>
+      </p>
+    </div>
+
+    <div class="tile">
+      <h2>Stage 2</h2>
+      <p class="ways">
+        <a href="/?stage=2">Player</a>
+        <a href="/gm?stage=2">GM</a>
+        <a href="/projector">Map</a>
+      </p>
+    </div>
+
+    <a class="tile" href="/simulation/claude/lab/?run=sample">
+      <h2>Fire lab</h2>
+    </a>
+
+    <a class="tile" id="films" href="#">
+      <h2>Forest structure studies</h2>
+    </a>
+
+    <a class="tile" href="https://pyrocene.netlify.app">
+      <h2>Stage 3</h2>
+    </a>
+
+    <a class="tile" id="stage4" href="#">
+      <h2>Stage 4</h2>
+    </a>
+  </div>
+</main>
+<script>
+  // The films are served from their own port on this same machine. Build the
+  // link from whatever address you reached this page on, so it works over wifi,
+  // over tailscale or on the laptop itself without three different bookmarks.
+  document.getElementById("films").href =
+    location.protocol + "//" + location.hostname + ":__FILMS_PORT__/";
+  document.getElementById("stage4").href =
+    location.protocol + "//" + location.hostname + ":__STAGE4_PORT__/";
+</script>
+</body>
+</html>

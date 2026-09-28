@@ -1,0 +1,92 @@
+{
+  "schema": "pyrocene-stage4-plant-images/1",
+  "assetRoot": "assets",
+  "retrievedAt": "2026-09-16T14:46:24Z",
+  "images": {
+    "urochloa_brizantha": {
+      "file": "plant-urochloa_brizantha.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Urochloa_brizantha_starr.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Urochloa_brizantha_starr.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Urochloa_brizantha_starr.jpg/960px-Urochloa_brizantha_starr.jpg",
+      "author": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "matchEvidence": "Commons file title, description and category identify Urochloa brizantha; the description says pasture fodder trials.",
+      "sha256": "1a654e6b4762d4b752262d32d94b8a45d8d45832c8e08be84a3d9a6339a7dc94",
+      "bytes": 230999,
+      "width": 960,
+      "height": 720
+    },
+    "megathyrsus_maximus": {
+      "file": "plant-megathyrsus_maximus.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Megathyrsus_maximus_head7_(7185350777).jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Megathyrsus_maximus_head7_%287185350777%29.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Megathyrsus_maximus_head7_%287185350777%29.jpg/960px-Megathyrsus_maximus_head7_%287185350777%29.jpg",
+      "author": "Harry Rose",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "matchEvidence": "Commons file title, description and category identify Megathyrsus maximus; the description identifies its open panicle flowerhead.",
+      "sha256": "718058a5b416e727f3902366b0ed0a71c3b5c91de7729086a0d6963124844c14",
+      "bytes": 152022,
+      "width": 960,
+      "height": 1016
+    },
+    "cecropia_obtusa": {
+      "file": "plant-cecropia_obtusa.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cecropia_obtusa_Tr%C3%A9cul_4500490002.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Cecropia_obtusa_Tr%C3%A9cul_4500490002.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Cecropia_obtusa_Tr%C3%A9cul_4500490002.jpg/960px-Cecropia_obtusa_Tr%C3%A9cul_4500490002.jpg",
+      "author": "iNaturalist.org (Soetjipto Verkuijl)",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "matchEvidence": "Commons file title, description and category identify Cecropia obtusa; the file records the iNaturalist/GBIF occurrence.",
+      "sha256": "6d477184ed1f1c9b7386de6bff65b7f8907ec51d7f76b0e21f4f450d9dcd27cc",
+      "bytes": 435723,
+      "width": 960,
+      "height": 1280
+    },
+    "phenakospermum_guyannense": {
+      "file": "plant-phenakospermum_guyannense.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Phenakospermum_guyannense_inat1.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Phenakospermum_guyannense_inat1.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Phenakospermum_guyannense_inat1.jpg/960px-Phenakospermum_guyannense_inat1.jpg",
+      "author": "Tony Rebelo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "matchEvidence": "Commons file title, description and category identify Phenakospermum guyannense; the description records the photographed garden location.",
+      "sha256": "e8b5bc1c10db37a39fbd2f21d5240314c76ee3e813f33bcfc96964997c38bdb3",
+      "bytes": 635020,
+      "width": 960,
+      "height": 1440
+    },
+    "oenocarpus_bacaba": {
+      "file": "plant-oenocarpus_bacaba.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Palma_de_bacaba.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Palma_de_bacaba.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Palma_de_bacaba.jpg/960px-Palma_de_bacaba.jpg",
+      "author": "Agcandrei",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "matchEvidence": "Commons file description says palma de bacaba with fruits and its category identifies Oenocarpus bacaba.",
+      "sha256": "d395fc5c2db201791bf16fd2b29195d83a811d89868cfd0c108192ff7d6c5838",
+      "bytes": 431751,
+      "width": 960,
+      "height": 1464
+    },
+    "nephrolepis_biserrata": {
+      "file": "plant-nephrolepis_biserrata.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Nephrolepis_biserrata_houbiknj.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Nephrolepis_biserrata_houbiknj.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Nephrolepis_biserrata_houbiknj.jpg/960px-Nephrolepis_biserrata_houbiknj.jpg",
+      "author": "Keisotyo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "matchEvidence": "Commons file title, description and category identify Nephrolepis biserrata; the description records the photographed fern.",
+      "sha256": "ffeb2d4ff752ae28634d5bc9570c81f3b1e0704c3e8302c08354505b1d7cef90",
+      "bytes": 259544,
+      "width": 960,
+      "height": 720
+    }
+  },
+  "boundary": "Photographs are taxon-matched reference images. They are not observations from the T_0638 crop. Plot assignments and dryness remain scenario data."
+}

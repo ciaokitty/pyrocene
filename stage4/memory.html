@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Memory map lab</title>
+  <link rel="stylesheet" href="memory.css">
+</head>
+<body>
+  <header>
+    <a href="./">Back</a>
+    <p class="kicker">PYROCENE 04</p>
+    <h1>Memory map lab</h1>
+    <p>After four explorations, make one shared paper map. Every team uses the same closing field-day snapshot. This is a declared training world, not a historical fire.</p>
+  </header>
+  <main>
+    <section class="paper" aria-labelledby="map-title">
+      <div class="bar"><label>Team name <input id="team" maxlength="80"></label><label>Cell <select id="sector-picker" aria-label="Select a measured map cell"></select></label><output id="status" aria-live="polite">Loading training world…</output></div>
+      <h2 id="map-title">What does your team remember?</h2>
+      <p id="snapshot-label">Closing field day: loading…</p>
+      <canvas id="map" width="720" height="720" aria-label="Six by six paper memory map. North is at the top."></canvas>
+      <div class="print-notes"><p id="print-snapshot">Closing field day: Day 3</p><p class="print-legend">Marks: dry, damp, v invasive, × disturbance, + exposed, F remembered ignition, p people, h habitat, ? uncertain. Blank means not observed.</p><p>Team: ________________________________</p><p>Sketch, route notes, and disagreements:</p><div></div></div>
+      <p id="selected">Choose a measured cell.</p>
+      <div class="editor" id="editor">
+        <fieldset><legend>Marks you remember</legend>
+          <label><input type="checkbox" value="dry"> dry</label><label><input type="checkbox" value="damp"> damp or slow</label><label><input type="checkbox" value="invasive"> invasive</label><label><input type="checkbox" value="disturbance"> disturbance</label><label><input type="checkbox" value="exposed"> exposed</label><label><input type="checkbox" value="ignition"> ignition</label><label><input type="checkbox" value="people"> people</label><label><input type="checkbox" value="habitat"> habitat</label><label><input type="checkbox" value="uncertain"> uncertain</label>
+        </fieldset>
+        <label class="why">Why <textarea id="why" maxlength="280" placeholder="What do you remember and why?"></textarea></label>
+        <details id="fine-tune"><summary>Fine tune fuel, moisture, and confidence</summary><div class="sliders"><label>Fuel <input id="fuel" type="range" min="0" max="100" value="50"></label><label>Moisture <input id="moisture" type="range" min="0" max="100" value="50"></label><label>Confidence <input id="confidence" type="range" min="0" max="100" value="50"></label></div></details>
+        <button id="paint">Paint recollection</button><button id="clear">Mark not observed</button>
+      </div>
+      <div class="actions"><button id="commit">Commit paper map</button><button id="open-fire" type="button" hidden>Open fire comparison</button><button id="print" type="button">Print map</button><button id="print-blank" type="button">Print blank map</button><button id="export">Export JSON</button><label class="import">Import JSON <input id="import" type="file" accept="application/json"></label><label class="photo">Optional photo, local reference only <input id="photo" type="file" accept="image/*"></label></div>
+      <div id="photo-box" hidden><img id="photo-preview" alt="Local reference photo selected by this team"><label><input id="manual-trace" type="checkbox"> I will trace this photo manually. No automatic interpretation is applied.</label></div><p id="photo-note"></p>
+    </section>
+    <aside>
+      <h2>Small shared legend</h2>
+      <ol class="steps"><li>Leave a cell blank when it was not observed. Blank means unknown, not damp.</li><li>Use the marks and a short reason to draw your best memory.</li><li>Open fine tune only if your group wants numerical estimates.</li></ol>
+      <p class="key"><i class="dry"></i> dry <i class="damp"></i> damp or slow <i class="inv"></i> invasive <b>×</b> disturbance <b>+</b> exposed</p><p class="key"><b>F</b> remembered ignition <b>p</b> people <b>h</b> habitat <b>?</b> uncertain <i class="unknown"></i> not observed</p>
+      <p>North is at the top. Row A is north. The southern entry and northern refuge are scenario landmarks. Every team maps the same Day 3 snapshot. The faint forest shape is a measured geometry reference, not an answer key.</p>
+      <details><summary>GM prompts</summary><p>Why is this damp? Where do accounts conflict? What did prior stages make easy to miss? Which human choices changed access, disturbance, or ignition?</p></details>
+      <details><summary>Historical evidence</summary><p><button id="history">Load 2023 mapped fire</button></p><label id="history-toggle" hidden><input id="show-history" type="checkbox"> show separate 2023 scar</label><p id="history-note">Optional measured satellite classification stays separate. It does not show an observed path and it follows the 2017 scan.</p></details>
+    </aside>
+  </main>
+  <dialog id="fire-dialog" aria-labelledby="fire-title"><section id="result" hidden><header><h2 id="fire-title">Your fire comparison</h2><button id="close-fire" type="button">Back to paper map</button></header><p id="score"></p><div class="fire-controls"><label>Fire time <input id="time" type="range" min="0" max="100" value="0"></label><output id="minute-label" aria-live="polite">0 of 20 minutes</output><button id="play" type="button">Play fire</button><button id="export-dialog" type="button">Export team map</button><label class="import">Import a team comparison <input id="compare" type="file" accept="application/json"></label></div><div class="fire-pair"><figure><figcaption>Your map</figcaption><canvas id="team-fire" width="420" height="420" aria-label="Fire predicted from this team map, north at top"></canvas></figure><figure><figcaption>Training reference</figcaption><canvas id="reference-fire" width="420" height="420" aria-label="Fire in the declared training reference, north at top"></canvas></figure></div><p class="fire-legend"><i class="team-burn"></i> predicted burned <i class="reference-burn"></i> reference burned <i class="unburned"></i> unburned active forest <i class="inactive"></i> outside measured footprint. North is at the top.</p><p>Both maps use the same fixed ignition and weather. The 20-minute educational Rothermel arrival propagation is not native ForeFire or a calibrated historical simulation. The score rewards reconstruction and arrival timing, not lowest burning.</p><h3>Local committed teams</h3><ol id="leaderboard"></ol><p id="comparison" aria-live="polite"></p></section></dialog>
+  <script type="module" src="memory.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#060d10" />
+    <title>Before the next fire · Pyrocene</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 5C10 30 16 44 24 49c-1-12 9-16 9-16-3 15 14 15 11 25C67 36 40 27 32 5' fill='%23dcac72'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="vendor/three.min.js"></script>
+    <script type="module" src="app.mjs"></script>
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="./" aria-label="Pyrocene home"
+        >P Y R O C E N E<span>04 / FIELD OPERATIONS</span></a
+      >
+      <nav aria-label="Mission progress" id="progress">
+        <span class="current">01 Observe</span><i></i><span>02 Protect</span
+        ><i></i><span>03 Learn</span>
+      </nav>
+      <div class="header-actions">
+        <button id="notebook-open" class="text-button">Notebook</button>
+        <button id="sources-open" class="text-button">Evidence & sources</button
+        ><button
+          id="menu-open"
+          class="icon-button"
+          aria-label="Mission settings"
+        >
+          •••
+        </button>
+      </div>
+    </header>
+    <main>
+      <section id="landscape" aria-label="Interactive measured Amazon forest">
+        <div class="top-caption">
+          <span class="eyebrow">CENTRAL AMAZON · AUTAZES</span
+          ><span id="view-caption">Airborne LiDAR / May 2017</span>
+        </div>
+        <div id="loading" role="status">
+          Loading the measured forest<span>420,000 returns from the film</span>
+        </div>
+        <div class="layer-tools" aria-label="Data layers">
+          <button data-layer="structure" class="active">Structure</button
+          ><button data-layer="spectral">Spectral pattern</button
+          ><button data-layer="satellite">Satellite</button>
+        </div>
+        <div class="legend" id="legend">
+          <span><i class="canopy"></i>Canopy</span
+          ><span><i class="mid"></i>Midstorey</span
+          ><span><i class="low"></i>0.2–2 m</span
+          ><span><i class="ground"></i>Ground</span>
+        </div>
+        <div class="peel-control">
+          <label for="peel"
+            >Reveal beneath the canopy
+            <output id="peel-value">All heights</output></label
+          ><input
+            id="peel"
+            type="range"
+            min="2"
+            max="45"
+            value="45"
+            aria-label="Maximum visible height"
+          />
+          <div><span>2 m</span><span>45 m</span></div>
+        </div>
+        <div class="camera-tools" aria-label="Camera">
+          <button data-camera="forest" title="Return to the film view">
+            Forest</button
+          ><button data-camera="overhead">Overhead</button
+          ><button data-camera="ground">Close view</button
+          ><button id="zoom-in" aria-label="Zoom in">+</button
+          ><button id="zoom-out" aria-label="Zoom out">−</button>
+        </div>
+        <div class="map-card">
+          <div class="map-heading">
+            <span>Your working map</span
+            ><span id="map-key">Select a sector</span>
+          </div>
+          <div id="map" class="sector-map" aria-label="Forest sectors"></div>
+          <div class="map-legend">
+            <span>○ Uncertain</span><span class="amber">╱ Crew</span
+            ><span class="teal">◇ Refuge</span>
+          </div>
+        </div>
+        <div id="fire-controls" hidden>
+          <div>
+            <span id="fire-title">Your protection plan</span
+            ><span id="fire-clock"></span>
+          </div>
+          <input
+            id="fire-time"
+            type="range"
+            min="0"
+            max="1000"
+            value="0"
+            aria-label="Fire replay time"
+          />
+          <div>
+            <button id="fire-play">Pause</button
+            ><button id="comparison">Show without intervention</button>
+          </div>
+        </div>
+        <div class="data-boundary" id="data-boundary">
+          MEASURED STRUCTURE <span>·</span> SIMULATED MISSION
+        </div>
+        <div class="navigation-hint">
+          Drag to orbit · Scroll to explore · Click a sector
+        </div>
+      </section>
+      <aside id="mission" aria-label="Mission console">
+        <div class="mission-scroll">
+          <div class="mission-kicker">
+            <span id="phase">FIELD BRIEFING</span
+            ><span id="mission-length">10–20 MIN</span>
+          </div>
+          <div id="briefing">
+            <h1>Before the<br />next fire.</h1>
+            <p class="lead">
+              You have seen this forest.<br />Now decide how to protect it.
+            </p>
+            <p>
+              A dry season is approaching. An unbroken route through the lower
+              forest could carry a small ignition into a living refuge.
+            </p>
+            <p>
+              You have a survey team and two treatment crews. Find the
+              connection that matters. Break it before the fire arrives.
+            </p>
+            <div class="briefing-note">
+              The forest scan is real. This mission’s fuels, field reports and
+              fire are a training scenario.
+            </div>
+            <button class="primary wide" id="start">
+              Enter the forest <span>↗</span>
+            </button>
+            <p class="quiet">No countdown. Take time to look and discuss.</p>
+          </div>
+          <div id="operations" hidden>
+            <h1 id="mission-title">Read the forest.</h1>
+            <p class="objective" id="objective"></p>
+            <div class="resources">
+              <div><b id="credits">8</b><span>survey credits</span></div>
+              <div><b id="crews">2</b><span>crews available</span></div>
+            </div>
+            <div class="site-heading">
+              <span class="eyebrow" id="site-label">SELECT A SECTOR</span>
+              <h2 id="site-name">Where would you look?</h2>
+              <p id="site-clue">
+                Explore the forest or choose a sector on your working map.
+              </p>
+            </div>
+            <div id="sensor-actions" class="sensor-actions">
+              <button data-action="lidar">
+                <span
+                  ><b>LiDAR pass</b><small>Peel back the structure</small></span
+                ><em>1</em></button
+              ><button data-action="spectral">
+                <span
+                  ><b>Spectral pass</b
+                  ><small>Compare a fine signature</small></span
+                ><em>1</em></button
+              ><button data-action="field">
+                <span
+                  ><b>Send a field team</b
+                  ><small>Check what is there</small></span
+                ><em>2</em>
+              </button>
+            </div>
+            <div id="evidence" aria-live="polite"></div>
+            <div id="classification" hidden>
+              <span class="eyebrow">YOUR INTERPRETATION</span>
+              <div class="mark-options">
+                <button data-mark="watch">Uncertain</button
+                ><button data-mark="connected">Connected fuel</button
+                ><button data-mark="damp">Damp / slow</button>
+              </div>
+              <p class="quiet">An interpretation, not a measurement.</p>
+            </div>
+            <div id="crew-actions" hidden>
+              <button id="assign" class="secondary wide">
+                Assign a treatment crew
+              </button>
+              <p class="quiet">
+                Two crossing 30 m strips of lower-fuel treatment, not tree
+                clearing. Fire may find a way around them. Idealized scenario;
+                not a field prescription.
+              </p>
+            </div>
+            <div id="results" hidden></div>
+            <div class="phase-actions" id="phase-actions"></div>
+          </div>
+        </div>
+        <div class="adviser" id="adviser">
+          <div class="adviser-label">
+            <span class="signal">◉</span> FIELD NOTES
+            <button id="help" title="Ask for a contextual hint">?</button>
+          </div>
+          <p id="advice">Start with what you cannot see from above.</p>
+        </div>
+      </aside>
+    </main>
+    <div id="toast" role="status" hidden></div>
+    <dialog id="sources">
+      <button class="dialog-close" aria-label="Close sources">×</button
+      ><span class="eyebrow">EVIDENCE, WITH ITS LIMITS</span>
+      <h2>A real forest.<br />A modelled decision.</h2>
+      <div id="source-content"></div>
+      <p>
+        The point colours mean height above ground. They do not identify
+        species, dryness, biomass or fuel. The 2017 scan shows structure after
+        the 2015 fire, not a recovered pre-fire map.
+      </p>
+      <p>
+        Training outcomes are comparisons within an educational spread model.
+        They are not forecasts or a reconstruction of the historical ignition.
+      </p>
+      <a href="assets/manifest.json" target="_blank" rel="noopener"
+        >Asset manifest and checksums ↗</a
+      >
+    </dialog>
+    <dialog id="settings">
+      <button class="dialog-close" aria-label="Close settings">×</button
+      ><span class="eyebrow">MISSION SETTINGS</span>
+      <h2>Make yourself at home.</h2>
+      <label class="setting"
+        ><input type="checkbox" id="low-detail" /> Low detail · 100,000 measured
+        returns</label
+      >
+      <p class="quiet">
+        Use this on older laptops. The evidence and game are the same.
+      </p>
+      <label class="setting"
+        ><input type="checkbox" id="reduced-motion" /> Reduce camera and fire
+        animation</label
+      ><button id="export" class="secondary wide">
+        Download mission record</button
+      ><button id="restart" class="text-button">Start a new mission</button>
+      <p class="quiet" id="save-status">Progress saves on this browser.</p>
+      <p class="quiet" id="performance"></p>
+    </dialog>
+    <dialog id="notebook">
+      <button class="dialog-close" aria-label="Close notebook">×</button
+      ><span class="eyebrow">YOUR FIELD RECORD</span>
+      <h2>What you took<br />the time to see.</h2>
+      <div id="notebook-content"></div>
+    </dialog>
+  </body>
+</html>

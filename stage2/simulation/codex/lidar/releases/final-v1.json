@@ -1,0 +1,36 @@
+{
+  "schema": "pyrocene-lidar-release/1",
+  "status": "frozen-final",
+  "release": "lidar-final-v1",
+  "frozen_at": "2026-09-14T15:25:36+05:30",
+  "film": {
+    "path": "/mnt/seagate/videos/pyrocene/lidar/final/forest-structure-single-v1.mp4",
+    "sha256": "4fa5dbaaeaf83d0ae77b720e119c73261b02136324311bb58ef4c15622b15be5",
+    "duration_seconds": 56.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 1344,
+    "codec": "h264",
+    "audio": false,
+    "size_bytes": 108639846
+  },
+  "manifest": {
+    "path": "/mnt/seagate/videos/pyrocene/lidar/final/forest-structure-single-v1.manifest.json",
+    "sha256": "a9034e0802db4869997654e29f9b15efb0ca21b20e053264358842011b99981d"
+  },
+  "captions": {
+    "path": "stage2/simulation/codex/lidar/captions.json",
+    "sha256": "ca7f6eca9c1f96eb16d961bcda96bf77840321e71961e8a2d8b8693a9dcc6c68"
+  },
+  "renderer": {
+    "path": "stage2/simulation/codex/lidar/render_single_lidar_story.py",
+    "sha256": "d3ae6786e26d8f746bf92248de440360c9b956a1e1ffab7389a089c24c7cdd8b"
+  },
+  "review": {
+    "gallery": "http://100.82.28.38:8022/",
+    "contact_sheet": "/mnt/seagate/videos/pyrocene/lidar/qa/single-contact-full.jpg",
+    "browser_capture": "/mnt/seagate/videos/pyrocene/lidar/qa/gallery-single.png"
+  },
+  "policy": "Do not overwrite this MP4. New LiDAR cuts must use a new release name. Hyperspectral work may reference or follow it but must not modify it."
+}

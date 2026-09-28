@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Pyrocene: The Fire You Made</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="world" aria-label="Cinematic three-dimensional replay of the forest"></canvas>
+  <div id="grade"></div><div id="grain"></div><div id="vignette"></div>
+  <div class="letterbox top"></div><div class="letterbox bottom"></div>
+  <header>
+    <div class="brand"><span>PYROCENE</span><small>THE FIRE YOU MADE</small></div>
+    <div class="readout">
+      <div><span>FOREST HEALTH</span><strong id="health">0%</strong></div>
+      <div><span>NIGHT</span><strong id="nightReadout">0 / 0</strong></div>
+    </div>
+  </header>
+  <main id="caption" aria-live="polite"><div class="rule"></div>
+    <div id="chapter"></div><h1 id="line"></h1><p id="detail"></p>
+  </main>
+  <aside id="telemetry"><div class="telemetry-label">EVENT RECORD</div><div id="telemetryBody"></div></aside>
+  <aside id="inspect"><div class="kicker">EXPLORE THE RECORD</div><h2 id="inspectTitle"></h2><div class="facts" id="facts"></div><p id="inspectNote"></p></aside>
+  <div id="controls">
+    <button id="play" class="round-button" aria-label="Pause replay"><span id="playIcon" class="pause"></span></button>
+    <div class="track-wrap"><div class="track-meta"><span id="trackLabel">RECONSTRUCTION</span><span id="clock">0:00 / 0:00</span></div><input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Replay timeline"></div>
+    <div class="control-actions"><button id="sound" class="text-button">Sound off</button><button id="fuel" class="text-button">Fuel scan</button><button id="restart" class="text-button">Restart</button></div>
+  </div>
+  <div id="toast"></div>
+  <div id="loader"><div class="load-inner"><div class="load-mark"><i></i><i></i><i></i></div><div class="load-code">PYROCENE / POST-FIRE RECONSTRUCTION</div><h1>Rebuilding your landscape</h1><div id="loadText">Placing terrain, vegetation and every recorded fire front.</div><div class="load-progress"><b id="loadBar"></b></div><button id="fileButton">Choose a game log</button><input id="fileInput" type="file" accept="application/json,.json"></div></div>
+  <div id="webglError" hidden><h1>This replay needs WebGL</h1><p>Open it in a current version of Chrome, Edge, Firefox or Safari.</p></div>
+  <script src="vendor/three.min.js"></script>
+  <script src="sample-data.js"></script>
+  <script src="cinematic.js"></script>
+</body>
+</html>

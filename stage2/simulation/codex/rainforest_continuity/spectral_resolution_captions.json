@@ -1,0 +1,42 @@
+{
+  "schema": "pyrocene-spectral-resolution-studies/1",
+  "header": "PYROCENE: FOREST STRUCTURE STUDY",
+  "studies": {
+    "neon": {
+      "source": "EDUCATIONAL COMPOSITE : AMAZON LIDAR 2017 : NEON SOAP CALIFORNIA 2024",
+      "sentences": [
+        {"start": 0.4, "end": 4.2, "text": "LiDAR keeps the height of every return"},
+        {"start": 4.0, "end": 8.0, "text": "Violet adds one selected spectral signature"}
+      ],
+      "legend": [
+        ["GREEN CYAN PINK", "LIDAR HEIGHT", "green"],
+        ["VIOLET", "SELECTED SIGNATURE", "violet"],
+        ["YELLOW", "CLASSIFIER BOUNDARY", "amber"]
+      ]
+    },
+    "emit": {
+      "source": "SAME AMAZON FOOTPRINT : LIDAR 2017 : NASA EMIT 2024 : 60 M",
+      "sentences": [
+        {"start": 0.4, "end": 4.2, "text": "These spectra were measured over the same place"},
+        {"start": 4.0, "end": 8.0, "text": "At 60 metres each selection covers a broad block"}
+      ],
+      "legend": [
+        ["GREEN CYAN PINK", "LIDAR HEIGHT", "green"],
+        ["VIOLET BLOCKS", "SELECTED SIGNATURE", "violet"],
+        ["YELLOW", "CLASSIFIER BOUNDARY", "amber"]
+      ]
+    },
+    "stack": {
+      "source": "SAME 900 M AMAZON FOOTPRINT : LIDAR 2017 : SENTINEL 2 2024 : EMIT 2024",
+      "sentences": [
+        {"start": 0.4, "end": 4.2, "text": "One satellite pixel contains many forest structures"},
+        {"start": 4.0, "end": 8.0, "text": "Resolution changes what can be separated"}
+      ],
+      "legend": [
+        ["TOP", "60 M HYPERSPECTRAL", "violet"],
+        ["MIDDLE", "10 M MULTISPECTRAL", "cyan"],
+        ["LOWEST", "LIDAR RETURNS", "green"]
+      ]
+    }
+  }
+}

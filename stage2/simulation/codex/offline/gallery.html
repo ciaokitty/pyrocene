@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pyrocene film studies</title>
+  <style>
+    :root{color-scheme:dark;--ink:#ece9dc;--muted:#9ca7a1;--amber:#e9b96e;--bg:#030605}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,sans-serif}
+    header{padding:52px 5vw 30px;border-bottom:1px solid #ffffff18}small{color:var(--amber);font:700 11px ui-monospace,monospace;letter-spacing:.18em}h1{font:400 clamp(35px,5vw,68px) Georgia,serif;margin:13px 0 8px}header p{color:var(--muted);max-width:720px;line-height:1.6}
+    main{display:grid;gap:58px;padding:42px 5vw 80px}.study{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(250px,.7fr);gap:30px;align-items:start}.frame{background:#000;box-shadow:0 18px 60px #000;border:1px solid #ffffff14}video{display:block;width:100%;aspect-ratio:16/9}.copy{padding-top:8px}.copy h2{font:400 30px Georgia,serif;margin:0 0 12px}.copy p{color:var(--muted);line-height:1.55;font-size:14px}.tag{display:inline-block;color:var(--amber);border:1px solid #e9b96e55;padding:5px 8px;font:700 9px ui-monospace,monospace;letter-spacing:.12em}
+    @media(max-width:850px){.study{grid-template-columns:1fr}.copy{order:-1}}
+  </style>
+</head>
+<body>
+  <header><small>PYROCENE / FILM TESTS</small><h1>Three ways to remember one fire</h1><p>Each 22-second study uses the same recorded Night 5 event: 71 burned cells, ten fire waves, and forest health falling from 63% to 50%. Headphones recommended.</p></header>
+  <main>
+    <section class="study"><div class="frame"><video controls preload="metadata" src="pyrocene-point-cloud-v2.mp4"></video></div><div class="copy"><span class="tag">REFERENCE-ALIGNED</span><h2>Spatial reconstruction</h2><p>The board dissolves into an illuminated forest volume. The scan, camera and flame particles reveal connected fuel without showing tiles.</p></div></section>
+    <section class="study"><div class="frame"><video controls preload="metadata" src="pyrocene-hybrid-v2.mp4"></video></div><div class="copy"><span class="tag">MOST PHOTOREAL</span><h2>Cinematic hybrid</h2><p>Original documentary-style forest plates provide atmosphere. Irregular point clusters identify the exact recorded wave front.</p></div></section>
+    <section class="study"><div class="frame"><video controls preload="metadata" src="pyrocene-documentary-v2.mp4"></video></div><div class="copy"><span class="tag">MOST ABSTRACT</span><h2>Documentary field map</h2><p>A continuous organic fuel field prioritizes causal legibility, using recorded cells as a heat surface rather than physical scenery.</p></div></section>
+  </main>
+</body>
+</html>

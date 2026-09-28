@@ -11,3 +11,9 @@
   [headers.values]
     Cross-Origin-Opener-Policy = "same-origin"
     Cross-Origin-Embedder-Policy = "require-corp"
+
+# Stage 2 (the room game under stage2/) is never deployed from a branch.
+# Only main builds; other branches are a no-op so a push cannot touch the live site.
+[context.branch-deploy]
+  command = "echo skip"
+  publish = "web"

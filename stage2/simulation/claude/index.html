@@ -1,0 +1,82 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pyrocene replay</title>
+<style>
+  :root { --ink:#e8ecf2; --dim:#8a93a3; --dim2:#5c6675; --bg:#020308; --green:#7fd18a; --lant:#e07ad0; --fire:#ff9a3c; --line:#8fd0ff; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--ink); overflow:hidden; font-family: Inter, "Helvetica Neue", Arial, sans-serif; }
+  [hidden] { display:none !important; }
+  #gl { position:fixed; inset:0; width:100vw; height:100vh; display:block; }
+  .mono { font-family: "SF Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace; }
+  #cap { position:fixed; left:4vw; top:8vh; max-width:44vw; pointer-events:none; transition:opacity .2s; text-shadow:0 1px 8px rgba(0,0,0,.8), 0 0 2px rgba(0,0,0,.9); }
+  #headline { font-size:clamp(18px, 2.2vw, 34px); font-weight:800; letter-spacing:.02em; line-height:1.1; }
+  #subline { font-size:clamp(14px, 1.35vw, 22px); font-weight:400; color:#c9d0da; margin-top:.35em; line-height:1.35; }
+  #stats { margin-top:1.6em; display:grid; gap:.9em; }
+  .stat { display:grid; grid-template-columns:4px 1fr; gap:10px; align-items:start; }
+  .stat i { display:block; width:4px; height:1.9em; border-radius:2px; margin-top:.15em; }
+  .stat b { display:block; font-size:clamp(9px, .8vw, 12px); letter-spacing:.16em; color:var(--dim); font-weight:700; }
+  .stat span { display:block; font-size:clamp(13px, 1.25vw, 20px); font-weight:500; margin-top:.15em; }
+  #night { position:fixed; left:4vw; bottom:20vh; pointer-events:none; text-shadow:0 1px 8px rgba(0,0,0,.8); }
+  #nightBig { font-size:clamp(22px, 2.6vw, 40px); font-weight:500; letter-spacing:.12em; }
+  #nightSub { font-size:clamp(10px, .9vw, 13px); letter-spacing:.14em; color:var(--dim); margin-top:.35em; }
+  #deck { position:fixed; left:0; right:0; bottom:0; padding:0 4vw 16px; background:linear-gradient(rgba(2,3,8,0), rgba(2,3,8,.85) 60%); }
+  #scrub { position:relative; height:40px; cursor:pointer; user-select:none; touch-action:none; }
+  #segs { position:absolute; left:0; right:0; top:15px; height:3px; display:flex; }
+  .seg { position:relative; height:100%; background:#2b3341; border-right:2px solid var(--bg); box-sizing:border-box; }
+  .seg.back { background:#3a3346; } .seg.intro { background:#232a36; }
+  .seg span { position:absolute; left:0; right:0; top:10px; text-align:center; font-size:10px; letter-spacing:.14em; color:var(--dim2); font-family:"DejaVu Sans Mono", Menlo, monospace; }
+  #done { position:absolute; left:0; top:15px; height:3px; width:0; background:#c9d0da; pointer-events:none; }
+  #marks { position:absolute; left:0; right:0; top:0; height:40px; pointer-events:none; }
+  .mk { position:absolute; top:0; transform:translateX(-50%); font-size:9px; line-height:1; }
+  .mk.fire { color:var(--fire); } .mk.big { font-size:13px; top:-3px; } .mk.dig { color:var(--line); } .mk.held { color:var(--line); } .mk.crit { color:var(--lant); font-size:12px; top:-2px; }
+  #head { position:absolute; top:9px; width:2px; height:15px; margin-left:-1px; background:#fff; pointer-events:none; box-shadow:0 0 6px rgba(255,255,255,.8); }
+  #ctl { display:flex; gap:8px; align-items:center; margin-top:4px; transition:opacity .4s; }
+  #ctl.idle { opacity:0; }
+  button { font:inherit; font-size:11px; font-weight:600; letter-spacing:.08em; color:var(--ink); background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.22); border-radius:6px; padding:5px 11px; cursor:pointer; }
+  button:hover { background:rgba(255,255,255,.14); }
+  #hint { margin-left:auto; font-size:10px; color:var(--dim2); letter-spacing:.08em; }
+  #start { position:fixed; inset:0; display:grid; place-items:center; background:rgba(2,3,8,.66); backdrop-filter:blur(3px); z-index:5; }
+  #start .card { text-align:center; max-width:640px; padding:40px; }
+  .brand { font-size:13px; letter-spacing:.5em; color:var(--dim); font-weight:700; }
+  #start h2 { font-size:clamp(26px, 3.4vw, 46px); font-weight:800; letter-spacing:.01em; margin:16px 0 10px; }
+  #start p { color:#b9c1cc; font-size:15px; line-height:1.55; margin:0 0 26px; }
+  #go { font-size:15px; padding:12px 34px; background:var(--ink); color:#0a0d14; border-color:var(--ink); border-radius:8px; }
+  #go:hover { background:#fff; }
+  #start small { display:block; margin-top:18px; color:var(--dim2); font-size:11px; letter-spacing:.06em; }
+  #err { position:fixed; inset:0; display:grid; place-items:center; background:var(--bg); z-index:6; text-align:center; padding:40px; }
+  #err code { background:#141a24; padding:2px 8px; border-radius:5px; } #err .dim { color:var(--dim); }
+  #rw { position:fixed; right:4vw; bottom:20vh; font-size:40px; font-weight:800; color:var(--ink); opacity:0; pointer-events:none; letter-spacing:-.1em; transition:opacity .2s; text-shadow:0 0 12px rgba(255,255,255,.5); }
+</style>
+
+<canvas id="gl"></canvas>
+<div id="cap">
+  <div id="headline"></div>
+  <div id="subline"></div>
+  <div id="stats">
+    <div class="stat"><i style="background:var(--green)"></i><div><b class="mono">FOREST</b><span id="sForest">–</span></div></div>
+    <div class="stat"><i style="background:var(--lant)"></i><div><b class="mono">THICK LANTANA</b><span id="sLant">–</span></div></div>
+    <div class="stat"><i style="background:var(--fire)"></i><div><b class="mono">FIRE</b><span id="sFire">–</span></div></div>
+  </div>
+</div>
+<div id="night"><div id="nightBig" class="mono"></div><div id="nightSub" class="mono"></div></div>
+<div id="rw">◀◀</div>
+<div id="deck">
+  <div id="scrub"><div id="segs"></div><div id="done"></div><div id="marks"></div><div id="head"></div></div>
+  <div id="ctl">
+    <button id="bplay" title="space">Play</button><button id="bback" title="left">◀ Back</button><button id="bfwd" title="right">Next ▶</button>
+    <button id="brestart" title="R">Restart</button><button id="bspeed" title="S">1×</button><button id="bsound" title="M">Sound on</button><button id="bfull" title="F">Full screen</button><button id="bquality" title="quality">High</button>
+    <span id="hint">space pause · arrows step · drag the line to scrub</span>
+  </div>
+</div>
+<div id="start" hidden>
+  <div class="card">
+    <div class="brand">PYROCENE</div>
+    <h2>The season, replayed</h2>
+    <p id="summary"></p>
+    <button id="go">Play the replay</button>
+    <small>SPACE PAUSES · ARROWS STEP · DRAG THE LINE TO SCRUB</small>
+  </div>
+</div>
+<div id="err" hidden></div>
+<script src="sample-game.js"></script>
+<script src="app.js"></script>

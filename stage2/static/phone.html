@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pyrocene</title>
+<style>
+  :root { --bg:#0f1613; --ink:#d9e5da; --muted:#8aa392; --hair:#26332a; --orange:#ff8a3d;
+          --lantana:#c58cf0; --native:#4dbd79; --ecologist:#4fb3ff; --ranger:#ff8a3d; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; background:var(--bg); color:var(--ink);
+         font: 17px/1.5 system-ui, sans-serif; display:flex; align-items:center; justify-content:center; padding: 20px; }
+  .card { width: 100%; max-width: 420px; display:grid; gap: 16px; }
+  h1 { margin:0; font-size: 18px; letter-spacing:.2em; color: var(--orange); text-align:center; }
+  input { font: inherit; width:100%; padding: 14px; border-radius: 12px; border:1px solid var(--hair);
+          background:#16201b; color: var(--ink); }
+  button { font: inherit; width:100%; padding: 14px; border-radius: 12px; border:0; background: var(--native);
+           color:#052; font-weight: 800; }
+  .role { text-align:center; padding: 28px 18px; border-radius: 16px; border: 2px solid var(--hair); }
+  .role .name { font-size: 34px; font-weight: 800; letter-spacing:-.01em; }
+  .role.lantana { border-color: var(--lantana); } .role.lantana .name { color: var(--lantana); }
+  .role.native { border-color: var(--native); } .role.native .name { color: var(--native); }
+  .role.ecologist { border-color: var(--ecologist); } .role.ecologist .name { color: var(--ecologist); }
+  .role.ranger { border-color: var(--ranger); } .role.ranger .name { color: var(--ranger); }
+  .blurb { color: var(--muted); margin-top: 8px; font-size: 15px; }
+  .status { text-align:center; font-weight: 700; padding: 10px; border-radius: 10px; background:#16201b; }
+  .status.out { color: #ffb3b3; background: #2a1616; }
+  .muted { color: var(--muted); text-align:center; font-size: 14px; }
+  .status:empty { display: none; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>PYROCENE</h1>
+  <div id="join">
+    <input id="name" placeholder="Your name" autocomplete="off" maxlength="24">
+    <div style="height:10px"></div>
+    <button id="go">Join</button>
+  </div>
+  <div id="me" hidden>
+    <div id="rolecard" class="role">
+      <div class="muted" id="who"></div>
+      <div class="name" id="rolename">waiting for the game master</div>
+      <div class="blurb" id="blurb"></div>
+    </div>
+    <div style="height:14px"></div>
+    <div id="status" class="status"></div>
+  </div>
+</div>
+<script>
+  const $ = (s) => document.querySelector(s);
+  const ROLE = {
+    lantana:   ["Lantana", "Every night you wake and choose a native to take."],
+    native:    ["Native forest", "Find the lantana in the day."],
+    ecologist: ["Ecologist", "Each night you wake and point at one player."],
+    ranger:    ["Ranger", "Each night you wake and point at one player to protect."],
+  };
+  let token = null;
+  try { token = localStorage.getItem("pyro_token"); } catch (e) {}
+  function show(me) {
+    $("#join").hidden = true; $("#me").hidden = false;
+    $("#who").textContent = me.name;
+    const rc = $("#rolecard");
+    rc.className = "role " + (me.role || "");
+    if (me.role) { $("#rolename").textContent = ROLE[me.role][0]; $("#blurb").textContent = ROLE[me.role][1]; }
+    else { $("#rolename").textContent = "waiting for the game master"; $("#blurb").textContent = ""; }
+    const st = $("#status");
+    if (me.phase === "lobby") { st.textContent = ""; st.className = "status"; }
+    else if (me.alive) { st.textContent = "Alive"; st.className = "status"; }
+    else { st.textContent = "Eliminated"; st.className = "status out"; }
+  }
+  function listen() {
+    const es = new EventSource("/events?ch=phone&token=" + encodeURIComponent(token));
+    es.addEventListener("me", (e) => show(JSON.parse(e.data)));
+  }
+  async function resume() {
+    if (!token) return;
+    const r = await fetch("/api/me?token=" + encodeURIComponent(token));
+    if (r.ok) { show(await r.json()); listen(); }
+    else { token = null; try { localStorage.removeItem("pyro_token"); } catch (e) {} }
+  }
+  $("#go").onclick = async () => {
+    const name = $("#name").value.trim();
+    if (!name) { $("#name").focus(); return; }
+    const r = await fetch("/api/join", { method: "POST", headers: { "Content-Type": "application/json" },
+                                          body: JSON.stringify({ name }) });
+    const d = await r.json();
+    if (!r.ok) { alert(d.error || "could not join"); return; }
+    token = d.token;
+    try { localStorage.setItem("pyro_token", token); } catch (e) {}
+    await resume();
+  };
+  $("#name").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#go").click(); });
+  resume();
+</script>
+</body>
+</html>

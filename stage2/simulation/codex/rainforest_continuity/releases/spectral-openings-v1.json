@@ -1,0 +1,29 @@
+{
+  "schema": "pyrocene-rainforest-continuity-experiment/1",
+  "released_at": "2026-09-15",
+  "gallery": "http://100.82.28.38:8022/",
+  "status": "review experiment not spliced into the frozen lidar final",
+  "film": {
+    "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/spectral-openings-v1.mp4",
+    "sha256": "c928fa2b2e3f830662e7ba0d13c1bf8bb156cc43a20ae47b0cca677111f08cbb",
+    "manifest_sha256": "3c03fe3760d1e7dd72cc2cc1084512f58006b9eff9ad4be1ae1a63e52d835ba2",
+    "duration_seconds": 34,
+    "resolution": [1920, 1080],
+    "fps": 24,
+    "audio": false,
+    "full_decode": "pass"
+  },
+  "source": {
+    "paper": "Barbosa et al 2016 Determining Subcanopy Psidium cattleianum Invasion in Hawaiian Forests Using Imaging Spectroscopy",
+    "doi": "10.3390/rs8010033",
+    "license": "CC BY 4.0",
+    "context_figure_sha256": "3b7bd06689cb4c2228e1da5123c093452e4b05201c775b3842440e35ab9719f8",
+    "classifier_figure_sha256": "17666cc7ba279ba66bbe3253e694533cd63ef0d32e63b8b1a0cd0b0977ccde86"
+  },
+  "qa": {
+    "contact_sheet": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/spectral-openings-full/contact.jpg",
+    "poster": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/spectral-openings-full/poster.jpg",
+    "visual_review": "pass",
+    "claim_boundary": "The film explains a gap mixing mechanism but does not display a measured gap mask. The field-trained signature identifies species similarity and not fuel."
+  }
+}

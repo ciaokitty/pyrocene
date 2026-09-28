@@ -1,0 +1,25 @@
+{
+  "schema": "pyrocene-spectral-overlay-snippet/1",
+  "header": "PYROCENE: FOREST STRUCTURE STUDY",
+  "source": "EDUCATIONAL COMPOSITE : AMAZON LIDAR 2017 : NEON SOAP HYPERSPECTRAL 2024 : 426 BANDS",
+  "sentences": [
+    {
+      "start": 0.4,
+      "end": 4.5,
+      "text": "The structure remains visible as spectral variation appears"
+    },
+    {
+      "start": 4.5,
+      "end": 8.0,
+      "text": "A classifier can outline one repeated spectral pattern"
+    }
+  ],
+  "legend": {
+    "title": "TWO WAYS OF SEEING THE FOREST",
+    "rows": [
+      ["HEIGHT STRUCTURE", "AMAZON LIDAR", "green"],
+      ["SPECTRAL VARIATION", "NEON SOAP 426 BANDS", "cyan"],
+      ["CLASSIFIER BOUNDARY", "UNSUPERVISED CLUSTER", "amber"]
+    ]
+  }
+}

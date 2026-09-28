@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "extensions": {"seedStudy": true, "broadFire": true},
+  "grant": 2,
+  "initialHealth": 60,
+  "clearingCost": 3,
+  "years": 10,
+  "duration": 20,
+  "followup": {"grant":6,"careCost":6,"careReturn":2,"startYear":0.5,"planted":100,"initialSurvival":90,"caredSurvival":80,"neglectedSurvival":15,"initialInvasive":0.15,"caredInvasive":0.08,"neglectedInvasive":0.85,
+    "newPatches":[
+      {"key":"D","id":15,"name":"New clearing","removalCost":4,"income":12,"damage":12,"healthLoss":3,"initialInvasive":0.85,"nativeCover":0.32,"note":"Dense invasives offer a large return. Without planting, they grow back into the cleared ground."},
+      {"key":"E","id":28,"name":"Edge growth","removalCost":3,"income":8,"damage":4,"healthLoss":1,"initialInvasive":0.7,"nativeCover":0.22,"note":"Invasives are spreading along an opening. Removal leaves open ground but no new native trees."}
+    ]},
+  "candidates": [
+    {"key":"A","id":13,"name":"Mixed growth","income":12,"removalCost":4,"healthLoss":5,"healthGain":8,"damage":18,"planting":7,"cover":65,"note":"Dense invasives grow between native stems. Removal would damage some of those stems.","mix":["cecropia_obtusa","inga_stipularis","eugenia_sinemariensis"]},
+    {"key":"B","id":22,"name":"Open ground","income":8,"removalCost":3,"healthLoss":1,"healthGain":12,"damage":4,"planting":6,"cover":80,"note":"An old opening has few native stems. Dry grass covers the ground.","mix":["cecropia_obtusa","carapa_guianensis","oenocarpus_bacaba"]},
+    {"key":"C","id":27,"name":"Narrow link","income":6,"removalCost":2,"healthLoss":1,"healthGain":6,"damage":2,"planting":6,"cover":50,"note":"A small invasive patch joins dry ground to the forest farther north.","mix":["cecropia_obtusa","inga_stipularis","oenocarpus_bacaba"]}
+  ]
+}

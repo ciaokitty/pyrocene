@@ -1,0 +1,519 @@
+{
+  "schema": "pyrocene-stage4-field-catalogue/1",
+  "photoManifests": [
+    "plant-images.json",
+    "field-photos.json"
+  ],
+  "species": [
+    {
+      "id": "urochloa_brizantha",
+      "name": "Marandu grass",
+      "scientific": "Urochloa brizantha (A.Rich.) R.D.Webster",
+      "status": "Invasive",
+      "growthForm": "Perennial pasture grass",
+      "description": "This African grass is widely planted as cattle forage in Brazil. It forms dense tussocks in pastures and disturbed ground.",
+      "use": "People plant it as cattle forage.",
+      "fireNote": "Dry standing blades can add fine surface fuel.",
+      "sources": [
+        {
+          "title": "Plants of the World Online: Urochloa brizantha",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943736-1"
+        },
+        {
+          "title": "Will climate change favor exotic grasses over native ecosystem engineer species in the Amazon Basin?",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1574954123001310"
+        }
+      ],
+      "photoAssetId": "urochloa_brizantha",
+      "plainUse": "People grow it as food for cattle."
+    },
+    {
+      "id": "megathyrsus_maximus",
+      "name": "Guinea grass",
+      "scientific": "Megathyrsus maximus (Jacq.) B.K.Simon & S.W.L.Jacobs",
+      "status": "Invasive",
+      "growthForm": "Tall perennial pasture grass",
+      "description": "This African grass is planted for pasture in tropical regions. It can spread into open disturbed areas and form tall clumps.",
+      "use": "People plant it for cattle forage.",
+      "fireNote": "Dry grass litter can carry surface fire.",
+      "sources": [
+        {
+          "title": "Plants of the World Online: Megathyrsus maximus",
+          "url": "https://powo.science.kew.org/taxon/60426565-2"
+        },
+        {
+          "title": "Selective logging and fire as drivers of alien grass invasion in a Bolivian tropical dry forest",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0378112709004976"
+        }
+      ],
+      "photoAssetId": "megathyrsus_maximus",
+      "plainUse": "People grow it as food for cattle."
+    },
+    {
+      "id": "urochloa_decumbens",
+      "name": "Signal grass",
+      "scientific": "Urochloa decumbens (Stapf) R.D.Webster",
+      "status": "Invasive",
+      "growthForm": "Creeping perennial pasture grass",
+      "taxonomyNote": "Some taxonomic backbones accept Brachiaria decumbens as the name and treat Urochloa decumbens as a synonym.",
+      "description": "This African grass was introduced for pasture and erosion control. A study in the Carajás National Forest in Pará found lower natural regeneration where it was present.",
+      "use": "People plant it for pasture and erosion control.",
+      "fireNote": "Dry grass litter can carry surface fire.",
+      "sources": [
+        {
+          "title": "The effect of exotic grass Urochloa decumbens in the Floresta Nacional de Carajás",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27142539/"
+        },
+        {
+          "title": "Belowground competition and niche partitioning between the Babassu palm and Urochloa grass in eastern Amazonian pastures",
+          "url": "https://doi.org/10.1002/ecs2.4687"
+        }
+      ],
+      "photoAssetId": "urochloa_decumbens",
+      "plainUse": "People plant it for cattle and to hold soil in place."
+    },
+    {
+      "id": "cecropia_obtusa",
+      "name": "Trumpet tree",
+      "scientific": "Cecropia obtusa Trécul",
+      "status": "Native",
+      "growthForm": "Pioneer tree",
+      "description": "This Guianas to northern Brazil tree often grows in secondary forest and road edges. Its large lobed leaves and hollow-looking trunk make it useful for field identification.",
+      "use": "Traditional medicine records describe leaf and bark preparations in French Guiana. Uses vary by community.",
+      "fireNote": "Leaf litter can add surface material after drying.",
+      "sources": [
+        {
+          "title": "Medicinal Plants of the Guianas: Cecropia obtusa",
+          "url": "https://naturalhistory.si.edu/sites/default/files/media/file/medicinalplantsmaster1.pdf"
+        },
+        {
+          "title": "Plants of the World Online: Cecropia obtusa",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:850946-1"
+        }
+      ],
+      "photoAssetId": "cecropia_obtusa",
+      "plainUse": "Some communities in French Guiana use its leaves and bark in traditional medicine."
+    },
+    {
+      "id": "phenakospermum_guyannense",
+      "name": "South American traveller's palm",
+      "scientific": "Phenakospermum guyannense (Rich.) Miq.",
+      "status": "Native",
+      "growthForm": "Large palm-like understory herb",
+      "description": "This native Guianas and Amazon plant has a tall pseudostem and very large fan-like leaves. It is an herb rather than a true palm tree.",
+      "use": "In Suriname, guides record leaves folded and woven for roof mats.",
+      "fireNote": "Old leaves can add material to the forest floor after drying.",
+      "sources": [
+        {
+          "title": "WFO Monographs: Phenakospermum guyannense",
+          "url": "https://sweetgum.nybg.org/science/world-flora/monographs-details/?irn=31549"
+        },
+        {
+          "title": "Guide to the vascular plants of central French Guiana",
+          "url": "https://ppbio.inpa.gov.br/sites/default/files/Guia_zingiberales_Ebook.pdf"
+        }
+      ],
+      "photoAssetId": "phenakospermum_guyannense",
+      "plainUse": "In Suriname people weave its leaves into roof mats."
+    },
+    {
+      "id": "oenocarpus_bacaba",
+      "name": "Bacaba palm",
+      "scientific": "Oenocarpus bacaba Mart.",
+      "status": "Native",
+      "growthForm": "Solitary fruit palm",
+      "description": "This Amazonian palm has a single trunk and a crown of pinnate fronds. Its dark fruits develop in hanging clusters.",
+      "use": "Riverside and Indigenous communities eat the fruit and use its oil in food.",
+      "fireNote": "Fallen fronds can add coarse surface fuel after drying.",
+      "sources": [
+        {
+          "title": "Physicochemical characteristics and lipid profile of bacaba",
+          "url": "https://periodicos.utfpr.edu.br/rebrapa/article/view/3806"
+        },
+        {
+          "title": "Plants of the World Online: Oenocarpus bacaba",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:668509-1/general-information"
+        }
+      ],
+      "photoAssetId": "oenocarpus_bacaba",
+      "plainUse": "People eat the fruit and use its oil in food."
+    },
+    {
+      "id": "nephrolepis_biserrata",
+      "name": "Broad sword fern",
+      "scientific": "Nephrolepis biserrata (Sw.) Schott",
+      "status": "Native",
+      "growthForm": "Terrestrial or epiphytic fern",
+      "description": "This fern makes a tuft of long fronds with many narrow pinnae. It can grow on soil or on other plants in humid tropical habitats.",
+      "use": "Records from Asia describe young fronds eaten and ornamental cultivation.",
+      "fireNote": "Dry litter can collect below green fronds.",
+      "sources": [
+        {
+          "title": "PROSEA: Nephrolepis biserrata",
+          "url": "https://prosea.prota4u.org/view.aspx?id=3195"
+        },
+        {
+          "title": "Plants of the World Online: Nephrolepis biserrata",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:17160710-1"
+        }
+      ],
+      "photoAssetId": "nephrolepis_biserrata",
+      "plainUse": "It is grown as an ornamental plant. We have no local use recorded here."
+    },
+    {
+      "id": "bertholletia_excelsa",
+      "name": "Brazil nut tree",
+      "scientific": "Bertholletia excelsa Bonpl.",
+      "status": "Native",
+      "growthForm": "Emergent nut tree",
+      "description": "This large Amazonian tree produces heavy woody fruits that contain edible seeds. Mature trees can stand above the surrounding forest canopy.",
+      "use": "Brazil nut harvest is a major non-timber forest product and livelihood activity. Kayapó harvest and dispersal practices have also been linked to seedling recruitment in groves.",
+      "fireNote": "Fire can damage large trees and seedlings.",
+      "sources": [
+        {
+          "title": "Anthropogenic Landscape in Southeastern Amazonia",
+          "url": "https://doi.org/10.1371/journal.pone.0102187"
+        },
+        {
+          "title": "The evolving role of Bertholletia excelsa in Amazonia",
+          "url": "https://doi.org/10.5380/dma.v48i0.58972"
+        }
+      ],
+      "photoAssetId": "bertholletia_excelsa",
+      "plainUse": "Families gather Brazil nuts for food and sale."
+    },
+    {
+      "id": "euterpe_oleracea",
+      "name": "Açaí palm",
+      "scientific": "Euterpe oleracea Mart.",
+      "status": "Native",
+      "growthForm": "Clumping palm",
+      "description": "This floodplain palm grows as several slender stems from a common base. It produces small dark fruits in branched clusters.",
+      "use": "Families in the Brazilian Amazon harvest and process the fruit as food and a market product.",
+      "fireNote": "Fallen fronds can add surface fuel after drying.",
+      "sources": [
+        {
+          "title": "Non-Wood Forest Product Extractivism: A Case Study of Euterpe oleracea",
+          "url": "https://doi.org/10.3390/su17020464"
+        },
+        {
+          "title": "Morphoagronomic and molecular characterization of Euterpe oleracea",
+          "url": "https://doi.org/10.4025/actascibiolsci.v43i1.58099"
+        }
+      ],
+      "photoAssetId": "euterpe_oleracea",
+      "plainUse": "Families harvest açaí fruit for food and sale."
+    },
+    {
+      "id": "mauritia_flexuosa",
+      "name": "Buriti palm",
+      "scientific": "Mauritia flexuosa L.f.",
+      "status": "Native",
+      "growthForm": "Wetland palm",
+      "description": "This tall palm forms dense stands in wet Amazonian areas. Its large fan leaves rise above a thick trunk.",
+      "use": "People in Amazonian communities use its fruit pulp and oil as food and its leaves and fibers for household materials. Harvest methods can affect palm survival.",
+      "fireNote": "Wetland water can limit fire at some times, but drought can change exposure.",
+      "sources": [
+        {
+          "title": "Mauritia flexuosa: an Amazonian palm to cultivate in Peru",
+          "url": "https://doi.org/10.1051/fruits:2007011"
+        },
+        {
+          "title": "Managing Amazonian palms for community use",
+          "url": "https://doi.org/10.1016/j.foreco.2008.09.038"
+        }
+      ],
+      "photoAssetId": "mauritia_flexuosa",
+      "plainUse": "People use its fruit for food and its leaves and fibres to make household items."
+    },
+    {
+      "id": "hevea_brasiliensis",
+      "name": "Para rubber tree",
+      "scientific": "Hevea brasiliensis (Willd. ex A.Juss.) Müll.Arg.",
+      "status": "Native",
+      "growthForm": "Latex-producing tree",
+      "description": "This tree is native to Amazonia and has compound leaves that are shed seasonally. Its trunk contains latex vessels.",
+      "use": "People tap the latex to make natural rubber. Embrapa records rubber tapping as an Amazon livelihood.",
+      "fireNote": "Shed leaves can add litter after drying.",
+      "sources": [
+        {
+          "title": "Produção de borracha natural de seringueira: histórico e caminho a seguir",
+          "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/1133399/producao-de-borracha-natural-de-seringueira-historico-e-caminho-a-seguir"
+        },
+        {
+          "title": "Novas Tecnologias na Produção da Borracha Natural no Amazonas",
+          "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1109676/1/LivroPesqAgricFamiliar.pdf"
+        }
+      ],
+      "photoAssetId": "hevea_brasiliensis",
+      "plainUse": "People tap its milky sap to make natural rubber."
+    },
+    {
+      "id": "theobroma_grandiflorum",
+      "name": "Cupuaçu",
+      "scientific": "Theobroma grandiflorum (Willd. ex Spreng.) K.Schum.",
+      "status": "Native",
+      "growthForm": "Small fruit tree",
+      "description": "This Amazonian relative of cacao has large leaves and heavy brown fruits. The fruit pulp has a strong aroma and pale color.",
+      "use": "Farmers grow it for pulp used in drinks, frozen foods and preserves. Seeds can also be processed into a cacao-like fat and food products.",
+      "fireNote": "Orchard litter can dry between rains.",
+      "sources": [
+        {
+          "title": "Cupuaçuzeiro: nutrição, calagem e adubação",
+          "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/409736/cupuacuzeiro-nutricao-calagem-e-adubacao"
+        },
+        {
+          "title": "Cupuaçu in natura",
+          "url": "https://www.embrapa.br/en/web/amazonia-oriental/busca-de-imagens/-/midia/7163001/cupuacu-in-natura"
+        }
+      ],
+      "photoAssetId": "theobroma_grandiflorum",
+      "plainUse": "Farmers grow its fruit for drinks and preserves."
+    },
+    {
+      "id": "manihot_esculenta",
+      "name": "Cassava",
+      "scientific": "Manihot esculenta Crantz",
+      "status": "Native",
+      "growthForm": "Woody root crop",
+      "description": "Cassava is a shrub with palmate leaves and swollen storage roots. Varieties differ in growth form, root chemistry and food preparation.",
+      "use": "Amazonian farmers cultivate cassava as a staple crop. Toxic varieties require processing before eating.",
+      "fireNote": "Crop residues can dry after harvest.",
+      "sources": [
+        {
+          "title": "Reliance Upon a Toxic Staple Crop: Tukanoan Cultivation of Manioc",
+          "url": "https://doi.org/10.1093/oxfordhb/9780199694013.013.43"
+        },
+        {
+          "title": "Origin and Domestication of Native Amazonian Crops",
+          "url": "https://doi.org/10.3390/d2010072"
+        }
+      ],
+      "photoAssetId": "manihot_esculenta",
+      "plainUse": "Farmers grow cassava for food. Some varieties must be processed to remove toxins."
+    },
+    {
+      "id": "carapa_guianensis",
+      "name": "Andiroba",
+      "scientific": "Carapa guianensis Aubl.",
+      "status": "Native",
+      "growthForm": "Floodplain and terra firme tree",
+      "description": "This Amazonian tree has compound leaves and large seeds in woody fruits. It occurs in floodplain forests and other humid forest settings.",
+      "use": "Communities extract seed oil for local medicine, repellents, soap and markets. Timber and seed harvest require management because the tree is a multiple-use resource.",
+      "fireNote": "Leaves, seeds and wood can occupy different fuel layers.",
+      "sources": [
+        {
+          "title": "Population Structure and Fruit Production of Carapa guianensis",
+          "url": "https://doi.org/10.1177/1940082917718835"
+        },
+        {
+          "title": "Práticas de uso e manejo tradicional de Carapa spp.",
+          "url": "https://doi.org/10.1590/1981-81222014000200014"
+        }
+      ],
+      "photoAssetId": "carapa_guianensis",
+      "plainUse": "People collect its seeds for oil used in soap and traditional medicine."
+    },
+    {
+      "id": "copaifera_reticulata",
+      "name": "Copaíba",
+      "scientific": "Copaifera reticulata Ducke",
+      "status": "Native",
+      "growthForm": "Resin-producing tree",
+      "description": "This Amazonian tree produces oleoresin in trunk tissues. Its leaves are compound and its crown can be broad.",
+      "use": "Amazonian communities collect copaiba oleoresin for traditional medicine and local trade. Traditional use does not establish medical safety or efficacy.",
+      "fireNote": "Woody litter can add fuel after drying.",
+      "sources": [
+        {
+          "title": "Brazilian Amazon Traditional Medicine and the Treatment of Difficult to Heal Leishmaniasis Wounds with Copaifera",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5282428/"
+        },
+        {
+          "title": "In vitro and in vivo antimalarial potential of Copaifera reticulata oleoresin",
+          "url": "https://doi.org/10.1016/j.phymed.2016.11.021"
+        }
+      ],
+      "photoAssetId": "copaifera_reticulata",
+      "plainUse": "People collect its resin for trade and traditional medicine. Traditional use does not prove that a remedy is safe or effective."
+    },
+    {
+      "id": "paullinia_cupana",
+      "name": "Guaraná",
+      "scientific": "Paullinia cupana Kunth",
+      "status": "Native",
+      "growthForm": "Woody climbing shrub",
+      "description": "Guaraná is a woody plant with compound leaves and red fruits that expose dark seeds. It is native to the central Amazon and is also cultivated.",
+      "use": "Sateré-Mawé and other Amazonian producers process the seeds into a stimulant food and drink.",
+      "fireNote": "Cultivation residues can dry after harvest.",
+      "sources": [
+        {
+          "title": "Guaraná: Ecological and social perspectives on an economic plant",
+          "url": "https://doi.org/10.1016/0378-8741(82)90054-X"
+        },
+        {
+          "title": "Guarana: Revisiting a highly caffeinated plant from the Amazon",
+          "url": "https://doi.org/10.1016/j.jep.2013.08.023"
+        }
+      ],
+      "photoAssetId": "paullinia_cupana",
+      "plainUse": "Sateré-Mawé and other Amazonian producers use the seeds in foods and drinks."
+    },
+    {
+      "id": "bactris_gasipaes",
+      "name": "Peach palm",
+      "scientific": "Bactris gasipaes Kunth",
+      "status": "Native",
+      "growthForm": "Spiny clumping palm",
+      "description": "This palm often has several spiny stems and pinnate leaves. Cultivated forms produce clusters of starchy fruits and can also be managed for palm hearts.",
+      "use": "Indigenous peoples domesticated peach palm for fruit and other products. Farmers still grow landraces for food and palm heart in Amazonian systems.",
+      "fireNote": "Fallen leaf bases can add local fuel.",
+      "sources": [
+        {
+          "title": "Origin and Dispersal of Domesticated Peach Palm",
+          "url": "https://doi.org/10.3389/fevo.2017.00148"
+        },
+        {
+          "title": "Domestication of Peach Palm in Southwestern Amazonia",
+          "url": "https://doi.org/10.70845/2572-3626.1174"
+        }
+      ],
+      "photoAssetId": "bactris_gasipaes",
+      "plainUse": "Farmers grow peach palm for its fruit and palm heart."
+    },
+    {
+      "id": "astrocaryum_vulgare",
+      "name": "Tucumã-do-Pará",
+      "scientific": "Astrocaryum vulgare Mart.",
+      "status": "Native",
+      "growthForm": "Spiny palm",
+      "description": "This eastern Amazon palm has a spiny trunk and pinnate leaves. Its orange fruit pulp surrounds a hard seed.",
+      "use": "People eat the fruit fresh and use fruit, fiber and seed products in local economies.",
+      "fireNote": "Spiny leaf bases and fallen fronds can add local fuel after drying.",
+      "sources": [
+        {
+          "title": "Caracterização e avaliação de frutos de tucumã",
+          "url": "https://www.embrapa.br/en/busca-de-publicacoes/-/publicacao/874476/caracterizacao-e-avaliacao-de-frutos-de-tucuma-astrocaryum-vulgare-mart-oriundos-de-coletas-em-sao-caetano-de-odivelas---pa"
+        },
+        {
+          "title": "Astrocaryum aculeatum e A. vulgare: tucumã-do-amazonas e tucumã-do-pará",
+          "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1144340"
+        }
+      ],
+      "photoAssetId": "astrocaryum_vulgare",
+      "plainUse": "People eat the fruit and use the plant's fibres."
+    }
+  ],
+  "humanEvidence": [
+    {
+      "id": "food_and_non_timber_livelihoods",
+      "title": "Food and non-timber livelihoods",
+      "summary": "Brazil nuts, açaí, buriti, bacaba and tucumã are documented food or non-timber products. Harvest income depends on access, processing, markets and local management.",
+      "sources": [
+        {
+          "title": "Anthropogenic Landscape in Southeastern Amazonia",
+          "url": "https://doi.org/10.1371/journal.pone.0102187"
+        },
+        {
+          "title": "Non-Wood Forest Product Extractivism: A Case Study of Euterpe oleracea",
+          "url": "https://doi.org/10.3390/su17020464"
+        },
+        {
+          "title": "Mauritia flexuosa: an Amazonian palm to cultivate in Peru",
+          "url": "https://doi.org/10.1051/fruits:2007011"
+        }
+      ]
+    },
+    {
+      "id": "cultivation_and_domestication",
+      "title": "Cultivation and domestication",
+      "summary": "Cassava, guaraná, cupuaçu and peach palm show that Amazonian food systems include selection, planting and processing. A crop record does not identify a crop at the imagined settlement.",
+      "sources": [
+        {
+          "title": "Origin and Domestication of Native Amazonian Crops",
+          "url": "https://doi.org/10.3390/d2010072"
+        },
+        {
+          "title": "Origin and Dispersal of Domesticated Peach Palm",
+          "url": "https://doi.org/10.3389/fevo.2017.00148"
+        },
+        {
+          "title": "Guaraná: Ecological and social perspectives on an economic plant",
+          "url": "https://doi.org/10.1016/0378-8741(82)90054-X"
+        }
+      ]
+    },
+    {
+      "id": "agriculture_and_fire",
+      "title": "Agriculture and fire coordination",
+      "summary": "Research in southeastern Amazonia links land use, ignition practices, repeated fire and grass invasion in some landscapes. It does not identify the cause, intensity or species in this training scenario.",
+      "sources": [
+        {
+          "title": "Testing the Amazon savannization hypothesis",
+          "url": "https://doi.org/10.1098/rstb.2012.0427"
+        },
+        {
+          "title": "The effect of exotic grass Urochloa decumbens in the Floresta Nacional de Carajás",
+          "url": "https://doi.org/10.1590/0001-3765201620150121"
+        },
+        {
+          "title": "Fire and deforestation in the Brazilian Amazon",
+          "url": "https://doi.org/10.1016/j.jenvman.2021.112310"
+        }
+      ]
+    },
+    {
+      "id": "forest_management",
+      "title": "Forest management and local knowledge",
+      "summary": "Extractive reserves and community managers use rules for Brazil nut, andiroba, rubber and palm resources. Sustainable outcomes depend on harvest intensity, access rights and monitoring.",
+      "sources": [
+        {
+          "title": "The evolving role of Bertholletia excelsa in Amazonia",
+          "url": "https://doi.org/10.5380/dma.v48i0.58972"
+        },
+        {
+          "title": "Population Structure and Fruit Production of Carapa guianensis",
+          "url": "https://doi.org/10.1177/1940082917718835"
+        },
+        {
+          "title": "Novas Tecnologias na Produção da Borracha Natural no Amazonas",
+          "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1109676/1/LivroPesqAgricFamiliar.pdf"
+        }
+      ]
+    },
+    {
+      "id": "vcm_verra_project_accounting",
+      "title": "Voluntary carbon market and Verra project accounting",
+      "summary": "Verra VCUs are issued for verified project reductions or removals. Projects set a baseline, show that the action is additional, monitor results, address leakage and protect against reversal over time. Credits are issued for projects, not for species or photos.",
+      "sources": [
+        {
+          "title": "Verra VCS Program Details",
+          "url": "https://verra.org/programs/verified-carbon-standard/vcs-program-details/"
+        },
+        {
+          "title": "Develop a Verified Carbon Standard Project",
+          "url": "https://verra.org/programs/verified-carbon-standard/develop-a-vcs-project/"
+        },
+        {
+          "title": "Verified Carbon Units",
+          "url": "https://verra.org/programs/verified-carbon-standard/verified-carbon-units-vcus/"
+        }
+      ]
+    },
+    {
+      "id": "community_and_biodiversity_safeguards",
+      "title": "Community and biodiversity safeguards",
+      "summary": "Biodiversity and community claims need their own evidence and participation processes. A field catalogue can support learning, but it is not a VCS validation, investment advice or legal opinion.",
+      "sources": [
+        {
+          "title": "Verra Climate, Community and Biodiversity Standards",
+          "url": "https://verra.org/programs/ccbs/"
+        },
+        {
+          "title": "Verra VCS Program Details",
+          "url": "https://verra.org/programs/verified-carbon-standard/vcs-program-details/"
+        }
+      ]
+    }
+  ],
+  "boundary": "Taxon facts and documented uses are sourced. Plot assignments, observed dryness, fire spread and map outcomes remain scenario data."
+}

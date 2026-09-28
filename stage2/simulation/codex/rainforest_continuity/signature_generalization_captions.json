@@ -1,0 +1,67 @@
+{
+  "schema": "pyrocene-signature-generalization-film/1",
+  "header": "PYROCENE: FOREST STRUCTURE STUDY",
+  "variants": {
+    "guided": {
+      "duration": 36,
+      "sentences": [
+        {
+          "start": 0.4,
+          "end": 7.4,
+          "text": "Spectral drone imagery can reveal ecological signatures around these gaps"
+        },
+        {
+          "start": 7.4,
+          "end": 14.4,
+          "text": "A local signature can be tested across airborne imagery"
+        },
+        {
+          "start": 14.4,
+          "end": 22.4,
+          "text": "Satellite spectroscopy can screen for similar patterns across the forest"
+        },
+        {
+          "start": 22.4,
+          "end": 28.8,
+          "text": "At 60 metres the pattern becomes a broader signal"
+        },
+        {
+          "start": 28.8,
+          "end": 36,
+          "text": "Forest composition can become one input to a fire risk model"
+        }
+      ]
+    },
+    "continuous": {
+      "duration": 30,
+      "sentences": [
+        {
+          "start": 0.4,
+          "end": 7,
+          "text": "Spectral drone imagery can reveal ecological signatures around these gaps"
+        },
+        {
+          "start": 7,
+          "end": 16.8,
+          "text": "Satellite spectroscopy can test that pattern across the forest"
+        },
+        {
+          "start": 16.8,
+          "end": 23.2,
+          "text": "At 60 metres the pattern becomes a broader signal"
+        },
+        {
+          "start": 23.2,
+          "end": 30,
+          "text": "Forest composition can become one input to a fire risk model"
+        }
+      ]
+    }
+  },
+  "sources": {
+    "fine": "EDUCATIONAL COMPOSITE : AMAZON LIDAR 2017 : NEON SOAP CALIFORNIA 2024",
+    "stack": "SCALE STUDY : AIRBORNE SPECTROSCOPY 1 TO 10 M : NASA EMIT 60 M",
+    "emit": "SAME AMAZON FOOTPRINT : NASA EMIT 2024 : 60 M",
+    "risk": "ILLUSTRATIVE MODEL : NOT MEASURED FUEL LOAD : NOT CALIBRATED FIRE RISK"
+  }
+}

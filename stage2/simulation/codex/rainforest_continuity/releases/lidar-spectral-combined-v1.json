@@ -1,0 +1,41 @@
+{
+  "schema": "pyrocene-lidar-spectral-combined-release/1",
+  "status": "combined final",
+  "master": {
+    "path": "/mnt/seagate/videos/pyrocene/final/pyrocene-forest-structure-and-spectra-v1.mp4",
+    "sha256": "1b843a50d6cd38c1004fb13a8677645ef76cafd60391b2375cd6019a585ff73b",
+    "duration_seconds": 88.125,
+    "resolution": [1920, 1080],
+    "fps": 24,
+    "audio": false
+  },
+  "inputs": {
+    "frozen_lidar": {
+      "path": "/mnt/seagate/videos/pyrocene/lidar/final/forest-structure-single-v1.mp4",
+      "sha256": "4fa5dbaaeaf83d0ae77b720e119c73261b02136324311bb58ef4c15622b15be5",
+      "modified": false
+    },
+    "spectral_continuation": {
+      "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-spectral-seamless-v1.mp4",
+      "sha256": "d7593c870d145ca6ce2e5762f320464e27d74e6f8d0b72d5718481a274d4ce20",
+      "modified": false
+    }
+  },
+  "join": {
+    "offset_seconds": 55.6,
+    "duration_seconds": 0.4,
+    "transition": "matched map dissolve",
+    "camera_correction": "none required because both shots share the same bearing",
+    "caption_overlap": false
+  },
+  "reproduction": {
+    "script": "stage2/simulation/codex/rainforest_continuity/assemble_lidar_spectral_final.sh",
+    "implementation": "stage2/simulation/codex/rainforest_continuity/assemble_lidar_spectral_final.py"
+  },
+  "qa": {
+    "full_decode": "passed",
+    "full_contact": "/mnt/seagate/videos/pyrocene/qa/combined-v1/contact.png",
+    "join_contact": "/mnt/seagate/videos/pyrocene/qa/combined-v1/join-contact.png",
+    "poster": "/mnt/seagate/videos/pyrocene/qa/combined-v1/poster.jpg"
+  }
+}

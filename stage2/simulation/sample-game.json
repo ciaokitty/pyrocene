@@ -1,0 +1,4403 @@
+{
+  "game": {
+    "started": "20260912-232835",
+    "seed": 13,
+    "ending": {
+      "result": "win",
+      "reason": "lantana",
+      "health": 45,
+      "text": "Every lantana patch is out, but the forest stands at 45%. It was close."
+    },
+    "file": "game-20260912-232835-seed13.json",
+    "cols": 22,
+    "rows": 12,
+    "players": [
+      {
+        "player_id": "p01",
+        "name": "P1",
+        "role": "lantana"
+      },
+      {
+        "player_id": "p02",
+        "name": "P2",
+        "role": "native"
+      },
+      {
+        "player_id": "p03",
+        "name": "P3",
+        "role": "native"
+      },
+      {
+        "player_id": "p04",
+        "name": "P4",
+        "role": "native"
+      },
+      {
+        "player_id": "p05",
+        "name": "P5",
+        "role": "native"
+      },
+      {
+        "player_id": "p06",
+        "name": "P6",
+        "role": "lantana"
+      },
+      {
+        "player_id": "p07",
+        "name": "P7",
+        "role": "native"
+      },
+      {
+        "player_id": "p08",
+        "name": "P8",
+        "role": "ranger"
+      },
+      {
+        "player_id": "p09",
+        "name": "P9",
+        "role": "ecologist"
+      },
+      {
+        "player_id": "p10",
+        "name": "P10",
+        "role": "native"
+      },
+      {
+        "player_id": "p11",
+        "name": "P11",
+        "role": "native"
+      },
+      {
+        "player_id": "p12",
+        "name": "P12",
+        "role": "native"
+      },
+      {
+        "player_id": "p13",
+        "name": "P13",
+        "role": "lantana"
+      },
+      {
+        "player_id": "p14",
+        "name": "P14",
+        "role": "native"
+      }
+    ],
+    "terrain": [
+      {
+        "cell": "A1",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "B1",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "C1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "D1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "E1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "F1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "G1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "H1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "I1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "J1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "K1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "L1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "M1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "N1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "O1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "P1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "Q1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "R1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "S1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "T1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "U1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "V1",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "A2",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "B2",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "C2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "D2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "E2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "F2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "G2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "H2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "I2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "J2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "K2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "L2",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "M2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "N2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "O2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "P2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "Q2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "R2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "S2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "T2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "U2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "V2",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "A3",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "B3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "C3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "D3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "E3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "F3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "G3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "H3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p12"
+      },
+      {
+        "cell": "I3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "J3",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "K3",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "L3",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "M3",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "N3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "O3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "P3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "Q3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "R3",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "S3",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "T3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "U3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "V3",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "A4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "B4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "C4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "D4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "E4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "F4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "G4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "H4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "I4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "J4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "K4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "L4",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "M4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p01"
+      },
+      {
+        "cell": "N4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "O4",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "P4",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "Q4",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "R4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "S4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "T4",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "U4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "V4",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p02"
+      },
+      {
+        "cell": "A5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p06"
+      },
+      {
+        "cell": "B5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "C5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "D5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "E5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "F5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "G5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "H5",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p04"
+      },
+      {
+        "cell": "I5",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "J5",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "K5",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "L5",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "M5",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "N5",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "O5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "P5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "Q5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "R5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "S5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "T5",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "U5",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "V5",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "A6",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "B6",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "C6",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "D6",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "E6",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "F6",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "G6",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "H6",
+        "cover": "water",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "I6",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "J6",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "K6",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "L6",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "M6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "N6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "O6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "P6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "Q6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "R6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "S6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "T6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "U6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "V6",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "A7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "B7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "C7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": "p10"
+      },
+      {
+        "cell": "D7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": "p10"
+      },
+      {
+        "cell": "E7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "F7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "G7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "H7",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "I7",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "J7",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "K7",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "L7",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "M7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "N7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "O7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "P7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "Q7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "R7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "S7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p03"
+      },
+      {
+        "cell": "T7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "U7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "V7",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "A8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": "p10"
+      },
+      {
+        "cell": "B8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": "p10"
+      },
+      {
+        "cell": "C8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "D8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "E8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "F8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "G8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "H8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "I8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "J8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "K8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "L8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "M8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "N8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "O8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "P8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "Q8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "R8",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "S8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "T8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "U8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "V8",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "A9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "B9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "C9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "D9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "E9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "F9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "G9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "H9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": true,
+        "owner": "p14"
+      },
+      {
+        "cell": "I9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "J9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "K9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "L9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "M9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "N9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p05"
+      },
+      {
+        "cell": "O9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "P9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "Q9",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": true,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "R9",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "S9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "T9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "U9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "V9",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "A10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "B10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "C10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p10"
+      },
+      {
+        "cell": "D10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "E10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "F10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "G10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "H10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "I10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": "p14"
+      },
+      {
+        "cell": "J10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": "p14"
+      },
+      {
+        "cell": "K10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": "p14"
+      },
+      {
+        "cell": "L10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "M10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "N10",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "O10",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": true,
+        "owner": "p13"
+      },
+      {
+        "cell": "P10",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": true,
+        "road": true,
+        "owner": "p13"
+      },
+      {
+        "cell": "Q10",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": true,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "R10",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": true,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "S10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "T10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "U10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "V10",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p11"
+      },
+      {
+        "cell": "A11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "B11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "C11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "D11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "E11",
+        "cover": "village",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "F11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "G11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "H11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "I11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "J11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p14"
+      },
+      {
+        "cell": "K11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "L11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "M11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "N11",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "O11",
+        "cover": "bare",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "P11",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "Q11",
+        "cover": "invasive",
+        "stage": 2,
+        "hill": true,
+        "road": true,
+        "owner": "p13"
+      },
+      {
+        "cell": "R11",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": true,
+        "owner": "p13"
+      },
+      {
+        "cell": "S11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "T11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "U11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "V11",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": true,
+        "owner": null
+      },
+      {
+        "cell": "A12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "B12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "C12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "D12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "E12",
+        "cover": "village",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "F12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "G12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "H12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": "p07"
+      },
+      {
+        "cell": "I12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "J12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "K12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "L12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "M12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "N12",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "O12",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "P12",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "Q12",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": "p13"
+      },
+      {
+        "cell": "R12",
+        "cover": "native",
+        "stage": 0,
+        "hill": true,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "S12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "T12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "U12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      },
+      {
+        "cell": "V12",
+        "cover": "native",
+        "stage": 0,
+        "hill": false,
+        "road": false,
+        "owner": null
+      }
+    ]
+  },
+  "rounds": [
+    {
+      "turn": 1,
+      "choice": "hunt",
+      "auto": false,
+      "player_changes": [
+        {
+          "player_id": "p02",
+          "from": "native",
+          "to": "removed"
+        }
+      ],
+      "landscape_changes": [
+        {
+          "cell": "S2",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "T3",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "R1",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "T2",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "C2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "A4",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "J2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "I3",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q8",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "I3",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "I2",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "I4",
+          "from": "native",
+          "to": "bare"
+        }
+      ],
+      "resilience": null,
+      "fire": {
+        "ignition_cell": "I3",
+        "ignition_cause": "spark",
+        "waves": [
+          [
+            "I3"
+          ],
+          [
+            "I2",
+            "I4"
+          ]
+        ],
+        "severity": 1,
+        "capped_by_water": false,
+        "burned_cells": [
+          "I3",
+          "I2",
+          "I4"
+        ],
+        "blocked_edges": [],
+        "village_reached": false
+      },
+      "health_before": 93,
+      "health": 88,
+      "health_loss": 5
+    },
+    {
+      "turn": 2,
+      "choice": "hunt",
+      "auto": false,
+      "player_changes": [
+        {
+          "player_id": "p03",
+          "from": "native",
+          "to": "removed"
+        },
+        {
+          "player_id": "p01",
+          "from": "lantana",
+          "to": "removed"
+        }
+      ],
+      "landscape_changes": [
+        {
+          "cell": "S4",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "Q6",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "R7",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "T5",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "L3",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "K3",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "M3",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "L2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "J3",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "K4",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "K2",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "M4",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "N3",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "L1",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "J2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "J4",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "R2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "B3",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "C3",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "D2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "U2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "A5",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S5",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R4",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q7",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R8",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P9",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R9",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "T10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "L2",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "K3",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "M3",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "K4",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "M4",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "O11",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R1",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S1",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "S2",
+          "from": "invasive",
+          "to": "bare"
+        }
+      ],
+      "resilience": null,
+      "fire": {
+        "ignition_cell": "R1",
+        "ignition_cause": "spark",
+        "waves": [
+          [
+            "R1"
+          ],
+          [
+            "R2",
+            "S1"
+          ],
+          [
+            "S2"
+          ]
+        ],
+        "severity": 1,
+        "capped_by_water": false,
+        "burned_cells": [
+          "R1",
+          "R2",
+          "S1",
+          "S2"
+        ],
+        "blocked_edges": [],
+        "village_reached": false
+      },
+      "health_before": 88,
+      "health": 78,
+      "health_loss": 10
+    },
+    {
+      "turn": 3,
+      "choice": "resilience",
+      "auto": false,
+      "player_changes": [
+        {
+          "player_id": "p04",
+          "from": "native",
+          "to": "removed"
+        }
+      ],
+      "landscape_changes": [
+        {
+          "cell": "F2",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "D4",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "F3",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "E4",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "T1",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "U1",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S2",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "V2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "B4",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "B5",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R5",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P7",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R6",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P8",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S9",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "O9",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "O10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "T11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R1",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "I2",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "R2",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "A2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "A1",
+          "from": "invasive",
+          "to": "bare"
+        }
+      ],
+      "resilience": {
+        "type": "fire_line",
+        "cells": [
+          "B1",
+          "B2",
+          "A3",
+          "B3",
+          "C2",
+          "D2",
+          "C3",
+          "D4",
+          "E4",
+          "F3"
+        ]
+      },
+      "fire": {
+        "ignition_cell": "A2",
+        "ignition_cause": "spark",
+        "waves": [
+          [
+            "A2"
+          ],
+          [
+            "A1"
+          ]
+        ],
+        "severity": 1,
+        "capped_by_water": false,
+        "burned_cells": [
+          "A2",
+          "A1"
+        ],
+        "blocked_edges": [
+          [
+            "A1",
+            "B1"
+          ],
+          [
+            "A2",
+            "B2"
+          ],
+          [
+            "A2",
+            "A3"
+          ]
+        ],
+        "village_reached": false
+      },
+      "health_before": 78,
+      "health": 71,
+      "health_loss": 7
+    },
+    {
+      "turn": 4,
+      "choice": "hunt",
+      "auto": false,
+      "player_changes": [
+        {
+          "player_id": "p05",
+          "from": "native",
+          "to": "removed"
+        }
+      ],
+      "landscape_changes": [
+        {
+          "cell": "O7",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "O8",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "N9",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "N7",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "S1",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "U4",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "C4",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q5",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S6",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "N8",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "O6",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S7",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S8",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "T9",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "N10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "N11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "T12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "O12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "A2",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "J3",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "N3",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "Q6",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q5",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q7",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R6",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P6",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "R5",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R7",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P7",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S6",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O6",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R4",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S5",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q9",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S7",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O7",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O5",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "S4",
+          "from": "invasive",
+          "to": "bare"
+        }
+      ],
+      "resilience": null,
+      "fire": {
+        "ignition_cell": "Q6",
+        "ignition_cause": "dense_lantana",
+        "waves": [
+          [
+            "Q6"
+          ],
+          [
+            "Q5",
+            "Q7",
+            "R6",
+            "P6"
+          ],
+          [
+            "R5",
+            "Q8",
+            "R7",
+            "P7",
+            "S6",
+            "O6"
+          ],
+          [
+            "R4",
+            "S5",
+            "Q9",
+            "R8",
+            "P8",
+            "S7",
+            "O7",
+            "O5"
+          ],
+          [
+            "S4"
+          ]
+        ],
+        "severity": 2,
+        "capped_by_water": false,
+        "burned_cells": [
+          "Q6",
+          "Q5",
+          "Q7",
+          "R6",
+          "P6",
+          "R5",
+          "Q8",
+          "R7",
+          "P7",
+          "S6",
+          "O6",
+          "R4",
+          "S5",
+          "Q9",
+          "R8",
+          "P8",
+          "S7",
+          "O7",
+          "O5",
+          "S4"
+        ],
+        "blocked_edges": [],
+        "village_reached": false
+      },
+      "health_before": 71,
+      "health": 63,
+      "health_loss": 8
+    },
+    {
+      "turn": 5,
+      "choice": "hunt",
+      "auto": false,
+      "player_changes": [
+        {
+          "player_id": "p07",
+          "from": "native",
+          "to": "removed"
+        },
+        {
+          "player_id": "p06",
+          "from": "lantana",
+          "to": "removed"
+        }
+      ],
+      "landscape_changes": [
+        {
+          "cell": "H12",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "G11",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "D10",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "G12",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "A2",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "C1",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "A4",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "D1",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "A5",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "B4",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "B5",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "C4",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "E1",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q3",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "U3",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S4",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "V4",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S5",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "O7",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "T8",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R8",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P8",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q9",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q8",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "D9",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "E10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "U10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "U11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "F11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "N12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "I12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "C1",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "D1",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "A2",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "L3",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "A4",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "R4",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "A5",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "P6",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q6",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "S6",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P7",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P11",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P10",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P12",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q11",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O11",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P9",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q10",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O10",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q12",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O12",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R11",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "N11",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q9",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O9",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "N10",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R12",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "N12",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R10",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S11",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R9",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "N9",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "M10",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "S12",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S10",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "T11",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "O7",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "N8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "M9",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "M11",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "T12",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S9",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "T10",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "U11",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P7",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "N7",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "M8",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "U12",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "T9",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "U10",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "T8",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P6",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "N6",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "M7",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "L8",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "V12",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "U9",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "S6",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q6",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "U8",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "M6",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "L7",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "K8",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "V11",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "R4",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S5",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "L6",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "K7",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "V10",
+          "from": "native",
+          "to": "bare"
+        }
+      ],
+      "resilience": null,
+      "fire": {
+        "ignition_cell": "P11",
+        "ignition_cause": "dense_lantana",
+        "waves": [
+          [
+            "P11"
+          ],
+          [
+            "P10",
+            "P12",
+            "Q11",
+            "O11"
+          ],
+          [
+            "P9",
+            "Q10",
+            "O10",
+            "Q12",
+            "O12",
+            "R11",
+            "N11"
+          ],
+          [
+            "P8",
+            "Q9",
+            "O9",
+            "N10",
+            "R12",
+            "N12",
+            "R10",
+            "S11"
+          ],
+          [
+            "Q8",
+            "O8",
+            "R9",
+            "N9",
+            "M10",
+            "S12",
+            "S10",
+            "T11"
+          ],
+          [
+            "R8",
+            "O7",
+            "N8",
+            "M9",
+            "M11",
+            "T12",
+            "S9",
+            "T10",
+            "U11"
+          ],
+          [
+            "R7",
+            "S8",
+            "P7",
+            "N7",
+            "M8",
+            "U12",
+            "T9",
+            "U10"
+          ],
+          [
+            "R6",
+            "S7",
+            "T8",
+            "P6",
+            "Q7",
+            "N6",
+            "M7",
+            "L8",
+            "V12",
+            "U9"
+          ],
+          [
+            "R5",
+            "S6",
+            "Q6",
+            "U8",
+            "O6",
+            "M6",
+            "L7",
+            "K8",
+            "V11"
+          ],
+          [
+            "R4",
+            "S5",
+            "Q5",
+            "O5",
+            "L6",
+            "K7",
+            "V10"
+          ]
+        ],
+        "severity": 3,
+        "capped_by_water": false,
+        "burned_cells": [
+          "P11",
+          "P10",
+          "P12",
+          "Q11",
+          "O11",
+          "P9",
+          "Q10",
+          "O10",
+          "Q12",
+          "O12",
+          "R11",
+          "N11",
+          "P8",
+          "Q9",
+          "O9",
+          "N10",
+          "R12",
+          "N12",
+          "R10",
+          "S11",
+          "Q8",
+          "O8",
+          "R9",
+          "N9",
+          "M10",
+          "S12",
+          "S10",
+          "T11",
+          "R8",
+          "O7",
+          "N8",
+          "M9",
+          "M11",
+          "T12",
+          "S9",
+          "T10",
+          "U11",
+          "R7",
+          "S8",
+          "P7",
+          "N7",
+          "M8",
+          "U12",
+          "T9",
+          "U10",
+          "R6",
+          "S7",
+          "T8",
+          "P6",
+          "Q7",
+          "N6",
+          "M7",
+          "L8",
+          "V12",
+          "U9",
+          "R5",
+          "S6",
+          "Q6",
+          "U8",
+          "O6",
+          "M6",
+          "L7",
+          "K8",
+          "V11",
+          "R4",
+          "S5",
+          "Q5",
+          "O5",
+          "L6",
+          "K7",
+          "V10"
+        ],
+        "blocked_edges": [],
+        "village_reached": false
+      },
+      "health_before": 63,
+      "health": 50,
+      "health_loss": 13
+    },
+    {
+      "turn": 6,
+      "choice": "resilience",
+      "auto": true,
+      "player_changes": [
+        {
+          "player_id": "p10",
+          "from": "native",
+          "to": "removed"
+        }
+      ],
+      "landscape_changes": [
+        {
+          "cell": "C9",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "D8",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "C10",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "B9",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "G1",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "E2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "G2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "E3",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "G3",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "V1",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S5",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "T6",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "D7",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "F12",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "J2",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "K2",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "B4",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "J4",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "R4",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "P6",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "R6",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S6",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "S7",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "O8",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "Q8",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "U8",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "R9",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "N10",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "V10",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "M11",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "O12",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "U12",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "R2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q3",
+          "from": "invasive",
+          "to": "bare"
+        }
+      ],
+      "resilience": {
+        "type": "fire_line",
+        "cells": [
+          "R1"
+        ]
+      },
+      "fire": {
+        "ignition_cell": "R2",
+        "ignition_cause": "dense_lantana",
+        "waves": [
+          [
+            "R2"
+          ],
+          [
+            "Q2"
+          ],
+          [
+            "Q3"
+          ]
+        ],
+        "severity": 2,
+        "capped_by_water": false,
+        "burned_cells": [
+          "R2",
+          "Q2",
+          "Q3"
+        ],
+        "blocked_edges": [
+          [
+            "R2",
+            "R1"
+          ]
+        ],
+        "village_reached": false
+      },
+      "health_before": 50,
+      "health": 50,
+      "health_loss": 0
+    },
+    {
+      "turn": 7,
+      "choice": "hunt",
+      "auto": false,
+      "player_changes": [
+        {
+          "player_id": "p11",
+          "from": "native",
+          "to": "removed"
+        },
+        {
+          "player_id": "p13",
+          "from": "lantana",
+          "to": "removed"
+        }
+      ],
+      "landscape_changes": [
+        {
+          "cell": "U6",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "T7",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "U7",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "V6",
+          "from": "native",
+          "to": "invasive_spreading"
+        },
+        {
+          "cell": "Q8",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "R9",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "N10",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "O12",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "C1",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "F1",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "H2",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R2",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "T8",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "B10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "C8",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "C11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "E9",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "F10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "G10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "H10",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "H11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "I11",
+          "from": "native",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q2",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "I3",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q3",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "Q5",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R5",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "M6",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "O6",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "N7",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "Q7",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "M8",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "O9",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "S9",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "U9",
+          "from": "bare",
+          "to": "invasive_young"
+        },
+        {
+          "cell": "R10",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "O11",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "R11",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "S11",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "P12",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "Q12",
+          "from": "bare",
+          "to": "native"
+        },
+        {
+          "cell": "U4",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "U3",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "V4",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "U2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "T3",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "U1",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "V2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "T2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "V1",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "T1",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "S1",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "R2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q2",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "Q1",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "Q3",
+          "from": "invasive",
+          "to": "bare"
+        },
+        {
+          "cell": "P2",
+          "from": "native",
+          "to": "bare"
+        },
+        {
+          "cell": "P1",
+          "from": "native",
+          "to": "bare"
+        }
+      ],
+      "resilience": null,
+      "fire": {
+        "ignition_cell": "U4",
+        "ignition_cause": "dense_lantana",
+        "waves": [
+          [
+            "U4"
+          ],
+          [
+            "U3",
+            "V4"
+          ],
+          [
+            "U2",
+            "T3"
+          ],
+          [
+            "U1",
+            "V2",
+            "T2"
+          ],
+          [
+            "V1",
+            "T1",
+            "S2"
+          ],
+          [
+            "S1",
+            "R2"
+          ],
+          [
+            "Q2"
+          ],
+          [
+            "Q1",
+            "Q3",
+            "P2"
+          ],
+          [
+            "P1"
+          ]
+        ],
+        "severity": 2,
+        "capped_by_water": false,
+        "burned_cells": [
+          "U4",
+          "U3",
+          "V4",
+          "U2",
+          "T3",
+          "U1",
+          "V2",
+          "T2",
+          "V1",
+          "T1",
+          "S2",
+          "S1",
+          "R2",
+          "Q2",
+          "Q1",
+          "Q3",
+          "P2",
+          "P1"
+        ],
+        "blocked_edges": [
+          [
+            "R2",
+            "R1"
+          ],
+          [
+            "S1",
+            "R1"
+          ],
+          [
+            "Q1",
+            "R1"
+          ]
+        ],
+        "village_reached": false
+      },
+      "health_before": 50,
+      "health": 45,
+      "health_loss": 5
+    }
+  ]
+}

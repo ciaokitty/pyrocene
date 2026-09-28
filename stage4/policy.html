@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What gets paid - Pyrocene</title><link rel="stylesheet" href="explore.css"><link rel="stylesheet" href="expedition.css"><link rel="stylesheet" href="round.css"><link rel="stylesheet" href="play-flow.css"><link rel="stylesheet" href="policy.css"><script src="vendor/three.min.js"></script><script type="module" src="policy.mjs"></script></head><body class="policy">
+<header><a class="wordmark" href="expedition.html">PYROCENE</a><nav class="game-navigation" aria-label="Mission"><select id="mission" aria-label="Mission"><option value="tonne">1 By the tonne</option><option value="tree">2 By the tree</option><option value="both">3 Both</option></select><select id="mode" aria-label="Difficulty"><option value="guided">Guided</option><option value="hard">Hard</option></select><button id="about-open">About</button></nav><span class="chapter">STAGE 4 / WHAT GETS PAID</span></header>
+<main id="landscape" aria-label="The island"><div id="loading" role="status"><p>Opening the forest</p></div><div class="view-controls" aria-label="Views"><button data-view="forest" class="active">Forest</button><button data-view="overhead">Overhead</button></div></main>
+<section id="round-panel" aria-label="This season"><small id="phase"></small><ol id="seasons" aria-label="Seasons"></ol><div id="meters"><div><span>Credits</span><b id="credits">0</b></div><div><span>Forest health</span><b id="health">0</b></div></div><p id="flow"></p><h1 id="task"></h1><p id="finding"></p><div id="patch-actions"></div><p id="status" role="status"></p></section>
+<div id="caption" role="status" hidden></div>
+<aside id="call" hidden><img src="hazel.png" alt="Hazel"><p id="call-text"></p><button id="call-ok" class="primary">OK</button></aside>
+<dialog id="briefing" aria-labelledby="briefing-title"><div class="facilitator-photo"><img src="hazel.png" alt="Hazel"></div><div class="briefing-copy"><small id="briefing-role"></small><h1 id="briefing-title"></h1><div id="briefing-text"></div><button id="briefing-begin" class="primary">Begin</button></div></dialog>
+<dialog id="result" aria-labelledby="result-title"><small id="result-kicker"></small><h1 id="result-title"></h1><div id="result-meters"></div><div id="result-lines"></div><div id="result-actions"></div></dialog>
+<dialog id="lab" aria-labelledby="lab-title"><small>THE LAST QUESTION</small><h1 id="lab-title">What would you pay for?</h1><p id="lab-intro"></p>
+<label>Per tonne removed <output id="o-rate"></output><input id="d-rate" type="range" min="0" max="2" step="0.5" value="1"></label>
+<label>A young stand, each season <output id="o-pioneer"></output><input id="d-pioneer" type="range" min="0" max="4" step="1" value="1"></label>
+<label>Forest, each season <output id="o-forest"></output><input id="d-forest" type="range" min="0" max="10" step="1" value="3"></label>
+<label>Paid up front <output id="o-grant"></output><input id="d-grant" type="range" min="0" max="40" step="4" value="8"></label>
+<div id="lab-actions"><button id="lab-run">Let a crew loose</button><button id="lab-close" class="secondary">Done</button></div><div id="lab-verdict"></div></dialog>
+<dialog id="about"><div class="dialog-heading"><h1>About this game</h1><button data-close>Back</button></div><p id="about-text"></p></dialog>
+</body></html>

@@ -1,0 +1,132 @@
+{
+  "schema": "pyrocene-stage4-species/1",
+  "species": [
+    {
+      "id": "urochloa_brizantha",
+      "name": "Marandu grass",
+      "scientific": "Urochloa brizantha (A.Rich.) R.D.Webster",
+      "family": "Poaceae",
+      "status": "Introduced",
+      "form": "Perennial pasture grass",
+      "description": "A pasture grass brought to Brazil from Africa. It forms dense clumps and can spread outside planted areas.",
+      "fireNote": "Dry grass blades can form a continuous layer of fine fuel.",
+      "identification": "Look for a dense tussock with long linear leaves and a branched seed head.",
+      "sources": [
+        {
+          "title": "Plants of the World Online: Urochloa brizantha",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943736-1"
+        },
+        {
+          "title": "Fire cues and germination of invasive and native grasses in the Cerrado",
+          "url": "https://doi.org/10.1590/0102-33062019abb0337"
+        }
+      ]
+    },
+    {
+      "id": "megathyrsus_maximus",
+      "name": "Guinea grass",
+      "scientific": "Megathyrsus maximus (Jacq.) B.K.Simon & S.W.L.Jacobs",
+      "family": "Poaceae",
+      "status": "Introduced",
+      "form": "Tall perennial pasture grass",
+      "description": "A tall grass brought from Africa for pasture. It can spread into disturbed areas and form dense clumps.",
+      "fireNote": "Dead blades can remain in the clump and burn when dry.",
+      "identification": "Look for tall clumps with long leaves and an open branching seed head.",
+      "sources": [
+        {
+          "title": "Plants of the World Online: Megathyrsus maximus",
+          "url": "https://powo.science.kew.org/taxon/60426565-2"
+        },
+        {
+          "title": "O fogo como facilitador da invasão biológica por Megathyrsus maximus",
+          "url": "https://doi.org/10.37002/biodiversidadebrasileira.v3i2.348"
+        }
+      ]
+    },
+    {
+      "id": "cecropia_obtusa",
+      "name": "Cecropia tree",
+      "scientific": "Cecropia obtusa Trécul",
+      "family": "Urticaceae",
+      "status": "Native",
+      "form": "Pioneer tree",
+      "description": "A native tree that often grows in openings. Its broad leaves have deep lobes.",
+      "fireNote": "Fallen leaves can burn after they dry.",
+      "identification": "Look for large palmately lobed leaves and ring scars around the stem.",
+      "sources": [
+        {
+          "title": "Plants of the World Online: Cecropia obtusa",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:850946-1"
+        },
+        {
+          "title": "Synchronization of growth, branching and flowering processes in Cecropia obtusa",
+          "url": "https://doi.org/10.3732/ajb.89.7.1180"
+        }
+      ]
+    },
+    {
+      "id": "phenakospermum_guyannense",
+      "name": "Phenakospermum",
+      "scientific": "Phenakospermum guyannense (Rich.) Miq.",
+      "family": "Strelitziaceae",
+      "status": "Native",
+      "form": "Large understory herb",
+      "description": "A large native herb with broad upright leaves. It often grows in disturbed forest.",
+      "fireNote": "Old leaves add to the material on the forest floor.",
+      "identification": "Look for very large upright leaves on long stalks and broad overlapping bases.",
+      "sources": [
+        {
+          "title": "Lectotypification and notes on the distribution of Phenakospermum guyannense",
+          "url": "https://doi.org/10.11646/phytotaxa.491.3.4"
+        },
+        {
+          "title": "Rainfall partitioning in a Phenakospermum guyannense secondary vegetation stand",
+          "url": "https://doi.org/10.1007/s004420050443"
+        }
+      ]
+    },
+    {
+      "id": "oenocarpus_bacaba",
+      "name": "Bacaba palm",
+      "scientific": "Oenocarpus bacaba Mart.",
+      "family": "Arecaceae",
+      "status": "Native",
+      "form": "Solitary palm",
+      "description": "A native palm with a single trunk. People use its dark fruits for food.",
+      "fireNote": "Check the fallen fronds as well as the living leaves.",
+      "identification": "Look for one smooth trunk and a crown of long pinnate fronds.",
+      "sources": [
+        {
+          "title": "Plants of the World Online: Oenocarpus bacaba",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:668509-1/general-information"
+        },
+        {
+          "title": "Morphology and germination development of Oenocarpus bacaba",
+          "url": "https://doi.org/10.1590/S0100-67622009000600006"
+        }
+      ]
+    },
+    {
+      "id": "nephrolepis_biserrata",
+      "name": "River fern",
+      "scientific": "Nephrolepis biserrata (Sw.) Schott",
+      "family": "Polypodiaceae",
+      "status": "Native",
+      "form": "Terrestrial or epiphytic fern",
+      "description": "A native fern with long divided fronds. It grows on the ground and sometimes on other plants.",
+      "fireNote": "A green fern can have dry material beneath it.",
+      "identification": "Look for a dense tuft of narrow fronds with many small pinnae.",
+      "sources": [
+        {
+          "title": "Plants of the World Online: Nephrolepis biserrata",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:17160710-1"
+        },
+        {
+          "title": "Parc amazonien de Guyane: Pteridophytes",
+          "url": "https://biodiversite.parc-amazonien-guyane.fr/groupe/Pt%C3%A9ridophytes"
+        }
+      ]
+    }
+  ],
+  "boundary": "Species facts are sourced. Plot assignments and dryness are scenario observations."
+}

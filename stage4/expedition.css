@@ -1,0 +1,149 @@
+/* Field hardware, not a permanently visible assistant. Photograph files stay
+   intact; the display applies the monochrome phosphor treatment at runtime. */
+.inline-detail.fallback .fallback-forest{display:none}
+.inline-detail canvas{touch-action:none}
+#plot-notes{position:absolute;right:24px;top:100px;width:310px;max-height:calc(100dvh - 210px);overflow:auto;z-index:6;background:#0b1c17ed;border:1px solid #8cab7840;border-radius:6px;padding:18px 20px;box-shadow:0 8px 35px #0003}
+#plot-notes .guide-heading{font:18px Georgia,serif;margin-bottom:14px;justify-content:space-between}
+#plot-notes .guide-heading{padding:0 0 12px;min-height:36px}
+#plot-notes .guide-heading button{font:12px Arial,sans-serif}
+#plot-notes p,.plain-note p{font:14px/1.7 Arial,sans-serif;color:#cfdbce;margin:0 0 16px}
+#plot-notes .plot-intro{font-size:12px;color:#9eb6a7;margin-bottom:12px}
+.stratum-heading{font:11px Arial,sans-serif;font-weight:normal;margin:15px 0 8px;letter-spacing:.7px}
+[data-layer=ground]{--stratum:#dc719d}
+[data-layer=understory]{--stratum:#69bccc}
+[data-layer=canopy]{--stratum:#99d8ab}
+.stratum-heading{color:var(--stratum)}
+.plot-species-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;margin-bottom:14px}
+.plot-plant{text-align:left;font:12px/1.35 Arial,sans-serif;padding:7px 5px 7px 10px;border-left:2px solid var(--stratum);background:#14271e;border-radius:2px;overflow-wrap:anywhere}
+.plot-plant:hover,.plot-plant:focus-visible{background:#24402f;color:#edffe9;outline:1px solid var(--stratum)}
+.specimen-pin[data-layer]{border-color:var(--stratum);color:var(--stratum)}
+.specimen-pin[data-layer]::before{background:var(--stratum)}
+.specimen-pin.focused{background:#16372ceb;box-shadow:0 0 12px #99e6ce33}
+.scientific-name,.plant-layer-note{display:block;font:11px/1.5 Arial,sans-serif;color:#a5c0ac;margin:0 0 12px}
+.plain-note a{font-size:11px}
+#plant-guide .plain-note{padding:20px 24px}
+#plant-guide .plain-note h2{font:23px Georgia,serif;margin:0 0 15px}
+#plant-guide:has(.plain-note){width:330px;max-height:calc(100dvh - 200px);bottom:auto;top:100px}
+@media(max-width:700px){#plot-notes{top:auto;bottom:78px;left:12px;right:12px;width:auto;max-height:27dvh;padding:12px 16px}#plot-notes p{font-size:12px;margin-bottom:10px}#plant-guide:has(.plain-note){top:auto;bottom:78px;left:12px;right:12px;width:auto;max-height:32dvh}}
+header nav { gap:24px; }
+#assignment { position:absolute; z-index:3; top:28px; left:32px; text-align:left; padding:0; }
+#assignment small { display:block; color:var(--muted); font-size:10px; letter-spacing:2px; margin-bottom:9px; }
+#assignment span { font:24px/1.2 Georgia,serif; }
+#place-context { position:absolute; left:32px; top:112px; z-index:2; display:grid; gap:7px; pointer-events:none; }
+#place-context small { font-size:11px; color:var(--gold); }
+#place-description { max-width:300px; color:var(--muted); font-size:12px; }
+#field-action { position:absolute; z-index:3; bottom:92px; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:14px; padding:10px 14px; border-radius:8px; border:1px solid var(--line); background:#0a1817f0; white-space:nowrap; }
+#action-note { color:var(--muted); font-size:11px; }
+#notes-open { font-size:12px; }
+.view-controls { z-index:4; }
+.dialog-heading,.comms-head { display:flex; justify-content:space-between; align-items:center; gap:20px; margin-bottom:18px; }
+.dialog-heading h1 { margin:0; }
+dialog { max-height:88dvh; overflow:auto; }
+dialog h1,dialog h2 { font-family:Georgia,serif; font-weight:400; }
+dialog h2 { font-size:22px; }
+dialog p { line-height:1.65; }
+dialog button,dialog a { touch-action:manipulation; }
+#radio { width:min(880px,94vw); padding:26px; background:#091c17fa; border:1px solid #618c693e; }
+#radio::backdrop { background:#020a08c9; backdrop-filter:blur(5px); }
+.comms-head { font:11px monospace; letter-spacing:2px; color:#9cbd9d; padding-bottom:15px; border-bottom:1px solid var(--line); }
+.comms-head button { font:12px Arial,sans-serif; letter-spacing:0; }
+.comms { display:block; }
+.radio-portrait { align-self:start; position:relative; border:1px solid #85ad7840; overflow:hidden; background:#0b2014; }
+.radio-portrait img { width:100%; aspect-ratio: .85; object-fit:cover; display:block; image-rendering:pixelated; filter:grayscale(1) sepia(1) hue-rotate(78deg) saturate(.7) contrast(1.06); }
+.radio-portrait::after,.phosphor::after { content:""; position:absolute; inset:0; pointer-events:none; background:repeating-linear-gradient(0deg,#00120833 0,#00120833 1px,transparent 1px,transparent 4px); }
+.radio-portrait span { display:block; font:10px/1.6 monospace; padding:10px; text-align:center; color:#acd7a7; }
+.radio-copy small { color:var(--gold); letter-spacing:2px; font-size:10px; }
+.radio-copy h1 { font-size:30px; margin:13px 0; }
+.radio-copy>p { color:#d1dfce; font-size:16px; }
+#radio-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+#radio-actions button { padding:11px 16px; border:1px solid #a5c3a650; border-radius:4px; }
+#radio-actions .primary { background:#a8c99f; color:#0b2115; }
+.radio-foot { display:block; margin-top:20px; color:#788d7c; font-size:10px; }
+.radio-copy textarea { width:100%; min-height:65px; resize:vertical; padding:10px; background:#071610; color:var(--ink); border:1px solid var(--line); font:14px Arial,sans-serif; }
+.radio-copy label { font-size:12px; }
+.reply { padding:12px; border-left:2px solid #9cbc99; background:#10251b; }
+.reply p { margin:0 0 10px; font-size:14px; }
+.reply a { font-size:11px; }
+.mission-option { border-top:1px solid var(--line); padding:16px 0; }
+.mission-option button { font:21px Georgia,serif; padding:0; }
+.mission-option p { margin:8px 0 0; }
+.mission-option small { color:var(--gold); }
+.paper-link { display:inline-block; margin-top:20px; border:1px solid var(--line); padding:14px; text-decoration:none; }
+.menu-grid { display:grid; gap:12px; }
+.menu-grid>* { text-align:left; padding:14px; background:#163127; text-decoration:none; border-radius:4px; }
+#note-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+#note-tabs button { padding:8px 12px; border:1px solid var(--line); border-radius:4px; }
+#note-tabs button.active { background:#a6c4a8; color:#102219; }
+.field-photo { position:relative; height:190px; overflow:hidden; background:#0b2114; }
+.field-photo img { width:100%; height:100%; object-fit:cover; image-rendering:pixelated; filter:grayscale(1) sepia(1) hue-rotate(58deg) saturate(.9) brightness(.7) contrast(1.35); }
+.field-photo.diagram { display:grid; place-items:center; height:140px; color:#9bcda1; }
+.field-photo.diagram svg { height:100px; width:100px; }
+.field-photo .photo-credit { font-size:9px; z-index:1; }
+#book-back,#book-close { font-size:12px; }
+.guide-heading { gap:14px; }
+#guide-title { font:20px Georgia,serif; flex:1; }
+.plant-open svg { width:40px; height:50px; flex-shrink:0; }
+.collection-count { color:var(--muted); font-size:12px; padding:0 22px 12px; }
+.use-note { padding:14px 0; margin-top:12px; border-top:1px solid var(--line); }
+.use-note h3 { font:20px Georgia,serif; margin:0 0 8px; }
+.use-note button { padding:10px 12px; border:1px solid var(--line); width:100%; text-align:left; }
+.field-question { padding:14px; border-left:2px solid var(--gold); background:#173026; }
+.observation-boundary { font-size:11px; color:var(--muted); }
+.reading-pair { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0; }
+.reading-pair div { padding:14px; border:1px solid var(--line); }
+.reading-pair small { display:block; margin-bottom:8px; color:var(--muted); }
+.related-lead { margin-top:16px; padding:12px; border:1px solid var(--line); }
+#bearing-map { aspect-ratio:1; max-width:470px; margin:0 auto 18px; display:grid; grid-template-columns:repeat(6,1fr); background:#e3ddc6; padding:12px; gap:2px; }
+#bearing-map button { border:1px solid #697660; background:#425745; color:#e6eadc; font:12px monospace; }
+#bearing-map button:disabled { background:transparent; border-color:transparent; opacity:1; }
+#bearing-map button.visited { background:#61785a; }
+#bearing-map button.selected { outline:2px solid #f6ce7d; outline-offset:-4px; }
+#radio-open.incoming { color:#e6c589; animation:call 2s ease-in-out infinite; }
+@keyframes call { 50% { opacity:.55; } }
+.grant-option { border-top:1px solid var(--line); padding:12px 0; }
+.grant-option button { font:19px Georgia,serif; padding:0; }
+.grant-option p { font-size:13px; margin:6px 0; }
+#sensor-team { display:block; width:100%; padding:10px; color:var(--ink); background:#10271c; border:1px solid var(--line); margin:8px 0 16px; }
+#network { width:min(780px,94vw); }
+.network-actions,.sensor-stations { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
+.network-actions button,.sensor-stations button { border:1px solid var(--line); padding:10px 14px; border-radius:4px; }
+.network-actions button.active,.sensor-stations button.selected { background:#a6c4a8; color:#102219; }
+.sensor-record { border-top:1px solid var(--line); margin-top:20px; padding:10px 0; }
+.sensor-record h3 { font:21px Georgia,serif; }
+.sensor-record a { font-size:11px; }
+.sensor-chart { padding:10px 0; }
+.sensor-chart>div { display:grid; grid-template-columns:165px 1fr 35px; align-items:center; gap:10px; min-height:29px; font:12px monospace; }
+.sensor-chart i { display:block; background:#8fb99a; height:8px; }
+.sensor-chart strong { font-weight:400; }
+#sensor-interpretation { display:block; width:100%; min-height:70px; margin-top:8px; padding:10px; color:var(--ink); background:#0d2017; border:1px solid var(--line); }
+@media(prefers-reduced-motion:reduce) { #radio-open.incoming { animation:none; } }
+@media(max-width:700px) {
+  #assignment { left:18px; top:20px; } #assignment span { font-size:19px; }
+  #place-context { top:90px; left:18px; }
+  #field-action { max-width:95vw; width:max-content; bottom:78px; gap:8px; padding:8px; }
+  #action-note { display:none; }
+  .comms { grid-template-columns:90px 1fr; gap:16px; min-height:0; }
+  #radio { padding:16px; }
+  .radio-copy h1 { font-size:23px; } .radio-copy>p { font-size:14px; }
+  .radio-portrait span { font-size:8px; padding:5px; }
+  .comms-head { letter-spacing:1px; gap:10px; }
+  #radio-actions { gap:8px; } #radio-actions button { padding:10px; }
+  header nav { gap:18px; } .reading-pair { grid-template-columns:1fr; }
+}
+.phosphor-frame{margin:0 0 15px;background:#081311;border:1px solid #2b4c3b;overflow:hidden}
+.phosphor-frame canvas{display:block;width:100%;height:auto}
+.phosphor-frame figcaption{padding:8px 10px;color:#8fa899;font:10px/1.5 monospace}
+.observation-switch{position:absolute;z-index:8;left:32px;bottom:32px;display:flex;align-items:center;gap:10px;font-size:12px;color:#a9c2b2;background:#0a1914e8;border:1px solid #2b4638;border-radius:6px;padding:8px 12px}
+.observation-switch select{background:#0b1d16;color:#d7e4d7;border:0;padding:6px;font:inherit;max-width:145px}
+.observation-pins{position:absolute;inset:0;pointer-events:none}
+.observation-pins button{position:absolute;pointer-events:auto;left:0;top:0;translate:-50% -50%;border:1px solid #7ca68a;border-radius:5px;background:#0a2119ed;color:#c9e8c9;padding:10px 14px;white-space:nowrap;box-shadow:0 0 22px #73c69128}
+.observation-card{position:absolute;z-index:7;transform:translate(-50%,-50%);background:#081812f5;border:1px solid #608765;border-radius:6px;box-shadow:0 0 60px #071710;overflow:hidden;max-height:65dvh}
+.observation-card-head{display:flex;justify-content:space-between;gap:10px;padding:12px 14px;color:#c7e8c6;font:11px/1.4 monospace}
+.observation-card .phosphor-frame{margin:0;border:0}
+.observation-card audio{width:calc(100% - 24px);height:36px;margin:8px 12px;color-scheme:dark}
+.observation-card small{display:block;margin:8px 12px;color:#96bba0;font:10px/1.5 monospace}
+.observation-credit{padding:8px 12px;font:10px/1.4 monospace;border-top:1px solid #254331}
+.observation-credit a{color:#91b29a}
+.sound-wave{display:block;width:100%;height:45px}
+@media(max-width:700px){.observation-switch{left:12px;bottom:85px;font-size:11px;padding:4px 8px}.observation-card{max-height:42dvh}.observation-card .phosphor-frame canvas{max-height:190px;object-fit:contain}.observation-card-head{padding:6px 10px}.observation-card audio{margin:3px 10px;height:30px}.observation-card small{margin:3px 10px}.observation-credit{padding:4px 10px}.sound-wave{height:26px}}
+@media(max-width:700px){.observation-switch{top:134px;bottom:auto}.observation-card{overflow:auto}}

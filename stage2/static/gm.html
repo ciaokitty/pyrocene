@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pyrocene — game master</title>
+<style>
+  :root { --bg:#0f1613; --card:#16201b; --ink:#d9e5da; --muted:#8aa392; --hair:#26332a;
+          --green:#4dbd79; --orange:#ff8a3d; --red:#ff5a5f; --blue:#4fb3ff; --purple:#c58cf0; }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin:0; background:var(--bg); color:var(--ink); font: 15px/1.5 system-ui, sans-serif; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 18px 16px 60px; display:grid; gap: 16px; }
+  h1 { margin:0; font-size: 20px; letter-spacing:.04em; color: var(--orange); }
+  .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+  .card { background: var(--card); border:1px solid var(--hair); border-radius: 10px; padding: 14px 16px; }
+  .card h2 { margin:0 0 10px; font-size: 12px; letter-spacing:.14em; text-transform: uppercase; color: var(--muted); }
+  button { font: inherit; padding: 8px 14px; border-radius: 8px; border:1px solid var(--hair);
+           background:#1d2a23; color: var(--ink); cursor:pointer; }
+  button:hover { border-color: var(--muted); }
+  button.primary { background: var(--green); color:#062; border-color: transparent; font-weight: 700; }
+  button.danger { background:#3a1d1d; color: #ffb3b3; }
+  button:disabled { opacity:.45; cursor:default; }
+  input[type=number], input[type=text] { font: inherit; padding: 7px 9px; border-radius: 8px;
+           border:1px solid var(--hair); background:#0e1512; color: var(--ink); width: 90px; }
+  table { width:100%; border-collapse: collapse; }
+  td, th { text-align:left; padding: 7px 8px; border-bottom: 1px solid var(--hair); }
+  th { font-size: 11px; letter-spacing:.12em; text-transform: uppercase; color: var(--muted); }
+  tr.out td { opacity: .45; text-decoration: line-through; }
+  tr.pending td { background: #2a1d10; }
+  .role { font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; }
+  .role.lantana { color: var(--purple); } .role.native { color: var(--green); }
+  .role.ecologist { color: var(--blue); } .role.ranger { color: var(--orange); }
+  .stat { font-size: 26px; font-weight: 800; }
+  .muted { color: var(--muted); }
+  .choice label { display:flex; gap:8px; align-items:center; padding:8px 12px; border:1px solid var(--hair);
+                  border-radius:8px; cursor:pointer; }
+  .choice input:checked + span { color: var(--orange); font-weight: 700; }
+  .log p { margin: 4px 0; } .log .k { color: var(--muted); font-size: 12px; margin-right: 6px; }
+  #err { color: var(--red); min-height: 1.4em; }
+  .ending { font-size: 18px; color: #ffd23f; }
+  .hint { font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="row" style="justify-content:space-between">
+    <h1>PYROCENE - game master</h1>
+    <div class="row">
+      <span id="phase" class="muted"></span>
+      <a href="/projector" target="_blank" class="muted" style="font-size:13px">open projector ↗</a>
+    </div>
+  </div>
+
+  <div id="lobby" class="card">
+    <h2>Lobby</h2>
+    <div class="row">
+      <span id="count" class="stat">0</span><span class="muted">players in</span>
+      <span style="flex:1"></span>
+      <label class="muted">lantana <input id="lantana" type="number" min="1" placeholder="auto"></label>
+      <label class="muted">seed test players <input id="seedn" type="number" value="12" min="1" max="20"></label>
+      <button id="seed">Seed</button>
+      <button id="start" class="primary">Start game</button>
+    </div>
+    <p class="hint">Players join at this laptop's address. Seed adds fake players so you can rehearse alone.</p>
+  </div>
+
+  <div id="game" class="card" hidden>
+    <div class="row" style="justify-content:space-between">
+      <div class="row"><span class="muted">Night</span><span id="round" class="stat"></span>
+        <span class="muted">of <span id="maxr"></span></span></div>
+      <div class="row"><span class="muted">Forest</span><span id="health" class="stat"></span></div>
+      <div class="row muted" id="alive"></div>
+    </div>
+    <div id="ending" class="ending"></div>
+    <div id="forecast" class="hint"></div>
+  </div>
+
+  <div id="onscreen" class="card" hidden>
+    <h2 id="onscreenhead">Ready to show</h2>
+    <p id="cardtitle" style="margin:0 0 4px;font-weight:700;color:var(--orange)"></p>
+    <p id="cardtext" style="margin:0 0 4px;color:var(--ink)"></p>
+    <p id="cardnote" style="margin:0 0 14px;color:var(--muted);font-size:13px"></p>
+    <div class="row">
+      <button id="advance" class="primary">Show what happened</button>
+      <button id="flip" hidden>Show before</button>
+      <button id="skip" hidden>Continue</button>
+      <span id="playing" class="muted" hidden>playing...</span>
+    </div>
+    <p class="hint" id="stepsleft"></p>
+    <p class="hint" id="skiphint" hidden>Continue applies the round without
+      playing it, so the room is not interrupted. The map stays on screen and
+      updates quietly.</p>
+  </div>
+
+  <div id="night" class="card" hidden>
+    <h2>Night</h2>
+    <button id="finishnight" class="primary">Finish night</button>
+    <p class="hint" id="villagewarn" hidden style="color:var(--orange)">
+      Dense lantana is close to the homes. If fire reaches them the game is over.</p>
+  </div>
+
+  <div id="day" class="card" hidden>
+    <h2>Day</h2>
+    <div class="row choice" id="choicebox">
+      <label><input type="radio" name="choice" value="hunt"><span>Hunt lantana</span></label>
+      <label><input type="radio" name="choice" value="resilience"><span>Resilience</span></label>
+    </div>
+    <div id="huntbox" class="row" hidden>
+      <span id="votepick" class="muted">mark who the room voted out</span>
+    </div>
+    <div id="actions" class="row" hidden>
+      <label><input type="radio" name="action" value="" checked><span>let the system pick</span></label>
+      <label><input type="radio" name="action" value="fireline"><span>fire line</span></label>
+      <label><input type="radio" name="action" value="water"><span>water</span></label>
+      <label><input type="radio" name="action" value="ews"><span>early warning</span></label>
+    </div>
+    <div style="height:10px"></div>
+    <button id="finishvote" class="primary">Finish vote</button>
+  </div>
+
+  <div class="card">
+    <h2>Players</h2>
+    <table><thead><tr><th>#</th><th>Name</th><th>Role</th><th>Status</th><th></th></tr></thead>
+    <tbody id="players"></tbody></table>
+  </div>
+
+  <div id="last" class="card log" hidden>
+    <h2>Last night, as Ember told it</h2>
+    <div id="lastlines"></div>
+  </div>
+
+  <div id="seasonbox" class="card" hidden>
+    <h2>Length of the season</h2>
+    <p class="hint">Bring the last night down to the one you are on and lantana
+      makes its run across whatever is between the patches, then one fire carries
+      the length of it. Push it out and the next fire is a smaller one that burns
+      into the lantana and leaves bare ground. Use it to end on the point you
+      want to make.</p>
+    <div class="row">
+      <button id="fewer">- night</button>
+      <span class="muted">last night: <b id="maxr2">8</b></span>
+      <button id="more">+ night</button>
+      <span id="seasonnote" class="muted"></span>
+    </div>
+  </div>
+
+  <div id="nextstage" class="card" hidden>
+    <h2>Go to stage 2</h2>
+    <p class="hint">Same people, same names, same forest. Roles are dealt again
+      and fire comes into the game. Walk the replay first, explain the map, then
+      press this.</p>
+    <button id="tostage2" class="primary">Start stage 2</button>
+  </div>
+
+  <div id="replaybox" class="card" hidden>
+    <h2>Replay the map</h2>
+    <p class="hint">Walk the forest forward one night at a time, with the squares
+      that changed picked out first and whoever went out that night named over
+      their ground.</p>
+    <div class="row">
+      <button id="replay" class="primary">Replay the map</button>
+      <button id="replaystop" hidden>Back to the game</button>
+      <span id="replaypos" class="muted"></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <button id="reset" class="danger">Reset</button>
+      <button id="backto1" hidden>Back to stage 1</button>
+      <label class="muted">seed <input id="rseed" type="text" placeholder="random"></label>
+      <span id="err"></span>
+    </div>
+  </div>
+</div>
+<script>
+  const $ = (s) => document.querySelector(s);
+  let S = null;
+  // Fire and forget. The reply is a snapshot from before the projector finished
+  // animating, so rendering it would overwrite the live update that arrives on
+  // the event stream and leave the console looking stuck. The stream is the only
+  // thing that paints.
+  async function post(path, body) {
+    const r = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" },
+                                   body: JSON.stringify(body || {}) });
+    const d = await r.json().catch(() => ({}));
+    $("#err").textContent = r.ok ? "" : (d.error || "error");
+    return d;
+  }
+  function render(s) {
+    S = s;
+    const lobby = s.phase === "lobby";
+    const busy = s.mode === "explain" || s.mode === "playing";
+    const replaying = s.mode === "replay";
+    // Always name the stage. It used to be shown only for stage 1, so after the
+    // handover the game master had nothing on screen saying where they were.
+    $("#phase").textContent =
+      `stage ${s.stage} - ` +
+      (replaying ? "replaying the map"
+       : lobby ? "lobby" : s.phase === "ended" ? "game over" : "in play");
+    $("#lobby").hidden = !lobby;
+    $("#game").hidden = lobby;
+    $("#onscreen").hidden = !s.current && !s.can_flip;
+    $("#night").hidden = lobby || s.phase !== "playing" || busy || s.step !== "night";
+    $("#day").hidden = lobby || s.phase !== "playing" || busy || s.step !== "day";
+    // Stage 1 has only the vote: there is no fire to shelter from.
+    $("#choicebox").hidden = s.stage === 1;
+    $("#replaybox").hidden = lobby || !s.can_replay;
+    // Stage 1 can be applied without playing it, for a room that would rather
+    // keep talking. Only offered while there is actually something to skip.
+    $("#skip").hidden = s.stage !== 1 || !s.current;
+    // Offered once stage 1 is over, so the room moves on without a restart and
+    // without everybody retyping their name.
+    $("#nextstage").hidden = !(s.stage === 1 && s.phase === "ended");
+    $("#backto1").hidden = s.stage !== 2;
+    $("#seasonbox").hidden = lobby || s.stage !== 2 || s.phase !== "playing";
+    $("#maxr2").textContent = s.max_rounds;
+    $("#fewer").disabled = s.max_rounds <= s.round;
+    $("#seasonnote").textContent = s.finale ? "tonight is the last night"
+      : s.reprieve ? "bought back a night: this fire burns fuel"
+      : `${s.max_rounds - s.round} more after tonight`;
+    $("#skiphint").hidden = s.stage !== 1 || !s.current;
+    // One button that walks the replay. Hiding it once the replay started left
+    // the game master with no way to move it forward.
+    $("#replay").textContent = replaying ? "Next night" : "Replay the map";
+    $("#replay").disabled = !!s.replaying;
+    $("#replaystop").hidden = !replaying;
+    $("#replaypos").textContent = replaying
+      ? (s.replaying ? "playing..." : `night ${s.replay_at} of ${s.replay_total}`) : "";
+    $("#count").textContent = s.players.length;
+    $("#round").textContent = s.round;
+    $("#maxr").textContent = s.max_rounds;
+    $("#health").textContent = s.health == null ? "" : s.health + "%";
+    $("#alive").textContent = lobby ? "" :
+      `lantana ${s.alive.lantana} - natives ${s.alive.native} - ecologist ${s.alive.ecologist ? "in" : "out"} - ranger ${s.alive.ranger ? "in" : "out"}`;
+    $("#ending").textContent = s.ending ? s.ending.text : "";
+    $("#forecast").textContent = s.forecast
+      ? `Forecast for night ${s.forecast.round}: ${s.forecast.level} fire, wind from the ${s.forecast.wind}` : "";
+    $("#villagewarn").hidden = !s.village_at_risk;
+
+    if (s.current) {
+      $("#cardtitle").textContent = s.current.title;
+      // Stage 2 hands back one step with nothing written on it: the whole night
+      // runs as a single animation and the projector keeps the map. Say what
+      // the press does rather than leaving the panel blank.
+      $("#cardtext").textContent = s.current.text;
+      // The projector gets the phrase; you get the detail to talk over.
+      $("#cardnote").textContent = s.current.note || "";
+    } else {
+      $("#cardtitle").textContent = "";
+      $("#cardtext").textContent = "";
+      $("#cardnote").textContent = "";
+    }
+    $("#advance").hidden = s.mode !== "explain";
+    // Flip between the board before the last change and the board after it, so
+    // the room can be told what moved instead of being asked to remember.
+    $("#flip").hidden = !s.can_flip || s.mode === "playing";
+    $("#flip").textContent = s.showing === "after" ? "Show before" : "Show after";
+    // Once the cards are done there is nothing left to show, only the two
+    // boards to flip between. Say so, and stop offering to skip nothing.
+    $("#onscreenhead").textContent = s.current ? "Ready to show" : "The last change";
+    $("#playing").hidden = s.mode !== "playing";
+    $("#stepsleft").textContent = s.steps_left > 1 ? `${s.steps_left} to go this round` : "";
+
+    const byId = {};
+    s.players.forEach(p => byId[p.id] = p);
+    const nk = s.pending.night_kill, vt = s.pending.vote;
+    $("#votepick").textContent = vt
+      ? `the room voted out ${byId[vt].name}` : "mark who the room voted out";
+
+    const tb = $("#players"); tb.innerHTML = "";
+    s.players.forEach((p, i) => {
+      const pend = p.id === nk || p.id === vt;
+      const tr = document.createElement("tr");
+      tr.className = !p.alive ? "out" : pend ? "pending" : "";
+      tr.innerHTML = `<td class="muted">${i + 1}</td><td>${p.name}</td>
+        <td>${p.role ? `<span class="role ${p.role}">${p.role}</span>` : '<span class="muted">-</span>'}</td>
+        <td>${!p.alive ? `out, night ${p.out_round}` : pend ? "going out" : "in"}</td>
+        <td style="text-align:right">${s.phase !== "playing" || !p.alive || busy ? "" :
+          pend ? `<button data-un="${p.id}">undo</button>` : `<button data-elim="${p.id}">mark</button>`}</td>`;
+      tb.appendChild(tr);
+    });
+
+    const c = s.pending.choice;
+    document.querySelectorAll('input[name=choice]').forEach(r => r.checked = r.value === c);
+    $("#actions").hidden = c !== "resilience";
+    $("#huntbox").hidden = c !== "hunt";
+    $("#finishvote").disabled = !c && s.stage !== 1;
+    const a = s.pending.action || "";
+    document.querySelectorAll('input[name=action]').forEach(r => r.checked = r.value === a);
+  }
+  document.addEventListener("click", async (e) => {
+    const t = e.target;
+    if (t.dataset.elim) return void post("/api/gm/eliminate", { id: t.dataset.elim });
+    if (t.dataset.un) return void post("/api/gm/uneliminate", { id: t.dataset.un });
+  });
+  document.addEventListener("change", async (e) => {
+    if (e.target.name === "choice" || e.target.name === "action") {
+      const choice = document.querySelector('input[name=choice]:checked')?.value || null;
+      const action = document.querySelector('input[name=action]:checked')?.value || null;
+      await post("/api/gm/choice", { choice, action: action || null });
+    }
+  });
+  $("#seed").onclick = async () => { await post("/api/gm/seed", { n: +$("#seedn").value || 12 }); };
+  $("#start").onclick = async () => { await post("/api/gm/start", { lantana: +$("#lantana").value || null }); };
+  $("#flip").onclick = async () => { await post("/api/gm/flip"); };
+  $("#skip").onclick = async () => { await post("/api/gm/skip"); };
+  $("#tostage2").onclick = async () => { await post("/api/gm/next_stage"); };
+  $("#fewer").onclick = async () => { await post("/api/gm/rounds", { delta: -1 }); };
+  $("#more").onclick = async () => { await post("/api/gm/rounds", { delta: 1 }); };
+  $("#backto1").onclick = async () => { await post("/api/gm/reset", { stage: 1 }); };
+  $("#finishnight").onclick = async () => { await post("/api/gm/night"); };
+  $("#finishvote").onclick = async () => { await post("/api/gm/vote"); };
+  $("#advance").onclick = async () => { await post("/api/gm/advance"); };
+  $("#replay").onclick = async () => { await post("/api/gm/replay"); };
+  $("#replaystop").onclick = async () => { await post("/api/gm/replay_stop"); };
+  $("#reset").onclick = async () => {
+    if (!confirm("Reset the game and send everyone back to the lobby?")) return;
+    await post("/api/gm/reset", { seed: $("#rseed").value || null });
+  };
+  const es = new EventSource("/events?ch=gm");
+  es.addEventListener("state", (e) => render(JSON.parse(e.data)));
+</script>
+</body>
+</html>

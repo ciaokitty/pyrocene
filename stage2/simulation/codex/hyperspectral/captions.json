@@ -1,0 +1,76 @@
+{
+  "schema": "pyrocene-hyperspectral-films/1",
+  "header": "PYROCENE: FOREST CONTENT STUDY",
+  "variants": {
+    "water": {
+      "location": "SOAPROOT SADDLE: CALIFORNIA: AIRBORNE HYPERSPECTRAL: JUNE 2024",
+      "labels": {
+        "measured_reflectance": "MEASURED REFLECTANCE",
+        "visible_light": "VISIBLE LIGHT",
+        "near_infrared": "NEAR INFRARED",
+        "shortwave_infrared": "SHORTWAVE INFRARED",
+        "water_absorption_fit": "WATER ABSORPTION FIT",
+        "water_fit_range": "850 TO 1100 NANOMETRES",
+        "estimated_canopy_water": "ESTIMATED CANOPY WATER",
+        "lower": "LOWER",
+        "higher": "HIGHER",
+        "fire_footprint": "FIRE FOOTPRINT",
+        "adjacent_unburned": "ADJACENT UNBURNED"
+      },
+      "sentences": [
+        {"start": 0.5, "end": 4.4, "text": "Structure shows where vegetation sits"},
+        {"start": 4.8, "end": 10.8, "text": "Hyperspectral data records the forest across 426 wavelengths"},
+        {"start": 11.2, "end": 17.7, "text": "Each pixel contains a measured spectrum"},
+        {"start": 18.2, "end": 25.8, "text": "Liquid water changes the spectrum at specific wavelengths"},
+        {"start": 26.2, "end": 30.9, "text": "This estimates canopy water content"},
+        {"start": 31.1, "end": 35.7, "text": "Fire models can combine condition with structure and weather"}
+      ]
+    },
+    "disturbance": {
+      "location": "SOAPROOT SADDLE: CALIFORNIA: CREEK FIRE FOOTPRINT: JUNE 2024",
+      "labels": {
+        "fire_history": "FIRE HISTORY",
+        "creek_fire_footprint": "CREEK FIRE FOOTPRINT",
+        "adjacent_unburned": "ADJACENT UNBURNED",
+        "spectral_view": "SPECTRAL VIEW",
+        "shortwave_infrared": "SHORTWAVE INFRARED",
+        "near_infrared": "NEAR INFRARED",
+        "vegetation_spectra": "VEGETATION SPECTRA",
+        "fire_footprint": "FIRE FOOTPRINT",
+        "estimated_canopy_water": "ESTIMATED CANOPY WATER",
+        "lower": "LOWER",
+        "higher": "HIGHER"
+      },
+      "sentences": [
+        {"start": 0.5, "end": 4.4, "text": "Structure shows disturbance"},
+        {"start": 4.8, "end": 11.7, "text": "These adjacent forests do not share the same fire history"},
+        {"start": 12.1, "end": 19.3, "text": "Their 2024 spectral responses are not the same"},
+        {"start": 19.8, "end": 27.4, "text": "The difference is measured across hundreds of bands"},
+        {"start": 27.8, "end": 35.7, "text": "Fire is one possible cause and the spectrum does not prove it alone"}
+      ]
+    },
+    "invasives": {
+      "location": "MUDUMALAI TIGER RESERVE: INDIA: AVIRIS NG: MARCH 2018",
+      "labels": {
+        "field_observation": "FIELD OBSERVATION",
+        "lantana": "LANTANA",
+        "ground_reference": "GROUND REFERENCE",
+        "chromolaena": "CHROMOLAENA",
+        "published_presence_class": "PUBLISHED PRESENCE CLASS",
+        "very_low": "VERY LOW",
+        "low": "LOW",
+        "moderate": "MODERATE",
+        "high": "HIGH",
+        "very_high": "VERY HIGH"
+      },
+      "sentences": [
+        {"start": 0.5, "end": 4.4, "text": "Structure alone cannot identify a species"},
+        {"start": 4.8, "end": 11.8, "text": "The canopy can hide invasive plants below it"},
+        {"start": 12.2, "end": 19.5, "text": "Field spectra linked plants on the ground to airborne measurements"},
+        {"start": 20.0, "end": 27.8, "text": "The model mapped Lantana and Chromolaena separately"},
+        {"start": 28.2, "end": 32.3, "text": "Hyperspectral data can identify material that structure cannot"},
+        {"start": 32.5, "end": 35.7, "text": "Identity still needs moisture and continuity for fire assessment"}
+      ]
+    }
+  }
+}

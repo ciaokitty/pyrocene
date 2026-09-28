@@ -1,0 +1,39 @@
+{
+  "schema": "pyrocene-spectral-seamless/1",
+  "header": "PYROCENE: FOREST STRUCTURE STUDY",
+  "duration": 32.5,
+  "sentences": [
+    {
+      "start": 0.4,
+      "end": 9.6,
+      "text": "Spectral drones can help us understand the signatures of these new gaps"
+    },
+    {
+      "start": 10.2,
+      "end": 21.5,
+      "text": "And satellites can help us generalize that pattern across the forest"
+    }
+  ],
+  "sources": {
+    "selected": "EDUCATIONAL COMPOSITE : AMAZON LIDAR 2017 : NEON SOAP CALIFORNIA 2024",
+    "stack": "SAME 900 M AMAZON FOOTPRINT : LIDAR 2017 : SENTINEL 2 2024 : EMIT 2024",
+    "emit": "SAME AMAZON FOOTPRINT : LIDAR 2017 : NASA EMIT 2024 : 60 M"
+  },
+  "legends": {
+    "selected": [
+      ["GREEN CYAN PINK", "LIDAR HEIGHT", "green"],
+      ["VIOLET", "SELECTED SIGNATURE", "violet"],
+      ["YELLOW", "CLASSIFIER BOUNDARY", "amber"]
+    ],
+    "stack": [
+      ["TOP", "60 M HYPERSPECTRAL", "violet"],
+      ["MIDDLE", "10 M MULTISPECTRAL", "cyan"],
+      ["LOWEST", "LIDAR RETURNS", "green"]
+    ],
+    "emit": [
+      ["GREEN CYAN PINK", "LIDAR HEIGHT", "green"],
+      ["VIOLET BLOCKS", "SIMILAR SPECTRA", "violet"],
+      ["YELLOW", "CELL BOUNDARY", "amber"]
+    ]
+  }
+}

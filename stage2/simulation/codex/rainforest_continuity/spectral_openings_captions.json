@@ -1,0 +1,32 @@
+{
+  "schema": "pyrocene-rainforest-continuity/1",
+  "header": "PYROCENE: FOREST STRUCTURE STUDY",
+  "false_color_legend": {
+    "title": "AIRBORNE IMAGING SPECTROSCOPY",
+    "rows": [
+      ["VISIBLE AND INFRARED", "380 TO 2510 nm", "green"],
+      ["EACH PIXEL", "MIXED SIGNAL", "cyan"],
+      ["FALSE COLOR", "THREE BAND VIEW", "magenta"]
+    ]
+  },
+  "similarity_legend": {
+    "title": "SPECTRAL SIMILARITY",
+    "rows": [
+      ["TARGET SIGNATURE", "FIELD TRAINED", "magenta"],
+      ["OTHER VEGETATION", "LOWER MATCH", "cyan"]
+    ]
+  },
+  "films": {
+    "spectral_openings": {
+      "duration": 34,
+      "location": "WAO KELE O PUNA : ISLAND OF HAWAII : AIRBORNE IMAGING SPECTROSCOPY",
+      "sentences": [
+        {"start": 1, "end": 8, "text": "Hyperspectral imaging separates vegetation into many spectral signatures"},
+        {"start": 8, "end": 13, "text": "Canopy openings can add lower leaves to this mixed signal"},
+        {"start": 13, "end": 21, "text": "At one field site a classifier finds the same signature repeating"},
+        {"start": 21, "end": 29, "text": "Field plots identify this signature as invasive strawberry guava"},
+        {"start": 29, "end": 34, "text": "Spectral identity is evidence of species not fuel"}
+      ]
+    }
+  }
+}

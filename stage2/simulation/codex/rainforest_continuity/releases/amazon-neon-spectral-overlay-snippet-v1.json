@@ -1,0 +1,27 @@
+{
+  "schema": "pyrocene-rainforest-continuity-experiment/1",
+  "released_at": "2026-09-15",
+  "gallery": "http://100.82.28.38:8022/",
+  "status": "short educational composite for visual review",
+  "film": {
+    "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-neon-spectral-overlay-snippet-v1.mp4",
+    "sha256": "508ec71296b88294f89bb264b23d669ff9f3635c8f4e739cc45414e368f56588",
+    "manifest_sha256": "dbad8b9cab1a5650bdfc7178129d54a188b197d6f0d76a714e1c7a3f36312e5c",
+    "duration_seconds": 8,
+    "resolution": [2560, 1440],
+    "fps": 24,
+    "audio": false,
+    "full_decode": "pass"
+  },
+  "spectral_artifact": {
+    "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/artifacts/neon-soap-signature-field-v1.npz",
+    "sha256": "dde24037835c6a54c89ec6851608664e078bb5894ed9aa95d4fba160314f4188",
+    "manifest_sha256": "dd4af8bea34fd856d612c79ba2c5d30df9da2d063502619414dff6b087d2835e"
+  },
+  "qa": {
+    "contact_sheet": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/amazon-neon-spectral-overlay-v1/contact.jpg",
+    "poster": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/amazon-neon-spectral-overlay-v1/frame-7.2.jpg",
+    "visual_review": "pass",
+    "claim_boundary": "Amazon structure and California spectra are visibly credited as an educational composite. The outlined cluster is unsupervised and has no species or fuel label."
+  }
+}

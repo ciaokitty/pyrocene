@@ -1,0 +1,140 @@
+# Everything Ember says on the projector. Grep a line to change it.
+# {n} number of squares, {dir} a compass direction, {r} a round number,
+# {asset} what a fire line protects, {level} a forecast word, {wind} a direction.
+
+# --- the round opens ---------------------------------------------------------
+[round.open]
+Night {r}.
+
+# --- eliminations, as the map shows them --------------------------------------
+[elim.lantana]
+A lantana patch in the {dir} was found and pulled out. Bare ground for now.
+
+[elim.lantana_native]
+A lantana patch in the {dir} was found and pulled out. Native forest takes it back.
+
+[elim.native]
+A native stand in the {dir} was lost. Lantana moves in.
+
+[elim.ecologist]
+The ecologist is gone. The map does not change. The room just got harder to read.
+
+[elim.ranger]
+The ranger is gone. The map does not change. Nobody is saving anyone now.
+
+# --- resilience ---------------------------------------------------------------
+[line.placed]
+A fire line is dug on the {dir} side of the dense lantana. It shields the {asset}.
+
+[line.none]
+There is no dense lantana to fence yet. The crew digs a line on the {dir} side of the biggest patch anyway.
+
+[water.ready]
+A response team is on standby tonight. Whatever starts, they will get to it fast.
+
+[forecast]
+Forecast for next night: {level}. Wind from the {wind}.
+
+[forecast.none]
+no fire
+
+[forecast.small]
+a small fire
+
+[forecast.medium]
+a fire that will run
+
+[forecast.large]
+a big fire
+
+# --- why the system picked what it picked ----------------------------------------
+[auto.village]
+The dense lantana is close to the village, so the crew digs a fire line.
+
+[auto.native]
+The dense lantana borders native forest, so the crew digs a fire line.
+
+[auto.big]
+The fuel load is high enough for a big fire tonight, so a response team stands by.
+
+[auto.watch]
+Nothing needs fencing yet, so the lookout posts a forecast instead.
+
+# --- growth ------------------------------------------------------------------
+[growth]
+Lantana spread into {n} more squares.
+
+[growth.one]
+Lantana spread into one more square.
+
+[growth.none]
+Lantana did not spread tonight.
+
+# --- the turn ------------------------------------------------------------------
+# Said once, the night separate patches become one run of fuel. Everything the
+# room does from here is different, so it gets its own card and its own animation.
+
+[network]
+The lantana now runs in one connected band across {n} patches. Fire can carry the whole length of it. Taking one patch out no longer breaks the chain.
+
+# --- fire ---------------------------------------------------------------------
+[fire.quiet]
+No fire tonight.
+
+[fire.spark]
+A small fire starts in the lantana in the {dir}. It burns {n} squares and goes out.
+
+[fire.spark.one]
+A small fire starts in the lantana in the {dir}. It burns one square and goes out.
+
+[fire.sev2]
+A fire starts in the dense lantana in the {dir}. It runs through {n} squares before it dies.
+
+[fire.sev3]
+A big fire starts in the dense lantana in the {dir}. It runs through {n} squares.
+
+[fire.water]
+A fire starts in the {dir}. The response team reaches it at {n} squares and puts it out.
+
+[fire.blocked]
+The fire line from night {r} stops it.
+
+[fire.village]
+It reached the edge of the village.
+
+[fire.cost]
+Burned ground is bare now, and lantana takes bare ground first.
+
+# --- endings ------------------------------------------------------------------
+[end.win]
+Every lantana patch is out. The forest stands at {health}%.
+
+[end.win_low]
+Every lantana patch is out, but the forest stands at {health}%. It was close.
+
+[end.lose.fire]
+The forest is down to {health}%. Too much of it burned.
+
+[end.lose.natives]
+Every stand has lost its keeper. There is nobody left to hold the line, and the forest stands at {health}%.
+
+[end.lose.team]
+The ecologist and the ranger are both gone. The village cannot find the lantana now.
+
+[end.lose.time]
+Night {r} and the lantana is still here. The season is over.
+
+[end.lose.finale]
+The fire ran through {n} squares before it stopped. The forest is at {health}% and the season is over.
+
+[fire.held]
+The line holds. The ground behind it is untouched.
+
+[line.none_room]
+There is nowhere to put a line around that patch yet.
+
+[end.lose.village]
+The fire reached the homes. Nothing else on the map matters tonight.
+
+[warn.village]
+The dense lantana is close to the homes now. One more night of this and the fire reaches them.

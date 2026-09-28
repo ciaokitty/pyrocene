@@ -1,0 +1,90 @@
+# The full-screen explanation the room reads before each animation.
+# One card, then one animation. Plain words, no names, no roles.
+#
+# Nothing here says who went out or what they were. A night that changes nothing
+# on the map reads the same whether the ranger saved someone or a specialist was
+# taken, so the room keeps guessing and lantana can lie about it.
+
+[intro.title]
+How a night goes
+
+[intro.body]
+1. Team lantana eliminates a player. 2. The room votes: hunt for lantana, or work against fire. 3. Lantana spreads. 4. Fire sparks and spreads based on the environment.
+
+[round.title]
+Night {r}
+
+[night.title]
+The night
+
+[night.ground]
+Lantana took ground in the {dir} during the night.
+
+[night.nothing]
+A player was eliminated. The land is the same as it was.
+
+[vote.title]
+The vote
+
+[vote.cleared]
+A lantana patch in the {dir} was pulled out. It is bare ground now.
+
+[vote.lost]
+A stand in the {dir} was lost. Lantana is moving into it.
+
+[vote.nothing]
+The land is the same as it was.
+
+[line.title]
+The crew digs
+
+[water.title]
+A response team stands by
+
+[ews.title]
+Early warning
+
+[growth.title]
+Lantana spreads
+
+[network.title]
+The patches have joined up
+
+[fire.title]
+Fire
+
+[fire.none_title]
+No fire
+
+[forecast.title]
+Tomorrow night
+
+[end.title]
+The season ends
+
+[prompt.show]
+the game master will show you
+
+[night.about]
+A player was eliminated, and lantana continued to spread.
+
+[growth.about]
+Lantana spread.
+
+[vote.about]
+The room voted someone out.
+
+[line.about]
+The crew cut a fire line.
+
+[water.about]
+A response team is standing by with water.
+
+[ews.about]
+A lookout is posted.
+
+[fire.about]
+Wildfire.
+
+[fire.quiet]
+No fire tonight.

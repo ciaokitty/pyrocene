@@ -1,0 +1,59 @@
+{
+  "schema": "pyrocene-rainforest-continuity/1",
+  "header": "PYROCENE: FOREST STRUCTURE STUDY",
+  "height_legend": {
+    "title": "MEASURED HEIGHT ABOVE GROUND",
+    "rows": [
+      ["CANOPY", "10 m +", "green"],
+      ["UNDERSTORY", "2 TO 10 m", "cyan"],
+      ["LOW STRATUM", "0 TO 2 m", "magenta"],
+      ["GROUND", "0 m", "ground"]
+    ]
+  },
+  "class_legend": {
+    "title": "MODEL LABELS FROM LIDAR",
+    "rows": [
+      ["LIANA STEM", "MODEL LABEL", "magenta"],
+      ["SURROUNDING FOREST", "OTHER RETURNS", "cyan"]
+    ]
+  },
+  "spectral_legend": {
+    "title": "IMAGING SPECTROSCOPY",
+    "rows": [
+      ["INVASIVE CANOPY", "SPECTRAL CLASS", "magenta"],
+      ["NATIVE CANOPY", "SPECTRAL CLASS", "cyan"]
+    ]
+  },
+  "composition_legend": {
+    "title": "SPECTRAL COMPOSITION",
+    "rows": [
+      ["LIVE CANOPY", "PHOTOSYNTHETIC", "green"],
+      ["DEAD MATERIAL", "NONPHOTOSYNTHETIC", "cyan"],
+      ["BARE OR SHADE", "SCREENED", "magenta"]
+    ]
+  },
+  "films": {
+    "liana_structure": {
+      "duration": 32,
+      "location": "NOURAGUES : FRENCH GUIANA : 2012 LIANA MAP WITH 2019 AIRBORNE LIDAR",
+      "sentences": [
+        {"start": 1, "end": 7, "text": "One tile barely overlaps a mapped liana zone"},
+        {"start": 7, "end": 14, "text": "Another lies mainly inside the mapped liana zone"},
+        {"start": 15, "end": 23, "text": "A separate terrestrial scan identified liana stems"},
+        {"start": 23, "end": 28, "text": "Lianas can pass through several forest layers"},
+        {"start": 28, "end": 32, "text": "This is structure not a measure of fuel"}
+      ]
+    },
+    "invasive_identity": {
+      "duration": 36,
+      "location": "ISLAND OF HAWAII : WET RAINFOREST : COREGISTERED LIDAR AND IMAGING SPECTROSCOPY",
+      "sentences": [
+        {"start": 1, "end": 8, "text": "Wet rainforest does not have one structure"},
+        {"start": 9, "end": 18, "text": "Higher strawberry guava abundance coincides with a shorter denser forest"},
+        {"start": 19, "end": 24, "text": "LiDAR screens the same Hawaiian canopy by height"},
+        {"start": 24, "end": 30, "text": "Imaging spectroscopy separates live canopy from dead material and shade"},
+        {"start": 30, "end": 36, "text": "The final layer identifies invasive tree cover"}
+      ]
+    }
+  }
+}

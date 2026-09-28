@@ -1,0 +1,60 @@
+{
+  "schema": "pyrocene-spectral-seamless-release/1",
+  "status": "active review candidate",
+  "supersedes": [
+    "amazon-spectral-triptych-v1.mp4",
+    "amazon-signature-generalization-guided-v1.mp4",
+    "amazon-signature-generalization-continuous-v1.mp4"
+  ],
+  "frozen_lidar_final": {
+    "path": "/mnt/seagate/videos/pyrocene/lidar/final/forest-structure-single-v1.mp4",
+    "sha256": "4fa5dbaaeaf83d0ae77b720e119c73261b02136324311bb58ef4c15622b15be5",
+    "modified": false
+  },
+  "master": {
+    "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/experiments/amazon-spectral-seamless-v1.mp4",
+    "sha256": "d7593c870d145ca6ce2e5762f320464e27d74e6f8d0b72d5718481a274d4ce20",
+    "duration_seconds": 32.5,
+    "resolution": [2560, 1440],
+    "fps": 24,
+    "audio": false
+  },
+  "review_copy": {
+    "path": "/mnt/seagate/videos/pyrocene/rainforest-continuity/review/amazon-spectral-seamless-v1-1080p.mp4",
+    "sha256": "c05900a6ecd568fcee552233a701138945d1449e8b2ed565d5796a9c2cabdf78"
+  },
+  "camera": {
+    "path": "continuous and reversible",
+    "cuts": 0,
+    "fades": 0,
+    "sequence": [
+      "forest to mapped signature",
+      "outward dolly as resolution planes rise",
+      "return to map as resolution planes collapse",
+      "reverse opening move with EMIT cells"
+    ]
+  },
+  "copy": {
+    "narrative_sentences": 2,
+    "path": "stage2/simulation/codex/rainforest_continuity/spectral_seamless_captions.json"
+  },
+  "qa": {
+    "full_decode": "passed",
+    "contact": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/spectral-seamless/contact-v1.png",
+    "poster": "/mnt/seagate/videos/pyrocene/rainforest-continuity/qa/spectral-seamless/poster-v1.jpg",
+    "return_transition_audit_seconds": [
+      19,
+      19.5,
+      20,
+      20.5,
+      21,
+      21.5,
+      22,
+      22.5,
+      23,
+      23.5,
+      24
+    ]
+  },
+  "claim_boundary": "The fine signature is a non co located educational composite The EMIT cells are measured Amazon spectra but not a species fuel or fire class"
+}
